@@ -1,0 +1,517 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First-Time China Checklist (2026) — China Travel OS</title>
+    <meta name="description" content="Everything you need to prepare before visiting China. Passport, payments, internet, apps, and the mistakes everyone makes. An interactive checklist for first-time travelers.">
+    <meta property="og:title" content="First-Time China Checklist — Everything to Prepare Before You Fly">
+    <meta property="og:description" content="Download Alipay. Buy an eSIM. Install a VPN. Bring your passport. An interactive, timeline-based checklist for your first trip to China.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://chinatravelos.com/guide/images/og-checklist.jpg">
+    <meta property="og:url" content="https://chinatravelos.com/guide/checklist.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="First-Time China Checklist — China Travel OS">
+    <meta name="twitter:description" content="Practical, honest guide for first-time travelers to China.">
+    <meta name="twitter:image" content="https://chinatravelos.com/guide/images/og-checklist.jpg">
+    <meta property="article:modified_time" content="2026-07-01">
+    <link rel="canonical" href="https://chinatravelos.com/guide/checklist.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400&amp;family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:           #FAFAFA;
+            --surface:      #FFFFFF;
+            --text:         #1C1614;
+            --text-sub:     #5A4D49;
+            --text-faint:   #968883;
+            --accent:       #D94838;
+            --accent-hover: #B8382A;
+            --accent-muted: #FDF0ED;
+            --border:       #E6E0DD;
+            --border-light: #F2EFED;
+            --radius:       10px;
+            --radius-l:     16px;
+            --radius-pill:  999px;
+            --max-w:        1120px;
+            --content-w:    720px;
+            --nav-h:        64px;
+            --z-nav:        50;
+
+            --space-xs:  4px;
+            --space-sm:  8px;
+            --space-md:  16px;
+            --space-lg:  24px;
+            --space-xl:  32px;
+            --space-2xl: 48px;
+            --space-3xl: 64px;
+            --space-4xl: 96px;
+
+            --text-xs:   0.75rem;
+            --text-sm:   0.875rem;
+            --text-base: 1rem;
+            --text-md:   1.125rem;
+            --text-lg:   1.375rem;
+            --text-xl:   1.75rem;
+            --text-2xl:  2.25rem;
+            --text-3xl:  2.875rem;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; max-width: 100%; }
+        body {
+            max-width: 100%; font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg); color: var(--text); line-height: 1.7; font-size: 1rem;
+        }
+        a { color: inherit; text-decoration: none; }
+        .article a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+        .article a:hover { color: var(--accent-hover); }
+        .tldr a { color: var(--accent); font-weight: 600; }
+        .tldr a:hover { color: var(--accent-hover); }
+        .checklist li small a { font-weight: 500; }
+        .guide-link { color: var(--text-sub) !important; text-decoration: none !important; }
+        .guide-link:hover { color: var(--accent) !important; }
+        .article-cta a { color: #FFF !important; text-decoration: none !important; }
+        .nav-back { color: var(--accent) !important; text-decoration: none !important; }
+        .nav-back:hover { color: var(--accent-hover) !important; }
+        .breadcrumb a { color: var(--text-sub) !important; text-decoration: none !important; }
+        .breadcrumb a:hover { color: var(--text) !important; }
+        .mistake-card a, .callout a { color: var(--accent); text-decoration: underline; }
+        img, video { max-width: 100%; height: auto; display: block; border-radius: var(--radius); }
+
+        /* Nav */
+        .nav {
+            position: sticky; top: 0; z-index: var(--z-nav);
+            background: var(--surface);
+            border-bottom: 1px solid var(--border-light); height: var(--nav-h);
+        }
+        .nav .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--space-lg); display: flex; align-items: center; justify-content: space-between; height: 100%; }
+        .nav-logo { font-family: 'Literata', 'Georgia', 'Times New Roman', serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em; }
+        .nav-logo span { color: var(--accent); }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-links a { font-size: var(--text-sm); font-weight: 500; color: var(--text-sub); transition: color .15s; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-back { font-size: var(--text-sm); font-weight: 600; color: var(--accent); }
+        .nav-back:hover { color: var(--accent-hover); }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+        }
+
+        /* Article */
+        .article { padding: 56px 0 80px; }
+        .article .container { max-width: var(--content-w); margin: 0 auto; padding: 0 var(--space-lg); }
+
+        .breadcrumb { font-size: var(--text-xs); color: var(--text-faint); margin-bottom: 32px; }
+        .breadcrumb a { color: var(--text-sub); transition: color .15s; }
+        .breadcrumb a:hover { color: var(--text); }
+
+        .article h1 {
+            font-size: clamp(28px, 5vw, 42px); font-weight: 800;
+            letter-spacing: -.03em; line-height: 1.15; margin-bottom: 12px;
+        }
+        .article .byline { font-size: var(--text-sm); color: var(--text-faint); margin-bottom: 36px; }
+        .article .byline strong { color: var(--text-sub); font-weight: 600; }
+
+        /* TL;DR */
+        .tldr {
+            background: #FEF9F3; border: 1px solid #FDE8D8; border-radius: var(--radius-l);
+            padding: 24px 28px; margin-bottom: 40px;
+        }
+        .tldr h3 { font-size: var(--text-sm); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--accent); margin-bottom: 10px; }
+        .tldr ul { list-style: none; }
+        .tldr li { font-size: var(--text-sm); padding: 4px 0; }
+        .tldr li::before { content: '—'; color: #0D9488; font-weight: 700; }
+
+        /* Section headings */
+        
+        /* TOC */
+        .toc {
+            background: var(--surface); border: 1px solid var(--border-light);
+            border-radius: var(--radius-l); padding: var(--space-lg) var(--space-xl);
+            margin-bottom: var(--space-2xl);
+        }
+        .toc h3 {
+            font-size: var(--text-sm); font-weight: 700; text-transform: uppercase;
+            letter-spacing: .05em; color: var(--text-faint); margin-bottom: var(--space-md);
+            font-family: 'Work Sans', sans-serif;
+        }
+        .toc ol { list-style: none; padding: 0; margin: 0; }
+        .toc li { margin-bottom: 6px; }
+        .toc a {
+            font-size: var(--text-sm); color: var(--text-sub);
+            transition: color .15s; text-decoration: none;
+        }
+        .toc a:hover { color: var(--accent); }
+.article h2 {
+            font-size: 26px; font-weight: 700; letter-spacing: -.02em;
+            margin: 48px 0 16px; padding-top: 16px; scroll-margin-top: 80px;
+        }
+        .article h3 {
+            font-size: 18px; font-weight: 700; margin: 32px 0 10px;
+        }
+        .article p { margin-bottom: 16px; color: var(--text-sub); }
+
+        /* Checklist */
+        .checklist { list-style: none; padding-left: 0; margin: 16px 0 28px; }
+        .checklist li {
+            padding: 8px 0; font-size: var(--text-sm); cursor: pointer; user-select: none;
+            transition: color .15s; border-bottom: 1px solid var(--border-light);
+        }
+        .checklist li::before { content: '—'; font-size: 18px; margin-right: 10px; color: var(--text-faint); transition: color .15s; }
+        .checklist li:hover { color: var(--text); }
+        .checklist li.checked { color: var(--text-faint); text-decoration: line-through; }
+        .checklist li.checked::before { content: '—'; color: #0F766E; }
+        .checklist li small { display: block; font-size: 12px; color: var(--text-faint); margin-top: 2px; text-decoration: none !important; }
+
+        /* Callout */
+        .callout {
+            background: #FFF8F5; border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 14px 18px; margin: 20px 0; font-size: var(--text-sm); color: var(--text-sub);
+        }
+        .callout strong { color: var(--accent); }
+        .callout-teal { border-color: #0D9488; background: #F0FDF9; }
+        .callout-teal strong { color: #0F766E; }
+
+        /* Guide link cards */
+        .guide-links { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0 28px; }
+        .guide-link {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 18px; background: var(--surface); border: 1px solid var(--border);
+            border-radius: 100px; font-size: var(--text-sm); font-weight: 500; color: var(--text-sub);
+            transition: all .15s;
+        }
+        .guide-link:hover { border-color: var(--accent); color: var(--accent); }
+
+        /* Mistakes card */
+        .mistake-card {
+            background: #FEF2F2; border: 1px solid #FECACA; border-radius: var(--radius);
+            padding: 16px 20px; margin: 12px 0;
+        }
+        .mistake-card strong { display: block; font-size: var(--text-sm); color: #991B1B; margin-bottom: 4px; }
+        .mistake-card p { font-size: var(--text-sm); color: var(--text-sub); margin: 0; }
+
+        /* CTA */
+        .article-cta {
+            background: var(--surface); border: 2px solid var(--accent); border-radius: var(--radius-l);
+            padding: 32px; margin: 40px 0 24px; text-align: center;
+        }
+        .article-cta h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+        .article-cta p { font-size: var(--text-sm); color: var(--text-sub); margin-bottom: 20px; }
+        .btn-primary {
+            display: inline-block; padding: 13px 32px; background: var(--accent);
+            color: #FFF; font-weight: 700; font-size: var(--text-sm); border-radius: 100px;
+            transition: background .15s;
+        }
+        .btn-primary:hover { background: var(--accent-hover); }
+
+        /* Footer */
+        .footer {
+            border-top: 1px solid var(--border); padding: 24px 0;
+            text-align: center; font-size: var(--text-xs); color: var(--text-faint);
+        }
+        .footer a { color: var(--text-sub); font-weight: 500; }
+        .footer a:hover { color: var(--text); }
+
+        /* Progress bar */
+        .progress-wrap { margin: 0 0 40px; }
+        .progress-bar {
+            height: 6px; background: var(--border); border-radius: 3px;
+            overflow: hidden; margin-bottom: 6px;
+        }
+        .progress-fill { height: 100%; background: #0D9488; border-radius: 3px; transform-origin: left center; transform: scaleX(0); transition: transform .3s; }
+        .progress-text { font-size: 12px; color: var(--text-faint); }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+            .btn:hover { transform: none; }
+            .section { animation: none; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "First-Time China Checklist (2026)",
+        "description": "Everything you need to prepare before visiting China — an interactive, timeline-based checklist for first-time travelers.",
+        "image": "https://chinatravelos.com/guide/images/og-checklist.jpg",
+        "dateModified": "2026-07-01",
+        "author": { "@type": "Organization", "name": "China Travel OS" },
+        "publisher": { "@type": "Organization", "name": "China Travel OS" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chinatravelos.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://chinatravelos.com/#guides" },
+            { "@type": "ListItem", "position": 3, "name": "First-Time China Checklist", "item": "https://chinatravelos.com/guide/checklist.html" }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="container">
+        <a href="/index.html" class="nav-logo">China Travel <span>OS</span></a>
+        <div class="nav-links">
+            <a href="/index.html#guides">Guides</a>
+        </div>
+    </div>
+</nav>
+
+<article class="article">
+    <div class="container">
+
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> &nbsp;/&nbsp; First-Time China Checklist
+        </div>
+
+        <h1>First-Time China Checklist<br>(2026)</h1>
+        <p class="byline">By <strong>China Travel OS</strong> &nbsp;·&nbsp; Updated 2026 &nbsp;·&nbsp; Everything you need to prepare before visiting China</p>
+
+        <!-- TL;DR — first thing impatient readers see -->
+        <div class="tldr">
+            <h3>TL;DR — The Short Version</h3>
+            <ul>
+                <li><a href="/guide/alipay.html">Download Alipay</a></li>
+                <li><a href="/guide/esim.html">Buy an eSIM</a></li>
+                <li><a href="/guide/vpn.html">Install a VPN</a></li>
+                <li><a href="/guide/apps.html">Download Amap</a></li>
+                <li>Bring your passport</li>
+                <li><a href="/guide/trains.html">Book trains early</a></li>
+            </ul>
+        </div>
+
+        <!-- Progress -->
+        <div class="progress-wrap">
+            <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+            <div class="progress-text" id="progress-text">0 of 21 checked</div>
+        </div>
+
+        <!-- TOC -->
+        <nav class="toc">
+            <h3>On this page</h3>
+            <ol>
+                <li><a href="#before-you-fly">Part 1: Before You Fly</a></li>
+                <li><a href="#when-you-land">Part 2: When You Land</a></li>
+                <li><a href="#first-48-hours">Part 3: Your First 48 Hours</a></li>
+                <li><a href="#tourist-worries">Part 4: Things Tourists Always Worry About</a></li>
+                <li><a href="#common-mistakes">Part 5: Common Mistakes</a></li>
+                <li><a href="#recommended-reading">Part 6: Recommended Reading</a></li>
+            </ol>
+        </nav>
+
+        <p>I've lived in China for years. Every time a friend visits for the first time, I send them a version of this list. This is the cleaned-up, battle-tested, 2026 edition — organized by <strong>when</strong> you need to do each thing, not by category. Start at the top. Check things off as you go.</p>
+
+        <!-- ============ PART 1 ============ -->
+        <h2 id="before-you-fly">Part 1: Before You Fly</h2>
+        <p>Do these at home, with stable WiFi and your passport in hand. Some of these take a few days (eSIM delivery, bank approvals), so don't leave them for the night before.</p>
+
+        <h3>Passport &amp; Visa</h3>
+        <ul class="checklist" data-group="before">
+            <li><strong>Check your passport validity.</strong> Must have at least 6 months left from your entry date. <small>If it expires sooner, renew now — airlines will deny boarding.</small></li>
+            <li><strong>Apply for a Chinese tourist visa (L visa).</strong> Most nationalities need one. Apply at your local Chinese Visa Application Service Centre (CVASC). Processing takes 4–5 business days. <small>Some nationalities may qualify for 240-hour visa-free transit — check eligibility before you apply.</small></li>
+            <li><strong>Make copies of your passport.</strong> One physical copy in your bag, one photo on your phone, one in your email. <small>Hotels register you with the police — having a copy speeds things up.</small></li>
+        </ul>
+
+        <div class="callout callout-teal"><strong>💡 240-hour visa-free transit:</strong> Some travelers may qualify for China's 240-hour (10-day) visa-free transit policy if transiting to a third country or region through eligible ports (e.g. London → Beijing → Tokyo). Eligibility depends on nationality, route, port, and onward ticket details — not all nationalities or itineraries qualify. Check the latest official rules before relying on this.</div>
+
+        <h3>Payments</h3>
+        <p>China runs on mobile payments. Cash exists but it's inconvenient — many places don't keep change. Set these up before you fly.</p>
+        <ul class="checklist" data-group="before">
+            <li><strong>Download Alipay and link your foreign card.</strong> Visa / Mastercard are best, Amex works but has more rejections. Verify your identity with your passport in the app. <small>Takes ~10 minutes. <a href="/guide/alipay.html">Full Alipay setup guide </a></small></li>
+            <li><strong>Download WeChat and set up WeChat Pay as backup.</strong> Useful for small shops, mini-program ordering, and backup payment. <small>More finicky than Alipay. <a href="/guide/wechat-pay.html">Full WeChat Pay guide </a></small></li>
+            <li><strong>Add a second card if you have one.</strong> Risk-control freezes can hit one card and not the other. I keep a Visa and a Mastercard in both apps.</li>
+            <li><strong>Tell your bank you're traveling to China.</strong> Otherwise your first Alipay transaction might get flagged as fraud and blocked.</li>
+        </ul>
+
+        <div class="callout"><strong>💳 Foreign card fees:</strong> Some platforms or cards may show a service fee on larger foreign-card payments. Check the payment screen before confirming — fees vary by card issuer and merchant.</div>
+
+        <h3>Internet</h3>
+        <p>Google, WhatsApp, Instagram, Gmail — many Western services are inaccessible on mainland networks. You need two things: a way to get online, and a way to get <em>around</em> the block.</p>
+        <ul class="checklist" data-group="before">
+            <li><strong>Buy and install an eSIM before you fly.</strong> Airalo, Holafly, and Nomad all work. Some travel eSIMs route data through Hong Kong or Singapore, which may make certain blocked services available without a VPN, but routing varies by provider and plan. <small>3–10 GB for a 1–2 week trip, $8–20. <a href="/guide/esim.html">Full eSIM guide </a></small></li>
+            <li><strong>Install and test a VPN.</strong> Pick one provider, install it, log in, test Gmail and YouTube. Do NOT wait until you land — VPN provider websites are blocked in China. <small>Choose a provider with recent China reports and test it before departure — availability and reliability change over time. <a href="/guide/vpn.html">Full VPN setup guide </a></small></li>
+            <li><strong>Download offline maps.</strong> Open Amap or Apple Maps and download the offline map for your destination city. <small>Google Maps data in China is outdated — don't rely on it.</small></li>
+        </ul>
+
+        <div class="callout callout-teal"><strong>💡 If you forget the VPN:</strong> Try connecting to hotel WiFi — some international chains route through Hong Kong and unblock by default. It's not guaranteed, but it's saved me twice.</div>
+
+        <h3>Essential Apps</h3>
+        <ul class="checklist" data-group="before">
+            <li><strong>Download Amap (高德地图).</strong> It's the Google Maps of China — accurate, real-time traffic, English UI may be available (check your app version). <small>Apple Maps also works well in China and has English labels. <a href="/guide/apps.html">Full apps guide </a></small></li>
+            <li><strong>Download a translation app.</strong> Google Translate with the Chinese offline pack downloaded, or Pleco (the best Chinese-English dictionary). <small>Camera translation is your superpower — point at menus, signs, packaging. <a href="/guide/apps.html">Full apps guide </a></small></li>
+            <li><strong>Download DiDi (滴滴出行).</strong> China's Uber. Has an English interface, accepts foreign cards via Alipay. <small><a href="/guide/apps.html">Full apps guide </a></small></li>
+            <li><strong>Download Meituan (美团).</strong> For food delivery. Mostly Chinese UI, but the photo-heavy interface is navigable. <small>Links to your WeChat or Alipay for payment.</small></li>
+        </ul>
+
+        <h3>Travel Essentials</h3>
+        <ul class="checklist" data-group="before">
+            <li><strong>Book your first night's accommodation.</strong> Hotels need to register you with the police within 24 hours. <small>Trip.com has English listings and foreign card payment.</small></li>
+            <li><strong>Book trains in advance if traveling during Chinese holidays.</strong> Trains sell out 2–3 weeks ahead during Spring Festival, National Day (Oct 1–7), and Labor Day (May 1–5). <small><a href="/guide/trains.html">Full train guide </a></small></li>
+            <li><strong>Get travel insurance.</strong> Make sure it covers medical evacuation. Public hospitals in China are efficient but rarely accept foreign insurance directly — you pay upfront and claim later.</li>
+            <li><strong>Pack a universal power adapter.</strong> China uses Type A and Type I sockets (220V). Most hotel rooms have USB ports, but bring an adapter for your laptop.</li>
+        </ul>
+
+        <!-- ============ PART 2 ============ -->
+        <h2 id="when-you-land">Part 2: When You Land</h2>
+        <p>You just got off the plane. Do these in order — they take about 15 minutes total and make the rest of your trip frictionless.</p>
+
+        <ul class="checklist" data-group="land">
+            <li><strong>Turn off Airplane Mode.</strong> Your eSIM should connect within 30–60 seconds. If it doesn't, go to Settings — Cellular — turn on the eSIM line and set it as your data line.</li>
+            <li><strong>Turn on your VPN and connect.</strong> Pick a server close to China (Hong Kong, Japan, Singapore). Test by opening Google.com.</li>
+            <li><strong>Open Alipay, do a test payment.</strong> Scan any QR code — even a vending machine at the airport works. Make sure the payment goes through before you're standing at a restaurant without backup.</li>
+            <li><strong>Open Amap or Apple Maps, check your route to the hotel.</strong> If you're taking the metro, Amap gives step-by-step transit directions including which exit to use. <small>Google Maps won't give transit directions in China.</small></li>
+            <li><strong>Message someone at home.</strong> "Landed, eSIM works, payment works." It takes 30 seconds and saves your family from googling "China number emergency."</li>
+        </ul>
+
+        <div class="callout"><strong>💴 Cash backup:</strong> If Alipay or WeChat fails, having ¥300–500 in cash covers a taxi and a meal. Withdraw from any ATM at the airport (Bank of China, ICBC — they all accept foreign cards). The exchange rate is fair, the ATM fee is usually ¥10–20.</div>
+
+        <!-- ============ PART 3 ============ -->
+        <h2 id="first-48-hours">Part 3: Your First 48 Hours</h2>
+        <p>The first two days set the tone. These three things will make you feel like you know what you're doing — even if you don't.</p>
+
+        <ul class="checklist" data-group="first48">
+            <li><strong>Learn the metro.</strong> Buy a single-journey ticket at any station machine (has English). Or better: open Alipay — Transport — get the city's transit QR code. Scan at the gate. <small>Metro is the fastest way around any Chinese city and costs ¥2–8 per ride.</small></li>
+            <li><strong>Order something digitally.</strong> Even if it's just a coffee. This is not about the coffee — it's about proving to yourself that the system works. Open Alipay, scan the shop's QR code, pay. <small>If ordering via mini-program (Starbucks, Luckin), use WeChat — its mini-program support is better.</small></li>
+            <li><strong>Book your first train.</strong> If you're traveling between cities, book your first leg on Trip.com. It's the easiest entry point — full English, foreign cards, clear seat selection. <small>For later trips, graduate to Alipay's 12306 mini-program to save the booking fees. <a href="/guide/trains.html">Full train guide </a></small></li>
+        </ul>
+
+        <!-- ============ PART 4 ============ -->
+        <h2 id="tourist-worries">Part 4: Things Tourists Always Worry About</h2>
+        <p>These are the questions I get from every first-timer. Short answers up front.</p>
+
+        <h3>Is China Safe?</h3>
+        <p>Yes. Violent crime against foreigners is extremely rare. The most common safety issue is traffic — drivers don't always yield to pedestrians, even at crosswalks. Look both ways, always. Solo female travelers: China is safer than most Western cities at night, but standard precautions apply (don't follow strangers to "tea ceremonies" or "art exhibitions" — they're scams).</p>
+
+        <h3>Will My Credit Card Work?</h3>
+        <p>Yes — through Alipay and WeChat Pay. Your physical Visa/Mastercard usually won't work at most shops (China skipped the credit card era and went straight to QR codes), but once it's linked in Alipay, you can pay at the vast majority of places. See <a href="/guide/alipay.html" style="color:var(--accent);">the Alipay guide</a> for the full setup.</p>
+
+        <h3>Can I Use Google Maps?</h3>
+        <p>No. Even with a VPN, Google Maps' China data is years out of date. Streets can be offset and unreliable, businesses are missing, transit directions don't work. Use <strong>Amap (高德地图)</strong> or <strong>Apple Maps</strong> instead. Both have English interfaces and accurate, real-time data.</p>
+
+        <h3>Do People Speak English?</h3>
+        <p>In hotels and airports: some. In taxi, restaurant, or street: almost none. This is not a problem — translation apps handle 90% of situations. Show the driver your destination in Chinese characters (Amap gives you this). At restaurants, point at photos on the menu or use camera translation. The language barrier feels intimidating before you arrive and becomes a non-issue within 24 hours.</p>
+
+        <!-- ============ PART 5 ============ -->
+        <h2 id="common-mistakes">Part 5: Common Mistakes</h2>
+        <p>Every one of these has happened to someone I know. Learn from them.</p>
+
+        <div class="mistake-card">
+            <strong> — Forgetting to install the VPN before leaving home</strong>
+            <p>VPN provider websites are blocked in China. If you land without one, you can't download one. Install and test it at home.</p>
+        </div>
+
+        <div class="mistake-card">
+            <strong> — Relying on Google Maps</strong>
+            <p>The map is offset by 500m due to China's coordinate system. You will get lost. Use Amap or Apple Maps from day one.</p>
+        </div>
+
+        <div class="mistake-card">
+            <strong> — Going to the wrong train station</strong>
+            <p>Chinese cities have multiple stations. Shanghai has Shanghai Railway Station, Shanghai Hongqiao, and Shanghai South — they can be 40+ minutes apart. Double-check which one your ticket says.</p>
+        </div>
+
+        <div class="mistake-card">
+            <strong> — Assuming your phone will just work</strong>
+            <p>It won't. Without an eSIM or local SIM, you're on airport WiFi and then offline. With a roaming plan but no VPN, you're online but 70% of the internet is blocked. eSIM + VPN is the combo.</p>
+        </div>
+
+        <div class="mistake-card">
+            <strong> — Not carrying tissues or hand sanitizer</strong>
+            <p>Public bathrooms often don't have toilet paper or soap. Pack a small tissue pack and sanitizer in your day bag. This sounds small — until you need it.</p>
+        </div>
+
+        <!-- ============ PART 6 ============ -->
+        <h2 id="recommended-reading">Part 6: Recommended Reading</h2>
+        <p>This checklist is the overview. Each of these guides goes deep on one topic.</p>
+
+        <div class="guide-links">
+            <a href="/guide/alipay.html" class="guide-link">Alipay Guide</a>
+            <a href="/guide/wechat-pay.html" class="guide-link">WeChat Pay Guide</a>
+            <a href="/guide/esim.html" class="guide-link">eSIM Guide</a>
+            <a href="/guide/vpn.html" class="guide-link">VPN Guide</a>
+            <a href="/guide/apps.html" class="guide-link">Apps Guide</a>
+            <a href="/guide/trains.html" class="guide-link">Train Guide</a>
+        </div>
+
+        <!-- CTA -->
+        <div class="article-cta">
+            <h3>Get the Free China Arrival Checklist</h3>
+            <p>The exact setup guide I send to friends before they visit China. Printable checklist, Alipay walkthrough, VPN picks — all in one PDF.</p>
+            <a href="/index.html#newsletter" class="btn btn-primary">Get the Free Checklist</a>
+        </div>
+
+        <p style="margin-top: 32px; font-size: var(--text-sm); color: var(--text-faint);">
+            <a href="/index.html#guides" class="nav-back"> — Back to all guides</a>
+        </p>
+
+    </div>
+</article>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 <a href="/index.html">China Travel OS</a>. Built for travelers, not algorithms.</p>
+    </div>
+</footer>
+
+<script>
+(function() {
+    var lists = document.querySelectorAll('.checklist');
+    var totalItems = 0;
+    lists.forEach(function(list) {
+        var items = list.querySelectorAll('li');
+        totalItems += items.length;
+        list.addEventListener('click', function(e) {
+            // Don't toggle if user clicked a link
+            if (e.target.closest('a')) return;
+            var li = e.target.closest('li');
+            if (!li) return;
+            li.classList.toggle('checked');
+            updateProgress();
+            saveState();
+        });
+    });
+
+    // Progress bar
+    function updateProgress() {
+        var checked = document.querySelectorAll('.checklist li.checked').length;
+        var pct = totalItems > 0 ? Math.round(checked / totalItems * 100) : 0;
+        document.getElementById('progress-fill').style.transform = 'scaleX(' + (pct / 100) + ')';
+        document.getElementById('progress-text').textContent = checked + ' of ' + totalItems + ' checked';
+    }
+
+    // Persist in localStorage
+    function saveState() {
+        var state = [];
+        document.querySelectorAll('.checklist li').forEach(function(li, i) {
+            if (li.classList.contains('checked')) state.push(i);
+        });
+        localStorage.setItem('china-checklist-state', JSON.stringify(state));
+    }
+
+    function loadState() {
+        var raw = localStorage.getItem('china-checklist-state');
+        if (!raw) return;
+        var state = JSON.parse(raw);
+        var all = document.querySelectorAll('.checklist li');
+        state.forEach(function(i) {
+            if (all[i]) all[i].classList.add('checked');
+        });
+    }
+
+    loadState();
+    updateProgress();
+})();
+</script>
+
+</body>
+</html>

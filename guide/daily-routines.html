@@ -1,0 +1,374 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Daily Routines Visitors Should Know — China Travel OS</title>
+    <meta name="description" content="Shared bikes, smart parcel lockers, late-night delivery. The everyday routines locals do without thinking, and how knowing them makes your trip smoother.">
+    <meta property="og:title" content="Local Daily Routines Visitors Should Know">
+    <meta property="og:description" content="From morning park exercise to midnight food delivery. The small rhythms of daily life in China, explained for first-time visitors.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://chinatravelos.com/guide/images/og-daily-routines.jpg">
+    <meta property="og:url" content="https://chinatravelos.com/guide/daily-routines.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Local Daily Routines — China Travel OS">
+    <meta name="twitter:description" content="Practical, honest guide for first-time travelers to China.">
+    <meta name="twitter:image" content="https://chinatravelos.com/guide/images/og-daily-routines.jpg">
+    <meta property="article:modified_time" content="2026-07-01">
+    <link rel="canonical" href="https://chinatravelos.com/guide/daily-routines.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400&amp;family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:           #FAFAFA;
+            --surface:      #FFFFFF;
+            --text:         #1C1614;
+            --text-sub:     #5A4D49;
+            --text-faint:   #968883;
+            --accent:       #D94838;
+            --accent-hover: #B8382A;
+            --accent-muted: #FDF0ED;
+            --border:       #E6E0DD;
+            --border-light: #F2EFED;
+            --radius:       10px;
+            --radius-l:     16px;
+            --radius-pill:  999px;
+            --max-w:        1120px;
+            --content-w:    720px;
+            --nav-h:        64px;
+            --z-nav:        50;
+
+            --space-xs:  4px;
+            --space-sm:  8px;
+            --space-md:  16px;
+            --space-lg:  24px;
+            --space-xl:  32px;
+            --space-2xl: 48px;
+            --space-3xl: 64px;
+            --space-4xl: 96px;
+
+            --text-xs:   0.75rem;
+            --text-sm:   0.875rem;
+            --text-base: 1rem;
+            --text-md:   1.125rem;
+            --text-lg:   1.375rem;
+            --text-xl:   1.75rem;
+            --text-2xl:  2.25rem;
+            --text-3xl:  2.875rem;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; max-width: 100%; }
+        body {
+            max-width: 100%; font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg); color: var(--text); line-height: 1.7; font-size: 1rem;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Literata', 'Georgia', 'Times New Roman', serif;
+            text-wrap: balance; line-height: 1.15;
+        }
+
+        .section {
+            animation: section-in .6s cubic-bezier(.22, .61, .36, 1) both;
+            animation-timeline: view();
+            animation-range: entry 15%;
+        }
+        @keyframes section-in {
+            from { opacity: .6; translate: 0 24px; }
+            to   { opacity: 1;   translate: 0 0; }
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img, video { max-width: 100%; height: auto; display: block; border-radius: var(--radius); }
+
+        /* Nav */
+        .nav {
+            position: sticky; top: 0; z-index: var(--z-nav);
+            background: var(--surface);
+            border-bottom: 1px solid var(--border-light); height: var(--nav-h);
+        }
+        .nav .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--space-lg); display: flex; align-items: center; justify-content: space-between; height: 100%; }
+        .nav-logo { font-family: 'Literata', 'Georgia', 'Times New Roman', serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em; }
+        .nav-logo span { color: var(--accent); }
+        .nav-links { display: flex; align-items: center; gap: var(--space-xl); }
+        .nav-links a { font-size: var(--text-sm); font-weight: 500; color: var(--text-sub); transition: color .15s; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-back { font-size: var(--text-sm); font-weight: 600; color: var(--accent); }
+        .nav-back:hover { color: var(--accent-hover); }
+
+        @media (max-width: 768px) { .nav-links { display: none; } .nav-back { display: none; } .article h1 { font-size: clamp(1.5rem, 8vw, 2rem); overflow-wrap: anywhere; } }
+
+        /* Article layout */
+        .article { padding: var(--space-3xl) 0 var(--space-4xl); }
+        .article .container { max-width: var(--content-w); margin: 0 auto; padding: 0 var(--space-lg); }
+        .breadcrumb { font-size: var(--text-xs); color: var(--text-faint); margin-bottom: var(--space-xl); }
+        .breadcrumb a { color: var(--text-sub); transition: color .15s; }
+        .breadcrumb a:hover { color: var(--text); }
+
+        .article h1 { font-size: clamp(1.75rem, 5vw, 2.75rem); font-weight: 700; letter-spacing: -0.015em; line-height: 1.15; margin-bottom: 12px; }
+        .article .byline { font-size: var(--text-sm); color: var(--text-faint); margin-bottom: var(--space-2xl); }
+        .article .byline strong { color: var(--text-sub); font-weight: 600; }
+
+        .tldr {
+            background: var(--accent-muted); border: 1px solid var(--border); border-radius: var(--radius-l);
+            padding: var(--space-lg) var(--space-xl); margin-bottom: var(--space-2xl);
+        }
+        .tldr h3 { font-size: var(--text-sm); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--accent); margin-bottom: 10px; }
+        .tldr ul { list-style: none; }
+        .tldr li { font-size: var(--text-sm); padding: 4px 0; }
+        .tldr li::before { content: '—'; color: #0D9488; font-weight: 700; }
+
+        
+        /* TOC */
+        .toc {
+            background: var(--surface); border: 1px solid var(--border-light);
+            border-radius: var(--radius-l); padding: var(--space-lg) var(--space-xl);
+            margin-bottom: var(--space-2xl);
+        }
+        .toc h3 {
+            font-size: var(--text-sm); font-weight: 700; text-transform: uppercase;
+            letter-spacing: .05em; color: var(--text-faint); margin-bottom: var(--space-md);
+            font-family: 'Work Sans', sans-serif;
+        }
+        .toc ol { list-style: none; padding: 0; margin: 0; }
+        .toc li { margin-bottom: 6px; }
+        .toc a {
+            font-size: var(--text-sm); color: var(--text-sub);
+            transition: color .15s; text-decoration: none;
+        }
+        .toc a:hover { color: var(--accent); }
+.article h2 { font-size: var(--text-xl); font-weight: 600; letter-spacing: -0.01em; margin: 44px 0 14px; padding-top: 20px; scroll-margin-top: 80px; }
+        .article h3 { font-size: var(--text-md); font-weight: 600; margin: 28px 0 10px; }
+        .article p { margin-bottom: var(--space-md); color: var(--text); }
+        .article ul, .article ol { margin-bottom: 20px; padding-left: 24px; }
+        .article li { margin-bottom: var(--space-sm); }
+
+        .callout {
+            border: 1px solid var(--border); background: var(--accent-muted);
+            padding: var(--space-md) var(--space-lg); border-radius: var(--radius);
+            margin-bottom: var(--space-lg); font-size: var(--text-sm);
+        }
+        .callout strong { color: var(--accent); }
+        .callout-teal { border-color: #0D9488; background: #F0FDF9; }
+        .callout-teal strong { color: #0F766E; }
+
+        .article-cta {
+            background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--radius-l);
+            padding: var(--space-xl); margin-top: var(--space-2xl); text-align: center;
+        }
+        .article-cta h3 { font-size: var(--text-lg); font-weight: 600; margin-bottom: var(--space-sm); }
+        .article-cta p { color: var(--text-sub); font-size: var(--text-sm); margin-bottom: var(--space-md); }
+        .btn {
+            display: inline-flex; align-items: center; gap: var(--space-sm);
+            padding: 13px 26px; border-radius: var(--radius-pill); font-weight: 600;
+            font-size: var(--text-sm); cursor: pointer; border: none; white-space: nowrap;
+            font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            transition: background-color .2s cubic-bezier(.4, 0, 0, 1),
+                        color .2s cubic-bezier(.4, 0, 0, 1),
+                        transform .2s cubic-bezier(.4, 0, 0, 1);
+        }
+        .btn-primary { background: var(--accent); color: #fff; }
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+        .btn-outline { background: transparent; color: var(--text); border: 1.5px solid var(--border); }
+        .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+        .footer { padding: var(--space-xl) 0; border-top: 1px solid var(--border-light); text-align: center; }
+        .footer .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--space-lg); }
+        .footer p { font-size: var(--text-xs); color: var(--text-faint); }
+        .footer a { color: var(--text-sub); transition: color .15s; }
+        .footer a:hover { color: var(--text); }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+            .btn:hover { transform: none; }
+            .section { animation: none; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Local Daily Routines Visitors Should Know",
+        "description": "Shared bikes, smart parcel lockers, late-night delivery — the everyday routines locals do without thinking, explained for first-time visitors.",
+        "image": "https://chinatravelos.com/guide/images/og-daily-routines.jpg",
+        "dateModified": "2026-07-01",
+        "author": { "@type": "Organization", "name": "China Travel OS" },
+        "publisher": { "@type": "Organization", "name": "China Travel OS" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chinatravelos.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://chinatravelos.com/#guides" },
+            { "@type": "ListItem", "position": 3, "name": "Local Daily Routines", "item": "https://chinatravelos.com/guide/daily-routines.html" }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="container">
+        <a href="/index.html" class="nav-logo">China<span>Travel</span>OS</a>
+        <div class="nav-links">
+            <a href="/index.html#guides">Guides</a>
+            <a href="/index.html#cities">Cities</a>
+            <a href="/index.html#community">Community</a>
+            <a href="/index.html#newsletter">Free Guide</a>
+        </div>
+        <a href="/index.html" class="nav-back"> — Back to Guides</a>
+    </div>
+</nav>
+
+<article class="article">
+    <div class="container">
+
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> &nbsp;/&nbsp;
+            <a href="/index.html#guides">Guides</a> &nbsp;/&nbsp;
+            Local Daily Routines
+        </div>
+
+        <h1>Local Daily Routines Visitors Should Know</h1>
+        <p class="byline">By <strong>China Travel OS</strong> &nbsp;·&nbsp; Updated 2026. The small rhythms of daily life you'll see everywhere in China, explained so you can join in instead of watching from the outside</p>
+
+        <div class="tldr">
+            <h3>TL;DR: The Short Version</h3>
+            <ul>
+                <li><strong>Shared bikes are a reflex, not a plan.</strong> Locals scan one without thinking. You can too.</li>
+                <li><strong>Packages go into smart lockers, not doorsteps.</strong> Many apartment complexes have rows of them. You get a code, you pick it up.</li>
+                <li><strong>Late-night life is quiet but alive.</strong> Food delivery usually runs past midnight. Convenience stores never close. Streets stay lit.</li>
+                <li><strong>Morning exercise is a public event.</strong> Parks fill up at dawn with tai chi, badminton, and group dancing. Join or just watch. Both are normal.</li>
+                <li><strong>These are not tourist activities.</strong> They are how people live. Understanding them turns your trip from observation into participation.</li>
+            </ul>
+        </div>
+
+        <!-- TOC -->
+        <nav class="toc">
+            <h3>On this page</h3>
+            <ol>
+                <li><a href="#shared-bikes">Shared Bikes: The Two-Second Decision</a></li>
+                <li><a href="#parcel-lockers">Smart Parcel Lockers</a></li>
+                <li><a href="#late-night">Late-Night Life: Never Fully Asleep</a></li>
+                <li><a href="#morning-exercise">Morning Exercise: The Park at Dawn</a></li>
+                <li><a href="#small-routines">Small Routines You'll Notice Everywhere</a></li>
+                <li><a href="#why-it-matters">Why These Routines Matter</a></li>
+            </ol>
+        </nav>
+
+        <h2 id="not-a-tourist-activity">None of This Is a Tourist Activity</h2>
+        <p>There is a version of travel where you visit the famous pagoda, take a photo, and move on. Then there is the version where you wake up on your third morning in China, walk to the corner convenience store for a bottled tea, scan a bike without thinking, and realize you're moving through the city the same way everyone else does.</p>
+        <p>This page is about the second version. The small routines that locals do without thinking. The ones that aren't in guidebooks, because they're too ordinary to mention. But they're exactly what makes a trip feel smooth instead of foreign.</p>
+        <p>None of these require special skills. Most require Alipay and a phone. Most take less than a minute to learn. Once you know them, your trip shifts from "figuring things out" to "just living here for a while."</p>
+
+        <h2 id="shared-bikes">Shared Bikes: The Two-Second Decision</h2>
+        <p>Walk out of a metro station in many major Chinese cities and watch what locals do. They don't look for a taxi. They don't open a ride-hailing app. They walk to the row of blue, yellow, and green bikes parked along the curb, open Alipay, scan a QR code, and ride away. The whole sequence takes five seconds. It's not a decision. It's a reflex.</p>
+        <p>The bikes are everywhere because the system is designed around them. Metro stations have designated bike parking zones. Bike lanes on main roads are wide, separated from car traffic by barriers or curbs, and used by thousands of people every hour. At rush hour, the bike lane is often faster than the car lane next to it.</p>
+        <p>What surprises visitors most is how natural it feels. You get off the metro, scan a bike, and ride the last kilometer to your destination through tree-lined back streets. No waiting. No negotiation. No meter. Just your phone, a bike, and wherever you're going.</p>
+
+        <div class="callout">
+            <strong>🚲 A local habit worth copying:</strong> Locals don't plan bike rides. They scan one because it's there. If the destination is under 3 km and the weather is decent, the bike is faster than any other option. Try this once and you'll understand why everyone does it.
+        </div>
+
+        <p><strong>For travelers, this means</strong> you can stop thinking about "how to get around" and just go. Metro station to restaurant: bike. Restaurant to hotel: bike. Hotel to park: bike. The system disappears, and you just move.</p>
+
+        <h2 id="parcel-lockers">Smart Parcel Lockers: How Packages Arrive in China</h2>
+        <p>In most countries, a package delivery means someone rings your doorbell or leaves a box on your doorstep. In China, the sheer volume of packages makes door-to-door delivery impractical for most courier companies. SF Express (顺丰) and JD Logistics (京东物流) are the exceptions: they typically deliver to your door. Everyone else drops packages at the nearest smart locker or parcel pickup station. And that is where you'll find them: smart lockers in many apartment complexes and office buildings, and pickup stations like Cainiao (菜鸟驿站) on many residential neighborhoods.</p>
+        <p>Smart lockers are gray or yellow metal cabinets with touchscreens, each a wall of numbered compartments. Parcel pickup stations are small storefronts where packages are organized on shelves by pickup code. During the day, staff scan your phone and hand you the package. At night, the stations stay open as self-service: find your package by code, scan it yourself at the checkout machine, walk out.</p>
+        <p>The locker system is fully self-service. You order something online. A delivery rider deposits it into a compartment. Your phone receives a text message with a pickup code. You walk to the lockers, tap the code into the screen, and the door pops open. Grab your package. Close the door. Done. You usually have 24 to 48 hours before the system sends a reminder. The most common locker brand is Fengchao (丰巢).</p>
+        <p>Parcel pickup stations work similarly. During the day, staff are on hand: you show the pickup code on your phone, and someone retrieves your package in seconds. At night, the stations stay open as self-service. No staff, no counter. You walk in, find your package on the shelf using the code, and scan it yourself at the checkout machine. It feels a bit like a small library. These stations handle larger items that don't fit in lockers and many are open late or self-service. Between lockers and pickup stations, the system covers most everyday deliveries. Nobody needs to be home. Nothing sits on a doorstep in the rain.</p>
+
+        <div class="callout callout-teal">
+            <strong>📦 If you're staying in one place for a while:</strong> You can order from Taobao or JD.com to your hotel or Airbnb. Use the hotel's address and your name. If the hotel has a front desk, the package usually goes there. If it's a residential building, it goes to the nearest smart locker or pickup station. The pickup code comes via SMS, so make sure your phone can receive Chinese text messages.
+        </div>
+
+        <p><strong>For travelers, this means</strong> you can order something online and pick it up on your schedule. No waiting at home. No missed deliveries. Lockers and pickup stations are common in many cities, though the exact setup varies by building and neighborhood. This matters most if you're staying more than a few days or ordering online during your trip.</p>
+
+        <figure class="article-img">
+            <img src="images/daily-routines/4.jpg" alt="Smart parcel lockers in a Chinese residential compound" loading="lazy">
+            <figcaption>Smart parcel lockers in a residential compound &#8212; tap the code, door opens, grab your package.</figcaption>
+        </figure>
+
+        <h2 id="late-night">Late-Night Life: Not Loud, but Never Fully Asleep</h2>
+        <p>Chinese cities at midnight are not party cities in the Western sense. The streets are not full of bars and nightclubs. But they are not empty either. What you get instead is something quieter and, in its own way, more remarkable: a city that never fully powers down.</p>
+        <p>Convenience stores are open 24 hours. Some pharmacies and convenience delivery options run late or overnight in major cities. Food delivery apps have full menus available past midnight. You can order a bowl of hot noodles at 1 AM and a rider will bring it to your door in 30 minutes. Street food stalls in residential neighborhoods stay open late, their lights visible from blocks away, a few plastic tables set up on the sidewalk with people eating skewers and drinking beer.</p>
+        <p>This is not a nightlife scene. It's infrastructure. The delivery rider working at midnight is the same person who delivered lunch eight hours earlier. The convenience store clerk restocking shelves at 2 AM will sell you a bottle of water and a pack of tissues without blinking. The city is not partying. It's just always running.</p>
+
+        <div class="callout">
+            <strong>🌙 The midnight rule:</strong> If you're hungry, open Meituan. If you need something small, find the nearest convenience store (look for a lit storefront with a cooler). Main streets are usually well-lit and feel safe in most city neighborhoods. The delivery apps work. The city has your back. This is one of the most underrated things about traveling in China: the quiet confidence that comes from knowing most things stay available.
+        </div>
+
+        <p><strong>For travelers, this means</strong> jet lag stops being a problem. You land at midnight, you can still eat. You wake up at 4 AM and can't sleep, there's a convenience store with hot tea two blocks away. The city is ready when you are.</p>
+
+        <figure class="article-img">
+            <img src="images/daily-routines/1.jpg" alt="Self-service convenience store open late at night in a Chinese city" loading="lazy">
+            <figcaption>A self-service convenience store at night &#8212; open 24 hours, scan to enter, pay with your phone. The city never fully powers down.</figcaption>
+        </figure>
+
+        <h2 id="morning-exercise">Morning Exercise: The Park Comes Alive at Dawn</h2>
+        <p>If you walk through a Chinese city park at 6:30 AM, you will see something that looks like a festival. Groups of older people doing tai chi in slow, synchronized motion. Others walking backwards on the paved paths, swinging their arms in wide circles. A badminton game without a net. Someone playing a traditional instrument under a tree. A circle of women dancing to a portable speaker. None of this is organized or ticketed. It's just what happens in parks every morning.</p>
+        <p>This is a deeply embedded cultural routine. For many older Chinese people, morning exercise in the park is as routine as brushing teeth. It's social, it's physical, and it's free. The groups are informal but regular. Same people, same spot, same time, every day. You don't need to join, but standing at the edge and watching is completely normal. Nobody will think you're strange. They might smile at you.</p>
+        <p>Public exercise equipment is everywhere too. Not just in parks, but along sidewalks, in residential courtyards, next to bus stops. Elliptical machines, leg presses, waist twisters, all made of brightly painted metal and built to live outdoors. They look like playground equipment for adults, which is exactly what they are. They're free, they're always open, and they're surprisingly fun.</p>
+
+        <div class="callout callout-teal">
+            <strong>🏃 If you want to join:</strong> Stand at the back of a tai chi group and copy the movements. Nobody will correct you. Nobody will ask you to leave. You might get a thumbs-up from someone in the front row. This is one of the easiest ways to feel like you belong, even if you're just visiting.
+        </div>
+
+        <p><strong>For travelers, this means</strong> your morning walk becomes something to look forward to. The park is already alive. You're not intruding. Bring a bottle of tea and find a bench. That's the routine.</p>
+
+        <figure class="article-img">
+            <img src="images/daily-routines/2.jpg" alt="Morning exercise in a Chinese city park &#8212; tai chi and group dancing at dawn" loading="lazy">
+            <figcaption>Morning exercise in a city park at dawn &#8212; tai chi, group dancing, badminton. Every morning, rain or shine.</figcaption>
+        </figure>
+
+        <h2 id="small-routines">Small Routines You'll Notice Everywhere</h2>
+        <p>Beyond the big patterns, there are smaller daily rhythms worth knowing. None of them are essential. All of them make the trip feel more natural:</p>
+
+        <h3>Clothes Drying on Balconies</h3>
+        <p>Walk through any Chinese neighborhood and look up. Every balcony tells the same story: shirts, pants, bedsheets, and quilts draped over extendable metal racks, catching the morning sun. This is not because dryers are unavailable. Most households have a washing machine, and washer-dryer combos are increasingly common. The real reason is simpler: sun-dried clothes and bedding carry a warm, clean scent that no dryer can replicate. In Chinese, people call it "太阳的味 — — the smell of sunshine. It's one of those small, sensory pleasures woven into daily life. Hotels have laundry services. Airbnbs have a drying rack on the balcony. By day two, your clothes will be hanging out there too, and you'll get it.</p>
+
+        <figure class="article-img">
+            <img src="images/daily-routines/3.jpg" alt="Clothes drying on balcony racks in a Chinese residential neighborhood" loading="lazy">
+            <figcaption>Clothes drying on balcony racks &#8212; a familiar sight in every Chinese neighborhood. Sun-dried laundry carries the smell of sunshine.</figcaption>
+        </figure>
+
+        <h3>Communal Dining Is the Default</h3>
+        <p>In most restaurants, dishes are ordered for the table, not for individuals. A group of four might order five or six dishes, all placed in the center, everyone taking portions with their own chopsticks. There is usually at least one shared serving spoon or pair of communal chopsticks per dish. Among family members or close friends eating at home, people might pick directly from the shared plates without using the serving utensils. At restaurants and with acquaintances or colleagues, using the serving spoon or communal chopsticks is the norm. If you are unsure, watch what others at your table do and follow their lead. The rice is in a separate bowl, and you take what you want from the shared dishes throughout the meal. If you are eating alone, order two dishes. Nobody will think it is strange. Eating well in China often means variety, not volume.</p>
+
+        <h3>Umbrellas Are for Sun, Not Just Rain</h3>
+        <p>On a sunny summer day in China, you will see hundreds of people walking with umbrellas. This is sun protection. Pale skin is culturally valued, and direct sunlight is avoided. Women in particular carry UV-blocking umbrellas. If it's 35 degrees and you're the only person on the street without an umbrella, you're not cool. You're just getting sunburned. Buy a UV umbrella at any convenience store for ¥30 to ¥60.</p>
+
+        <h3>Tipping Is Usually Not Expected</h3>
+        <p>There is no tipping culture in China. Not in restaurants. Not in taxis. Not for delivery. Not for haircuts. The price on the menu or the app is the final price. If you leave cash on the table after a meal, the staff will run after you to return it, genuinely confused. This is one of the hardest habits for Western travelers to break. The first time you walk out of a restaurant without leaving anything extra, it feels like you forgot something. By day five, it feels like freedom.</p>
+
+        <h2 id="why-it-matters">Why These Routines Matter</h2>
+        <p>Travel is partly about famous places. The Great Wall. The Bund. West Lake. But the part of travel that changes how you feel about a country is the ordinary stuff. How people get to work. What they eat at midnight. Where their packages go. What their mornings look like.</p>
+        <p>These routines matter because they turn a foreign city into a familiar one. The first time you scan a shared bike without hesitating, or pick up a package from a smart locker without reading the instructions, or walk past a group of morning dancers and don't even slow down, you've crossed a line. You're not watching China anymore. You're just living in it.</p>
+        <p>A traveler I hosted last spring put it this way: "The first two days, I felt like I was on a movie set. Everything was familiar but slightly wrong. By day four, I was drying my socks on the balcony and picking up packages from the locker like I'd done it my whole life. That's when the trip got good."</p>
+
+        <div class="article-cta">
+            <h3>Get the Free China Arrival Checklist</h3>
+            <p>The routines on this page become second nature fast. Start with the practical stuff: Alipay, eSIM, VPN. Free PDF, no spam.</p>
+            <a href="/index.html#newsletter" class="btn btn-primary">Get the Free Checklist</a>
+        </div>
+
+        <p style="margin-top: var(--space-xl); font-size: var(--text-sm); color: var(--text-faint);">
+            <a href="/index.html#guides" class="nav-back"> — Back to all guides</a>
+        </p>
+
+    </div>
+</article>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 <a href="/index.html">China Travel OS</a>. Built for travelers, not algorithms.</p>
+    </div>
+</footer>
+
+</body>
+</html>

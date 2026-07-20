@@ -1,0 +1,494 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Prepare Internet Access Before Visiting China (2026) — China Travel OS</title>
+    <meta name="description" content="Install and test your VPN before flying to China. Step-by-step Surfshark setup guide — iPhone & Android. Don't wait until you land.">
+    <meta property="og:title" content="How to Prepare Internet Access Before Visiting China">
+    <meta property="og:description" content="The biggest mistake first-time visitors make isn't choosing the wrong VPN. It's trying to download one after landing. Here's exactly what to do.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://chinatravelos.com/guide/images/og-vpn.jpg">
+    <meta property="og:url" content="https://chinatravelos.com/guide/vpn.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VPN Setup Guide — China Travel OS">
+    <meta name="twitter:description" content="Practical, honest guide for first-time travelers to China.">
+    <meta name="twitter:image" content="https://chinatravelos.com/guide/images/og-vpn.jpg">
+    <meta property="article:modified_time" content="2026-07-01">
+    <link rel="canonical" href="https://chinatravelos.com/guide/vpn.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400&amp;family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:           #FAFAFA;
+            --surface:      #FFFFFF;
+            --text:         #1C1614;
+            --text-sub:     #5A4D49;
+            --text-faint:   #968883;
+            --accent:       #D94838;
+            --accent-hover: #B8382A;
+            --accent-muted: #FDF0ED;
+            --border:       #E6E0DD;
+            --border-light: #F2EFED;
+            --radius:       10px;
+            --radius-l:     16px;
+            --radius-pill:  999px;
+            --max-w:        1120px;
+            --content-w:    720px;
+            --nav-h:        64px;
+            --z-nav:        50;
+
+            --space-xs:  4px;
+            --space-sm:  8px;
+            --space-md:  16px;
+            --space-lg:  24px;
+            --space-xl:  32px;
+            --space-2xl: 48px;
+            --space-3xl: 64px;
+            --space-4xl: 96px;
+
+            --text-xs:   0.75rem;
+            --text-sm:   0.875rem;
+            --text-base: 1rem;
+            --text-md:   1.125rem;
+            --text-lg:   1.375rem;
+            --text-xl:   1.75rem;
+            --text-2xl:  2.25rem;
+            --text-3xl:  2.875rem;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; max-width: 100%; }
+        body {
+            max-width: 100%; font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg); color: var(--text); line-height: 1.7; font-size: 1rem;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Literata', 'Georgia', 'Times New Roman', serif;
+            text-wrap: balance; line-height: 1.15;
+        }
+        a { color: inherit; text-decoration: none; }
+        img, video { max-width: 100%; height: auto; display: block; border-radius: var(--radius); }
+
+        /* Nav */
+        .nav {
+            position: sticky; top: 0; z-index: var(--z-nav);
+            background: var(--surface);
+            border-bottom: 1px solid var(--border-light); height: var(--nav-h);
+        }
+        .nav .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--space-lg); display: flex; align-items: center; justify-content: space-between; height: 100%; }
+        .nav-logo { font-family: 'Literata', 'Georgia', 'Times New Roman', serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em; }
+        .nav-logo span { color: var(--accent); }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-links a { font-size: var(--text-sm); font-weight: 500; color: var(--text-sub); transition: color .15s; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-back { font-size: var(--text-sm); font-weight: 600; color: var(--accent); }
+        .nav-back:hover { color: var(--accent-hover); }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-back { display: none; }
+            .btn { white-space: normal; }
+        }
+
+        /* Article layout */
+        .article { padding: 56px 0 80px; }
+        .article .container { max-width: var(--content-w); margin: 0 auto; padding: 0 var(--space-lg); }
+
+        .breadcrumb { font-size: var(--text-xs); color: var(--text-faint); margin-bottom: 32px; }
+        .breadcrumb a { color: var(--text-sub); transition: color .15s; }
+        .breadcrumb a:hover { color: var(--text); }
+
+        .article h1 {
+            font-size: clamp(28px, 5vw, 42px); font-weight: 800;
+            letter-spacing: -.03em; line-height: 1.15; margin-bottom: 12px;
+        }
+        .article .byline { font-size: var(--text-sm); color: var(--text-faint); margin-bottom: 36px; }
+        .article .byline strong { color: var(--text-sub); font-weight: 600; }
+
+        /* TL;DR box */
+        .tldr {
+            background: #FEF9F3; border: 1px solid #FDE8D8; border-radius: var(--radius-l);
+            padding: 24px 28px; margin-bottom: 40px;
+        }
+        .tldr h3 { font-size: var(--text-sm); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--accent); margin-bottom: 10px; }
+        .tldr p { font-size: var(--text-sm); margin-bottom: 0; color: var(--text); }
+        .tldr strong { color: var(--accent); }
+
+        /* Content */
+        
+        /* TOC */
+        .toc {
+            background: var(--surface); border: 1px solid var(--border-light);
+            border-radius: var(--radius-l); padding: var(--space-lg) var(--space-xl);
+            margin-bottom: var(--space-2xl);
+        }
+        .toc h3 {
+            font-size: var(--text-sm); font-weight: 700; text-transform: uppercase;
+            letter-spacing: .05em; color: var(--text-faint); margin-bottom: var(--space-md);
+            font-family: 'Work Sans', sans-serif;
+        }
+        .toc ol { list-style: none; padding: 0; margin: 0; }
+        .toc li { margin-bottom: 6px; }
+        .toc a {
+            font-size: var(--text-sm); color: var(--text-sub);
+            transition: color .15s; text-decoration: none;
+        }
+        .toc a:hover { color: var(--accent); }
+.article h2 {
+            font-size: 24px; font-weight: 700; letter-spacing: -.02em;
+            margin: 44px 0 14px; padding-top: 20px; scroll-margin-top: 80px;
+        }
+        .article h3 { font-size: 18px; font-weight: 700; margin: 28px 0 10px; }
+        .article p { margin-bottom: 16px; color: var(--text); }
+        .article ul, .article ol { margin-bottom: 20px; padding-left: 24px; }
+        .article li { margin-bottom: 8px; }
+
+        /* Image styling */
+        .article img.screenshot {
+            border: 1px solid var(--border);
+            
+            border-radius: var(--radius-l);
+            margin: 24px 0;
+            width: 100%;
+            max-width: 480px;
+        }
+
+        /* Tip / Warning boxes */
+        .callout {
+            border: 1px solid var(--border); background: #FFF5F3;
+            padding: 16px 20px; border-radius: var(--radius);
+            margin-bottom: 24px; font-size: var(--text-sm);
+        }
+        .callout strong { color: var(--accent); }
+        .callout-teal { border-color: #0D9488; background: #F0FDF9; }
+        .callout-teal strong { color: #0F766E; }
+
+        /* Checklist */
+        .checklist { list-style: none; padding-left: 0; margin-bottom: 24px; }
+        .checklist li { padding: 4px 0; font-size: var(--text-sm); cursor: pointer; user-select: none; transition: color .15s; }
+        .checklist li::before { content: '—'; font-size: 18px; margin-right: 8px; color: var(--text-faint); transition: color .15s; }
+        .checklist li:hover { color: var(--text); }
+        .checklist li.checked { color: var(--text-faint); text-decoration: line-through; }
+        .checklist li.checked::before { content: '—'; color: #0F766E; }
+
+        /* Step number */
+        .step-num {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 28px; height: 28px; background: var(--accent); color: #fff;
+            border-radius: var(--radius-pill); font-size: var(--text-xs); font-weight: 700; margin-right: 8px;
+            flex-shrink: 0;
+        }
+
+        /* CTA at bottom */
+        .article-cta {
+            background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-l);
+            padding: 32px; margin-top: 48px; text-align: center;
+        }
+        .article-cta h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+        .article-cta p { color: var(--text-sub); font-size: var(--text-sm); margin-bottom: 16px; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 28px; border-radius: var(--radius-pill); font-weight: 600;
+            font-size: var(--text-sm); transition: background-color .2s cubic-bezier(.4, 0, 0, 1); cursor: pointer;
+            border: none; white-space: nowrap;
+        }
+        .btn-primary { background: var(--accent); color: #fff; }
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+        .btn-outline { background: var(--surface); color: var(--text); border: 1.5px solid var(--border); }
+        .btn-outline:hover { border-color: var(--border); background: var(--border-light); }
+
+        /* Footer */
+        .footer { padding: 32px 0; border-top: 1px solid var(--border); text-align: center; }
+        .footer .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--space-lg); }
+        .footer p { font-size: var(--text-xs); color: var(--text-faint); }
+        .footer a { color: var(--text-sub); transition: color .15s; }
+        .footer a:hover { color: var(--text); }
+
+        /* Related guides */
+        .related-guides { margin-top: 40px; }
+        .related-guides h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; }
+        .related-guides a { display: block; font-size: var(--text-sm); color: var(--accent); font-weight: 500; padding: 6px 0; transition: color .15s; }
+        .related-guides a:hover { color: var(--accent-hover); }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+            .btn:hover { transform: none; }
+            .section { animation: none; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How to Set Up a VPN Before Flying to China",
+        "description": "Step-by-step guide to installing and testing a VPN before your flight to China. The biggest mistake is landing without one.",
+        "image": "https://chinatravelos.com/guide/images/og-vpn.jpg",
+        "dateModified": "2026-07-01",
+        "author": { "@type": "Organization", "name": "China Travel OS" },
+        "publisher": { "@type": "Organization", "name": "China Travel OS" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chinatravelos.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://chinatravelos.com/#guides" },
+            { "@type": "ListItem", "position": 3, "name": "VPN Setup Guide", "item": "https://chinatravelos.com/guide/vpn.html" }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="container">
+        <a href="/index.html" class="nav-logo">China<span>Travel</span>OS</a>
+        <div class="nav-links">
+            <a href="/index.html#guides">Guides</a>
+            <a href="/index.html#cities">Cities</a>
+            <a href="/index.html#community">Community</a>
+            <a href="/index.html#newsletter">Free Guide</a>
+        </div>
+        <a href="/index.html" class="nav-back"> — Back to Guides</a>
+    </div>
+</nav>
+
+<article class="article">
+    <div class="container">
+
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> &nbsp;/&nbsp;
+            <a href="/index.html#guides">Guides</a> &nbsp;/&nbsp;
+            VPN Setup Guide
+        </div>
+
+        <h1>How to Set Up a VPN Before Flying to China</h1>
+        <p class="byline">Using Surfshark as an Example &nbsp;·&nbsp; By <strong>China Travel OS</strong> &nbsp;·&nbsp; Updated for 2026 Travelers</p>
+
+        <div class="tldr">
+            <h3>TL;DR — The Short Version</h3>
+            <p>If you're visiting China, <strong>install and test your VPN before your flight</strong>. The biggest mistake first-time visitors make isn't choosing the wrong VPN. It's landing in China and then trying to download one. For this guide, we'll use <strong>Surfshark</strong> as an example — it's beginner-friendly, available on all major devices, and takes less than 10 minutes to set up.</p>
+        </div>
+
+        <!-- TOC -->
+        <nav class="toc">
+            <h3>On this page</h3>
+            <ol>
+                <li><a href="#step-1">Step 1: Download a VPN</a></li>
+                <li><a href="#step-2">Step 2: Create Your Account</a></li>
+                <li><a href="#step-3">Step 3: Log In Before Your Flight</a></li>
+                <li><a href="#step-4">Step 4: Connect to a Server</a></li>
+                <li><a href="#step-5">Step 5: Test Everything</a></li>
+                <li><a href="#step-6">Step 6: Create a "China" Folder</a></li>
+                <li><a href="#common-questions">Common Questions</a></li>
+                <li><a href="#pro-tips">Pro Tips</a></li>
+                <li><a href="#final-checklist">Final Checklist</a></li>
+            </ol>
+        </nav>
+
+        <h2 id="do-before-fly">Why You Need to Do This Before You Fly</h2>
+        <p>Every month, I see the same thing happen. Someone lands in China, turns off airplane mode, opens Instagram — and nothing loads. Then they try Gmail. Nothing. Then Google Maps. Still nothing.</p>
+        <p>At that point they start searching: <em>"Best VPN for China."</em></p>
+        <p>Unfortunately, that's exactly the wrong time to start looking. Many VPN websites can be difficult to access once you're already in China. The solution is simple: <strong>install and test everything before you leave home.</strong></p>
+
+        <img src="images/vpn/1.png" alt="Traveler unable to access Instagram and Google services after arriving in China" class="screenshot" loading="lazy">
+
+        <h2 id="why-need-vpn">Why You Might Need a VPN in China</h2>
+        <p style="color:var(--text-sub);font-size:15px;margin-top:-10px;margin-bottom:20px;">A guide for first-time visitors</p>
+        <p>Most everyday services in China work smoothly:</p>
+        <ul>
+            <li>Alipay</li>
+            <li>WeChat</li>
+            <li>DiDi</li>
+            <li>Food delivery</li>
+            <li>High-speed trains</li>
+        </ul>
+        <p>But many services commonly used in Western countries are unavailable without a VPN. These include:</p>
+        <ul>
+            <li>Google Search</li>
+            <li>Gmail</li>
+            <li>Google Maps</li>
+            <li>YouTube</li>
+            <li>Instagram</li>
+            <li>Facebook</li>
+            <li>WhatsApp</li>
+            <li>Reddit</li>
+            <li>X (Twitter)</li>
+        </ul>
+        <p>If you rely on any of those services, prepare before your trip.</p>
+
+        <p><strong>How to Stay Connected in China?</strong> The answer isn't any single app — it's preparing <em>before</em> you fly. Below we'll walk through the setup using Surfshark as an example, but the same principles apply to the provider currently available on your device — the key is having something installed and tested. Don't overthink which one.</p>
+
+        <div class="callout">
+            <strong>⚖️ A note on scope:</strong> This guide is for short-term visitors preparing personal internet access before traveling. It is not legal advice. Rules and enforcement can change, and what works for one traveler may not work for another. Avoid using VPNs for any activity that may violate local laws — the risks are yours to assess.
+        </div>
+
+        <h2 id="step-1">Step 1: Download a VPN (Example: Surfshark)</h2>
+        <p>Choose your device and install Surfshark <strong>before</strong> traveling.</p>
+
+        <h3>iPhone</h3>
+        <p>Open the <strong>App Store</strong> and search for: <strong>Surfshark VPN</strong><br>Developer: <strong>Surfshark</strong></p>
+
+        <h3>Android</h3>
+        <p>Open <strong>Google Play</strong> and search for: <strong>Surfshark</strong><br>Developer: <strong>Surfshark</strong></p>
+
+        <div class="callout callout-teal">
+            <strong>💡 Important:</strong> There are dozens of VPN apps that look similar. Before downloading, make sure the developer name is <strong>Surfshark</strong>. If you're using Android, download it from Google Play before your trip. If you're using an iPhone, install it from the App Store before boarding your flight. Don't assume you'll be able to download it after landing.
+        </div>
+
+        <figure style="margin: 24px 0;">
+            <img src="images/vpn/2.png" alt="Surfshark VPN on the App Store — make sure the developer is Surfshark" class="screenshot" loading="lazy">
+            <figcaption style="font-size:12px;color:var(--text-faint);margin-top:8px;text-align:center;">Reference image</figcaption>
+        </figure>
+
+        <h2 id="step-2">Step 2: Create Your Account</h2>
+        <p>Open Surfshark. Create an account using your email address. Choose a subscription plan.</p>
+        <p>Use an email address you can easily access while traveling. Trust me — trying to reset passwords on airport WiFi after a 12-hour flight is not fun.</p>
+
+        <figure style="margin: 24px 0;">
+            <img src="images/vpn/3.png" alt="Surfshark account creation screen" class="screenshot" loading="lazy">
+            <figcaption style="font-size:12px;color:var(--text-faint);margin-top:8px;text-align:center;">Reference image</figcaption>
+        </figure>
+
+        <h2 id="step-3">Step 3: Log In Before Your Flight</h2>
+        <p>Open the app. Sign in. Make sure everything works.</p>
+        <p>This sounds obvious, but it's where a surprising number of people get stuck. I've had friends arrive in China only to discover they forgot their password and couldn't access their email to reset it. Solve that problem now, not later.</p>
+
+        <figure style="margin: 24px 0;">
+            <img src="images/vpn/4.png" alt="Surfshark login screen — sign in and verify before your flight" class="screenshot" loading="lazy">
+            <figcaption style="font-size:12px;color:var(--text-faint);margin-top:8px;text-align:center;">Reference image</figcaption>
+        </figure>
+
+        <h2 id="step-4">Step 4: Connect to a Server</h2>
+        <p>Open Surfshark. Choose a nearby location. Good options include:</p>
+        <ul>
+            <li>Japan</li>
+            <li>Singapore</li>
+            <li>South Korea</li>
+        </ul>
+        <p>Generally, closer servers mean better speed. You don't need to overthink this — just pick one and test it. Exact performance changes over time, so don't be surprised if one location works better than another on any given day.</p>
+
+        <figure style="margin: 24px 0;">
+            <img src="images/vpn/5.png" alt="Surfshark server selection — Japan, Singapore, and South Korea are good nearby options" class="screenshot" loading="lazy">
+            <figcaption style="font-size:12px;color:var(--text-faint);margin-top:8px;text-align:center;">Reference image</figcaption>
+        </figure>
+
+        <h2 id="step-5">Step 5: Test Everything</h2>
+        <p>Before your trip, connect to Surfshark and verify that:</p>
+        <ul class="checklist">
+            <li>Gmail opens</li>
+            <li>YouTube loads</li>
+            <li>Google Maps works</li>
+            <li>Instagram refreshes</li>
+            <li>WhatsApp sends messages</li>
+        </ul>
+        <p>If all five work, you're ready.</p>
+
+        <figure style="margin: 24px 0;">
+            <img src="images/vpn/6.png" alt="Surfshark connected — verify all your essential services work" class="screenshot" loading="lazy">
+            <figcaption style="font-size:12px;color:var(--text-faint);margin-top:8px;text-align:center;">Reference image</figcaption>
+        </figure>
+
+        <h2 id="step-6">Step 6: Create a "China" Folder</h2>
+        <p>This sounds silly. It's actually one of the best travel hacks I know.</p>
+        <p>Create a folder on your phone called <strong>"China"</strong> and put these apps inside:</p>
+        <ul>
+            <li>Surfshark</li>
+            <li>Alipay</li>
+            <li>WeChat</li>
+            <li>Apple Maps / Amap</li>
+            <li>DiDi</li>
+            <li>Google Translate</li>
+        </ul>
+        <p>When you land, everything is in one place. No searching through dozens of apps while a taxi driver waits.</p>
+
+        <img src="images/vpn/7.png" alt="China folder on iPhone — all essential apps in one place" class="screenshot" loading="lazy">
+
+        <h2 id="common-questions">Common Questions</h2>
+
+        <h3>Do I Need a VPN All the Time?</h3>
+        <p>No. Most Chinese apps work better without one. I usually turn my VPN on only when I need Gmail, Google, YouTube, Instagram, or WhatsApp. For Alipay payments, I often turn it off first — some VPNs interfere with the connection and the payment spinner just spins.</p>
+
+        <h3>Can I Install It After Landing?</h3>
+        <p>Maybe. Sometimes yes. Sometimes no. I wouldn't risk it. Install everything before your trip.</p>
+
+        <h3>Is Surfshark the Only Option?</h3>
+        <p>No. Check what's currently available for your device and location, and test before departure. Which VPN works best can change over time — what's more important is having <strong>a working VPN installed before your flight</strong>.</p>
+
+        <h2 id="pro-tips">💡 Pro Tips From People Who Live Here</h2>
+
+        <h3>Keep Two Browsers Installed</h3>
+        <p>Sometimes one browser behaves differently from another. Having both Chrome and Safari (or Chrome and Edge) gives you options.</p>
+
+        <h3>Save Important Information Offline</h3>
+        <p>Before your flight, save your hotel address, flight information, and emergency contacts. Take screenshots. Don't rely entirely on cloud services.</p>
+
+        <h3>Test on Mobile Data Too</h3>
+        <p>Some VPNs behave differently on WiFi and mobile networks. Test both before you travel.</p>
+
+        <h3>Don't Panic If One Server Is Slow</h3>
+        <p>Switch to Japan, Singapore, or South Korea — usually one of them will perform better.</p>
+
+        <div class="callout callout-teal">
+            <strong>💡 My personal recommendation:</strong> Don't spend hours comparing VPNs. Pick a reputable provider. Install it. Test it. Move on. The difference between having a decent VPN and having no VPN at all is <strong>huge</strong>. The difference between the top three VPN providers is usually much smaller than people think.
+        </div>
+
+        <h2 id="final-checklist">Final Checklist Before You Fly</h2>
+        <ul class="checklist">
+            <li>VPN app installed (e.g. Surfshark in this example)</li>
+            <li>Logged in successfully</li>
+            <li>Gmail tested</li>
+            <li>YouTube tested</li>
+            <li>Password saved somewhere safe</li>
+            <li>Added to your China folder</li>
+            <li>Hotel address saved offline</li>
+            <li>Emergency contacts saved</li>
+        </ul>
+        <p>If you've done all that, you're already better prepared than most first-time visitors. And future-you will be very grateful when the plane lands.</p>
+
+        <div class="related-guides">
+            <h3>Related Guides</h3>
+            <a href="/guide/alipay.html"> — How to Use Alipay in China</a>
+            <a href="/guide/apps.html"> — Essential Apps for China Travel</a>
+        </div>
+
+        <div class="article-cta">
+            <h3>Get the Free China Arrival Checklist</h3>
+            <p>The exact setup guide I send to friends before they visit China. VPN, eSIM, Alipay, essential apps — all in one place.</p>
+            <a href="/index.html#newsletter" class="btn btn-primary">Get the Free Checklist</a>
+        </div>
+
+        <p style="margin-top: 32px; font-size: var(--text-sm); color: var(--text-faint);">
+            <a href="/index.html#guides" class="nav-back"> — Back to all guides</a>
+        </p>
+
+    </div>
+</article>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 <a href="/index.html">China Travel OS</a>. Built for travelers, not algorithms.</p>
+    </div>
+</footer>
+
+<script>
+    (function() {
+        var lists = document.querySelectorAll('.checklist');
+        lists.forEach(function(list) {
+            list.addEventListener('click', function(e) {
+                var li = e.target.closest('li');
+                if (!li) return;
+                li.classList.toggle('checked');
+            });
+        });
+    })();
+</script>
+
+</body>
+</html>

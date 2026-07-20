@@ -1,0 +1,546 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use China's Metro &amp; Bus with Alipay — No Ticket Needed — China Travel OS</title>
+    <meta name="description" content="Skip the ticket machines. Use Alipay Transit QR to ride China's metro and buses — scan in, scan out, no paper tickets, no transit cards. Step-by-step guide for foreign travelers.">
+    <meta property="og:title" content="How to Use China's Metro &amp; Bus with Alipay (No Ticket Needed)">
+    <meta property="og:description" content="Foreign cards work. One QR code for metro and bus. No ticket machines required. Everything you need to know about riding China's public transit.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://chinatravelos.com/guide/images/og-metro.jpg">
+    <meta property="og:url" content="https://chinatravelos.com/guide/metro.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Metro & Bus Guide — China Travel OS">
+    <meta name="twitter:description" content="Practical, honest guide for first-time travelers to China.">
+    <meta name="twitter:image" content="https://chinatravelos.com/guide/images/og-metro.jpg">
+    <meta property="article:modified_time" content="2026-07-01">
+    <link rel="canonical" href="https://chinatravelos.com/guide/metro.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400&amp;family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:           #FAFAFA;
+            --surface:      #FFFFFF;
+            --text:         #1C1614;
+            --text-sub:     #5A4D49;
+            --text-faint:   #968883;
+            --accent:       #D94838;
+            --accent-hover: #B8382A;
+            --accent-muted: #FDF0ED;
+            --border:       #E6E0DD;
+            --border-light: #F2EFED;
+            --radius:       10px;
+            --radius-l:     16px;
+            --radius-pill:  999px;
+            --max-w:        1120px;
+            --content-w:    720px;
+            --nav-h:        64px;
+            --z-nav:        50;
+
+            --space-xs:  4px;
+            --space-sm:  8px;
+            --space-md:  16px;
+            --space-lg:  24px;
+            --space-xl:  32px;
+            --space-2xl: 48px;
+            --space-3xl: 64px;
+            --space-4xl: 96px;
+
+            --text-xs:   0.75rem;
+            --text-sm:   0.875rem;
+            --text-base: 1rem;
+            --text-md:   1.125rem;
+            --text-lg:   1.375rem;
+            --text-xl:   1.75rem;
+            --text-2xl:  2.25rem;
+            --text-3xl:  2.875rem;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; max-width: 100%; }
+        body {
+            max-width: 100%; font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg); color: var(--text); line-height: 1.7; font-size: 1rem;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Literata', 'Georgia', 'Times New Roman', serif;
+            text-wrap: balance; line-height: 1.15;
+        }
+
+        .section {
+            animation: section-in .6s cubic-bezier(.22, .61, .36, 1) both;
+            animation-timeline: view();
+            animation-range: entry 15%;
+        }
+        @keyframes section-in {
+            from { opacity: .6; translate: 0 24px; }
+            to   { opacity: 1;   translate: 0 0; }
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img, video { max-width: 100%; height: auto; display: block; border-radius: var(--radius); }
+
+        /* Nav */
+        .nav {
+            position: sticky; top: 0; z-index: var(--z-nav);
+            background: var(--surface);
+            border-bottom: 1px solid var(--border-light); height: var(--nav-h);
+        }
+        .nav .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--space-lg); display: flex; align-items: center; justify-content: space-between; height: 100%; }
+        .nav-logo { font-family: 'Literata', 'Georgia', 'Times New Roman', serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em; }
+        .nav-logo span { color: var(--accent); }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-links a { font-size: var(--text-sm); font-weight: 500; color: var(--text-sub); transition: color .15s; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-back { font-size: var(--text-sm); font-weight: 600; color: var(--accent); }
+        .nav-back:hover { color: var(--accent-hover); }
+
+        @media (max-width: 768px) { .nav-links { display: none; } .nav-back { display: none; } .article h1 { font-size: clamp(1.5rem, 8vw, 2rem); overflow-wrap: anywhere; } }
+
+        /* Article layout */
+        .article { padding: 56px 0 80px; }
+        .article .container { max-width: var(--content-w); margin: 0 auto; padding: 0 var(--space-lg); }
+
+        .breadcrumb { font-size: var(--text-xs); color: var(--text-faint); margin-bottom: 32px; }
+        .breadcrumb a { color: var(--text-sub); transition: color .15s; }
+        .breadcrumb a:hover { color: var(--text); }
+
+        .article h1 {
+            font-size: clamp(1.75rem, 5vw, 2.75rem); font-weight: 700;
+            letter-spacing: -0.015em; line-height: 1.15; margin-bottom: 12px;
+        }
+        .article .byline { font-size: var(--text-sm); color: var(--text-faint); margin-bottom: 36px; }
+        .article .byline strong { color: var(--text-sub); font-weight: 600; }
+
+        /* TL;DR box */
+        .tldr {
+            background: var(--accent-muted); border: 1px solid var(--border); border-radius: var(--radius-l);
+            padding: 24px 28px; margin-bottom: 40px;
+        }
+        .tldr h3 { font-size: var(--text-sm); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--accent); margin-bottom: 10px; }
+        .tldr ul { list-style: none; }
+        .tldr li { font-size: var(--text-sm); padding: 4px 0; }
+        .tldr li::before { content: '—'; color: #0D9488; font-weight: 700; }
+
+        /* Content */
+        
+        /* TOC */
+        .toc {
+            background: var(--surface); border: 1px solid var(--border-light);
+            border-radius: var(--radius-l); padding: var(--space-lg) var(--space-xl);
+            margin-bottom: var(--space-2xl);
+        }
+        .toc h3 {
+            font-size: var(--text-sm); font-weight: 700; text-transform: uppercase;
+            letter-spacing: .05em; color: var(--text-faint); margin-bottom: var(--space-md);
+            font-family: 'Work Sans', sans-serif;
+        }
+        .toc ol { list-style: none; padding: 0; margin: 0; }
+        .toc li { margin-bottom: 6px; }
+        .toc a {
+            font-size: var(--text-sm); color: var(--text-sub);
+            transition: color .15s; text-decoration: none;
+        }
+        .toc a:hover { color: var(--accent); }
+.article h2 {
+            font-size: var(--text-xl); font-weight: 600; letter-spacing: -0.01em;
+            margin: 44px 0 14px; padding-top: 20px; scroll-margin-top: 80px;
+        .article h3 { font-size: var(--text-md); font-weight: 600; margin: 28px 0 10px; }
+        .article p { margin-bottom: 16px; color: var(--text); }
+        .article ul, .article ol { margin-bottom: 20px; padding-left: 24px; }
+        .article li { margin-bottom: 8px; }
+
+        /* Tip / Warning / Mistake boxes */
+        .callout {
+            border: 1px solid var(--border); background: var(--accent-muted);
+            padding: 16px 20px; border-radius: var(--radius);
+            margin-bottom: 24px; font-size: var(--text-sm);
+        }
+        .callout strong { color: var(--accent); }
+        .callout-teal { border-color: #0D9488; background: #F0FDF9; }
+        .callout-teal strong { color: #0F766E; }
+
+        /* Mistake card */
+        .mistake-card {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius-l); padding: 24px 28px; margin-bottom: 16px;
+        }
+        .mistake-card h4 {
+            font-size: 1rem; font-weight: 700; margin-bottom: 6px;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .mistake-card h3 .mistake-num {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 26px; height: 26px; background: var(--accent); color: #fff;
+            border-radius: var(--radius-pill); font-size: var(--text-xs); font-weight: 700; flex-shrink: 0;
+        }
+        .mistake-card p { font-size: var(--text-sm); color: var(--text-sub); margin-bottom: 0; }
+
+        /* Step number */
+        .step-num {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 28px; height: 28px; background: var(--accent); color: #fff;
+            border-radius: var(--radius-pill); font-size: var(--text-xs); font-weight: 700; margin-right: 8px;
+            flex-shrink: 0; position: relative; top: -1px;
+        }
+
+        .step-block { margin-bottom: 32px; }
+        .step-block h3 { display: flex; align-items: flex-start; gap: 10px; }
+
+        /* Screenshot placeholder */
+        .img-placeholder {
+            display: flex; align-items: center; justify-content: center;
+            max-width: 420px; height: 200px; margin: 20px 0 28px;
+            background: var(--border-light); border: 1px dashed var(--border);
+            border-radius: var(--radius-l); color: var(--text-faint);
+            font-size: var(--text-xs); text-align: center;
+        }
+
+        /* CTA at bottom */
+        .article-cta {
+            background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--radius-l);
+            padding: var(--space-xl); margin-top: var(--space-2xl); text-align: center;
+        }
+        .article-cta h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+        .article-cta p { color: var(--text-sub); font-size: var(--text-sm); margin-bottom: 16px; }
+        .btn {
+            display: inline-flex; align-items: center; gap: var(--space-sm);
+            padding: 13px 26px; border-radius: var(--radius-pill); font-weight: 600;
+            font-size: var(--text-sm); cursor: pointer; border: none; white-space: nowrap;
+            font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            transition: background-color .2s cubic-bezier(.4, 0, 0, 1),
+                        color .2s cubic-bezier(.4, 0, 0, 1),
+                        transform .2s cubic-bezier(.4, 0, 0, 1);
+        }
+        .btn-primary { background: var(--accent); color: #fff; }
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+        .btn-outline { background: var(--surface); color: var(--text); border: 1.5px solid var(--border); }
+        .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--surface); border: 1px solid var(--border-light);
+            border-radius: var(--radius); padding: 20px 24px; margin-bottom: 12px;
+        }
+        .faq-item h4 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+        .faq-item p { font-size: var(--text-sm); color: var(--text-sub); margin-bottom: 0; }
+
+        /* Footer */
+        .footer { padding: var(--space-xl) 0; border-top: 1px solid var(--border-light); text-align: center; }
+        .footer .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--space-lg); }
+        .footer p { font-size: var(--text-xs); color: var(--text-faint); }
+        .footer a { color: var(--text-sub); transition: color .15s; }
+        .footer a:hover { color: var(--text); }
+
+        .related-guides-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+            margin-top: 16px;
+        }
+        .related-guide-card {
+            display: block; background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 16px 18px; transition: background-color .2s cubic-bezier(.4, 0, 0, 1);
+            color: var(--text); cursor: pointer;
+        }
+        .related-guide-card:hover { border-color: var(--border);  transform: translateY(-1px); }
+
+        @media (max-width: 500px) {
+            .related-guides-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+            .btn:hover { transform: none; }
+            .section { animation: none; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How to Use China's Metro & Bus with Alipay",
+        "description": "Skip the ticket machines. Use Alipay Transit QR to ride China's metro and buses — scan in, scan out, no paper tickets.",
+        "image": "https://chinatravelos.com/guide/images/og-metro.jpg",
+        "dateModified": "2026-07-01",
+        "author": { "@type": "Organization", "name": "China Travel OS" },
+        "publisher": { "@type": "Organization", "name": "China Travel OS" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chinatravelos.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://chinatravelos.com/#guides" },
+            { "@type": "ListItem", "position": 3, "name": "Metro & Bus Guide", "item": "https://chinatravelos.com/guide/metro.html" }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="container">
+        <a href="/index.html" class="nav-logo">China<span>Travel</span>OS</a>
+        <div class="nav-links">
+            <a href="/index.html#guides">Guides</a>
+            <a href="/index.html#cities">Cities</a>
+            <a href="/index.html#community">Community</a>
+            <a href="/index.html#newsletter">Free Guide</a>
+        </div>
+        <a href="/index.html" class="nav-back"> — Back to Guides</a>
+    </div>
+</nav>
+
+<article class="article">
+    <div class="container">
+
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> &nbsp;/&nbsp;
+            <a href="/index.html#guides">Guides</a> &nbsp;/&nbsp;
+            Metro &amp; Bus in China
+        </div>
+
+        <h1>How to Use China's Metro &amp; Bus with Alipay<br>(Skip the Ticket Machines)</h1>
+        <p class="byline">By <strong>China Travel OS</strong> &nbsp;·&nbsp; Updated 2026 — because standing at a ticket machine while a queue forms behind you is nobody's idea of a good arrival</p>
+
+        <div class="tldr">
+            <h3>TL;DR — The Short Version</h3>
+            <ul>
+                <li><strong>Use Alipay Transit QR</strong> — claim metro and bus codes once per city (2 min each), then scan and ride, no paper tickets, no cash</li>
+                <li><strong>No need to buy tickets first</strong> — walk straight to the metro gate or bus scanner and scan your phone</li>
+                <li><strong>Foreign cards work</strong> — your Visa or Mastercard linked in Alipay pays for all public transit rides</li>
+                <li><strong>Metro: scan in, scan out.</strong> Bus: just scan when boarding (no exit scan). Fare calculated automatically.</li>
+                <li><strong>Metro signs are bilingual</strong> — Chinese + English on every sign, every station, every announcement. Bus route numbers are Arabic numerals — easy to spot.</li>
+            </ul>
+        </div>
+
+        <!-- TOC -->
+        <nav class="toc">
+            <h3>On this page</h3>
+            <ol>
+                <li><a href="#first-time-setup">Part 1: First-Time Setup</a></li>
+                <li><a href="#ride-metro">Part 2: How to Ride the Metro</a></li>
+                <li><a href="#ride-bus">Part 3: How to Ride the Bus</a></li>
+                <li><a href="#common-mistakes">Common Mistakes</a></li>
+                <li><a href="#things-to-know">Things to Know</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ol>
+        </nav>
+
+        <h2 id="skip-ticket-machines">Skip the Ticket Machines</h2>
+        <p>Walk into any Chinese metro station and you'll see a row of ticket machines. Ignore them. Most locals don't bother with them anymore — locals haven't touched a ticket machine in years. The machines are there for the one person whose phone just died, and for grandparents who never switched to smartphone payments.</p>
+        <p>Also forget about UnionPay bank cards and physical transit cards. Yes, they exist. But as a foreign traveler, getting a transit card means finding the service counter, showing your passport, filling out a form, and loading money onto a card you'll use for maybe a week. It's not worth the friction.</p>
+        <p>The only thing you need: <strong>Alipay's Transit QR code.</strong> It works in most major Chinese cities with public transit — Beijing, Shanghai, Guangzhou, Shenzhen, Hangzhou, Chengdu, Chongqing, and dozens more. You'll claim a metro transit code and a bus transit code separately (takes 2 minutes each, one-time per city), then just scan and ride. Alipay charges your linked foreign card automatically.</p>
+
+        <div class="callout callout-teal">
+            <strong>💡 Already set up Alipay?</strong> If you followed our <a href="/guide/alipay.html" style="color:var(--accent);font-weight:600;">Alipay guide</a> and linked a foreign card, you're ready. The Transit QR feature is built into Alipay — no extra app, no deposit. Just claim your codes below.
+        </div>
+
+        <h2 id="first-time-setup">Part 1: First-Time Setup — Claim Your Transit Codes</h2>
+        <p>You only do this once per city. The process is the same for metro and bus — pick one, fill in your passport details, claim the code, then do the other. The exact wording may differ slightly between cities, but the flow is always: select metro or bus — fill your info — done.</p>
+
+        <div class="step-block">
+            <h3><span class="step-num">1</span> Open Alipay and tap "Transport"</h3>
+            <p>On the Alipay home screen, tap the <strong>"Transport"</strong> (出行) icon — it's the one with a bus or train. Usually in the top row of shortcuts.</p>
+            <img src="images/metro bus/0.jpg" alt="Alipay home screen with Transport icon highlighted" loading="lazy" style="max-width:380px; border-radius:var(--radius-l); margin:20px 0 28px; border:1px solid var(--border-light);">
+        </div>
+
+        <div class="step-block">
+            <h3><span class="step-num">2</span> Claim your Metro transit code first</h3>
+            <p>Inside Transport, you'll see three options. Ignore "One-card Pass" — that's a prepaid top-up card. Tap <strong>"Metro"</strong>, then tap the blue button at the bottom ("前往领取" in Chinese —"Obtain" or similar in English).</p>
+            <img src="images/metro bus/1.jpg" alt="Alipay Transport screen — Metro tab with Obtain button at the bottom" loading="lazy" style="max-width:380px; border-radius:var(--radius-l); margin:20px 0 28px; border:1px solid var(--border-light);">
+        </div>
+
+        <div class="step-block">
+            <h3><span class="step-num">3</span> Fill in your passport details</h3>
+            <p>A form appears. Fill in your <strong>Name</strong> and phone number (same as you used when registering Alipay). Tap <strong>ID Type</strong> and select <strong>"Passport"</strong>. Enter your <strong>passport number</strong> in the ID No. field. Then tap <strong>"Agree and obtain card"</strong>.</p>
+            <img src="images/metro bus/2.jpg" alt="Alipay transit card registration form — Name, ID Type, ID Number fields" loading="lazy" style="max-width:380px; border-radius:var(--radius-l); margin:20px 0 28px; border:1px solid var(--border-light);">
+        </div>
+
+        <div class="step-block">
+            <h3><span class="step-num">4</span> Metro code — done</h3>
+            <p>You'll see a confirmation screen. Your metro transit code is now active.</p>
+            <img src="images/metro bus/3.jpg" alt="Alipay confirmation — metro transit card successfully obtained" loading="lazy" style="max-width:380px; border-radius:var(--radius-l); margin:20px 0 28px; border:1px solid var(--border-light);">
+        </div>
+
+        <div class="step-block">
+            <h3><span class="step-num">5</span> Now claim your Bus transit code</h3>
+            <p>Go back to the Alipay home screen, tap <strong>"Transport"</strong> again, and this time tap the <strong>"Bus"</strong> tab. Tap the blue button at the bottom (same position as before).</p>
+            <img src="images/metro bus/4.jpg" alt="Alipay Transport screen — Bus tab with activate button" loading="lazy" style="max-width:380px; border-radius:var(--radius-l); margin:20px 0 28px; border:1px solid var(--border-light);">
+        </div>
+
+        <div class="step-block">
+            <h3><span class="step-num">6</span> Activate the bus card</h3>
+            <p>A "Select Bus Card" screen appears. Tap <strong>"Activate"</strong>.</p>
+            <img src="images/metro bus/6.jpg" alt="Alipay Select Bus Card screen with Activate button" loading="lazy" style="max-width:380px; border-radius:var(--radius-l); margin:20px 0 28px; border:1px solid var(--border-light);">
+        </div>
+
+        <div class="step-block">
+            <h3><span class="step-num">7</span> Fill in your details again and complete</h3>
+            <p>Same as the metro step — enter your name, select <strong>Passport</strong> as ID type, enter your passport number, then tap <strong>"Agree and receive card"</strong>. Done. Your Alipay now has both metro and bus transit codes. Payment is automatic through your linked card.</p>
+        </div>
+
+        <div class="callout callout-teal">
+            <strong>💡 Different cities, same process.</strong> Most major cities have their own transit systems, so you'll need to claim new codes when you travel to a new city. But the process is usually the same: tap Transport — pick Metro or Bus — fill passport details — done. After the first time, you'll breeze through it in 30 seconds.
+        </div>
+
+        <h2 id="ride-metro">Part 2: How to Ride the Metro</h2>
+        <p>Your codes are ready. Here's the actual experience from station entrance to exit — with real screenshots from Hangzhou.</p>
+
+        <div class="step-block">
+            <h3><span class="step-num">1</span> Go through security</h3>
+            <p>In most Chinese cities, metro stations have a security checkpoint. Put your bag and luggage on the conveyor belt. Any liquids you're carrying (water bottle, etc.) will be checked — don't try to skip this. It takes 15 seconds. Once through, look for the gates with a <strong>green arrow</strong> — those are the entry gates.</p>
+            <img src="images/metro bus/8.jpg" alt="Metro station entry gates with green arrows and a security checkpoint visible" loading="lazy" style="max-width:480px; border-radius:var(--radius-l); margin:20px 0 28px; border:1px solid var(--border-light);">
+        </div>
+
+        <div class="step-block">
+            <h3><span class="step-num">2</span> Open your Metro QR code</h3>
+            <p>Back to Alipay home —<strong>Transport</strong> —<strong>Metro</strong> tab. Since you've already claimed your code, a QR code appears immediately — no forms, no waiting.</p>
+            <img src="images/metro bus/0.jpg" alt="Alipay home screen with Transport icon" loading="lazy" style="max-width:380px; border-radius:var(--radius-l); margin:20px 0 28px; border:1px solid var(--border-light);">
+            <img src="images/metro bus/9.jpg" alt="Alipay Metro QR code ready to scan" loading="lazy" style="max-width:380px; border-radius:var(--radius-l); margin:0 0 28px; border:1px solid var(--border-light);">
+        </div>
+
+        <div class="step-block">
+            <h3><span class="step-num">3</span> Scan at the gate and enter</h3>
+            <p>Each gate has a small camera on top. Hold your phone screen facing the camera — about 5 — cm away. The gate opens immediately. Walk through.</p>
+            <img src="images/metro bus/10.jpg" alt="Phone held up to metro gate QR scanner camera" loading="lazy" style="max-width:380px; border-radius:var(--radius-l); margin:20px 0 28px; border:1px solid var(--border-light);">
+        </div>
+
+        <div class="step-block">
+            <h3><span class="step-num">4</span> Ride — then scan again to exit</h3>
+            <p>Metro stations are clean, air-conditioned, and bilingual. Platform screen doors, announcements in Chinese and English, arrival times shown to the minute. When you reach your stop, do exactly the same thing at the exit gate: open Alipay — Transport — Metro — hold QR to the camera. The gate opens, Alipay shows <strong>"Station exited"</strong>, and the fare is deducted automatically. Check your Alipay bill to see exactly how much — typically ¥2–8.</p>
+            <img src="images/metro bus/11.jpg" alt="Alipay screen showing Station exited after scanning out of metro" loading="lazy" style="max-width:380px; border-radius:var(--radius-l); margin:20px 0 28px; border:1px solid var(--border-light);">
+        </div>
+
+        <h2 id="ride-bus">Part 3: How to Ride the Bus</h2>
+        <p>Why bother with buses when the metro is so good? Two reasons. First, <strong>China's urban bus networks are massive</strong> — any major city runs 100+ bus lines. And in the many Chinese cities that don't have a metro, buses are simply the most convenient way to get around. Second, <strong>buses go where metros don't.</strong> That scenic lakeside road in Hangzhou? Bus. The old town alleys in Chengdu? Bus. The shortcut from your hotel to a metro station that's just a bit too far to walk? Bus.</p>
+        <p>One key rule to remember: <strong>board at the front door, exit at the back door.</strong> The scanner is usually next to the driver.</p>
+
+        <div class="step-block">
+            <h3><span class="step-num">1</span> Open your Bus QR code</h3>
+            <p>Alipay home —<strong>Transport</strong> —<strong>Bus</strong> tab. A QR code appears. Same as metro, just a different tab.</p>
+            <img src="images/metro bus/13.jpg" alt="Alipay Bus QR code ready to scan" loading="lazy" style="max-width:380px; border-radius:var(--radius-l); margin:20px 0 28px; border:1px solid var(--border-light);">
+        </div>
+
+        <div class="step-block">
+            <h3><span class="step-num">2</span> Scan at the ticket machine by the driver</h3>
+            <p>Board through the <strong>front door</strong>. To the right of the driver, you'll see a small ticket machine with a camera. Hold your phone screen to the camera. A satisfying <strong>"ding"</strong> sound, and Alipay shows <strong>"Payment successful"</strong> with the amount. In Hangzhou, it's ¥2 flat fare. Move toward the back of the bus — you'll exit through the back door when you reach your stop.</p>
+            <img src="images/metro bus/12.jpg" alt="Bus ticket machine with QR scanner next to the driver" loading="lazy" style="max-width:380px; border-radius:var(--radius-l); margin:20px 0 28px; border:1px solid var(--border-light);">
+            <img src="images/metro bus/14.jpg" alt="Alipay screen showing Payment successful —¥2 bus fare" loading="lazy" style="max-width:380px; border-radius:var(--radius-l); margin:0 0 28px; border:1px solid var(--border-light);">
+        </div>
+
+        <div class="step-block">
+            <h3><span class="step-num">3</span> No exit scan — just get off at the back door</h3>
+            <p>Unlike the metro, city buses charge a <strong>flat fare</strong> — you only scan when boarding. When your stop comes, walk out the <strong>back door</strong>. That's it. Use <strong>Amap (高德地图)</strong> to track your route in real time so you know when to get off — Google Maps bus data in China is unreliable.</p>
+        </div>
+
+        <h2 id="common-mistakes">Common Mistakes (Read Before You Ride)</h2>
+        <p>Every one of these has happened to a traveler I know. Learn from them in 2 minutes instead of discovering them at a crowded metro gate.</p>
+
+        <div class="mistake-card">
+            <h3><span class="mistake-num">1</span> Trying to buy tickets first</h3>
+            <p>You see the machines, you assume you need a ticket, you stand in line, you fumble with the English menu, and five minutes later you realize it only takes Chinese bank cards or cash. Meanwhile, locals are streaming past you, scanning their phones without breaking stride. Skip the machines entirely — go straight to the gate with Alipay.</p>
+        </div>
+
+        <div class="mistake-card">
+            <h3><span class="mistake-num">2</span> Forgetting to scan when exiting</h3>
+            <p>You arrive at your stop, walk through the open exit gate, and pat yourself on the back. Then next time you ride, Alipay charges you extra. The system doesn't know where you got off, so it assumes the worst. Always scan out — it takes half a second and the gate won't close on you.</p>
+        </div>
+
+        <div class="mistake-card">
+            <h3><span class="mistake-num">3</span> Using Google Maps instead of Amap</h3>
+            <p>Google Maps shows metro lines but the data is often incomplete — wrong exit numbers, missing new lines, outdated schedules. Chinese cities are opening new metro lines every few months, and only Chinese map apps keep up. Download <a href="/guide/apps.html" style="color:var(--accent);font-weight:600;">Amap (高德地图)</a> — it has an English mode for navigation and shows exact metro exit numbers, transfer walking times, and real-time arrival data.</p>
+        </div>
+
+        <div class="mistake-card">
+            <h3><span class="mistake-num">4</span> Going to the wrong metro exit</h3>
+            <p>This is very Chinese. A single metro station can have 6–8 exits — A, B, C, D, E, F — each opening to a different intersection. Exit A might put you directly in front of a museum. Exit D might drop you in a shopping mall basement. Exit F might leave you on the wrong side of an 8-lane road with no crosswalk. The difference between exits can be a 10-minute walk. <strong>Always check which exit you need before going up.</strong> Amap tells you the correct exit number for your destination.</p>
+        </div>
+
+        <div class="mistake-card">
+            <h3><span class="mistake-num">5</span> Not expecting security checks</h3>
+            <p>In most Chinese cities, metro stations have a security checkpoint at the entrance. You put your bag (and sometimes your water bottle) on a conveyor belt, walk through a metal detector, and pick it up on the other side. It takes 10–15 seconds. There's usually no line. It's routine and entirely unremarkable — but if nobody told you, it'd catch you off guard the first time. Avoid knives, flammable items, large aerosols, or anything obviously prohibited.</p>
+        </div>
+
+        <div class="mistake-card">
+            <h3><span class="mistake-num">6</span> Boarding the bus through the back door</h3>
+            <p>In many countries, you can board a bus through any door. In China, you generally board through the <strong>front door</strong> — that's where the scanner is. The back door is for exiting. Some newer buses have scanners at every door (look for the small rectangular device), but unless you see one, go to the front. Watch what locals do for 5 seconds and follow them.</p>
+        </div>
+
+        <h2 id="things-to-know">Things to Know</h2>
+
+        <ul>
+            <li><strong>Bilingual everything.</strong> Station names, line maps, exit signs, platform announcements, transfer directions — all in Chinese and English. You're unlikely to get lost. Even the ticket machines have an English button (not that you'll need them).</li>
+            <li><strong>It's cheap.</strong> Most city rides are around ¥2–8, while airport or long cross-city trips can cost more. A cross-city journey (e.g., Pudong Airport to Hongqiao in Shanghai, about 60 km) might cost ¥7–10 ($1.10). A day of heavy metro riding in most major Chinese cities costs less than a single tube ride in London.</li>
+            <li><strong>It's clean and safe.</strong> Chinese metro stations are consistently among the cleanest public spaces in the country. Trains are well-lit, stations have attendants, and there's security at every entrance. Late-night rides feel safe.</li>
+            <li><strong>Platform screen doors.</strong> Every station has glass doors between the platform and the tracks. They open only when the train arrives. You physically cannot fall onto the tracks.</li>
+            <li><strong>Transfers are well-signed.</strong> When you need to switch lines, follow the color-coded signs. Transfer walking distances are posted (usually 2–5 minutes). Some transfers in mega-stations can be long — People's Square in Shanghai has a transfer passage that's basically an underground street.</li>
+            <li><strong>No eating or drinking.</strong> It's technically prohibited on most metro systems. Nobody will arrest you for sipping water, but eating a full meal on the train will get you stared at.</li>
+            <li><strong>Give up the priority seats.</strong> Seats marked with a different color (usually bright orange or yellow) are for elderly, pregnant, disabled, and passengers with children. You can sit there, but give them up if someone needs them.</li>
+            <li><strong>Buses are air-conditioned and cheap.</strong> City buses cost ¥1–2 flat fare. They're modern, clean, and air-conditioned. Bus stops announce upcoming stops in Chinese and sometimes English. Use Amap to track your route in real time so you know when to get off.</li>
+            <li><strong>Night buses exist.</strong> Most cities have night bus routes (marked with "Y" or "N" prefix). They're less frequent but run after the metro closes. Amap shows them.</li>
+        </ul>
+
+        <h2 id="faq">FAQ</h2>
+
+        <div class="faq-item">
+            <h3>Do I need to use the ticket machines?</h3>
+            <p>No. Most travelers find Alipay Transit QR far easier. Ticket machines still exist, but they're mainly a backup if your phone isn't working. Many machines only accept Chinese bank cards or cash — your foreign card likely won't work in them anyway.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Does Alipay Transit QR work in every city?</h3>
+            <p>Yes — Beijing, Shanghai, Guangzhou, Shenzhen, Hangzhou, Chengdu, Chongqing, Nanjing, Wuhan, Xi'an, Suzhou, and most major Chinese cities with public transit. Each city has its own transit system, so you'll claim new metro and bus codes the first time you visit. The process is usually the same: pick metro or bus, fill passport details, done. Takes 2 minutes per mode.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What if my phone dies mid-ride?</h3>
+            <p>Find a station attendant near the exit gates. They'll help you — you may need to pay the fare in cash. This is one of the few scenarios where the ticket machines become relevant, but honestly, just keep your phone charged. Power banks are cheap and everywhere.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can I use WeChat instead of Alipay?</h3>
+            <p>Yes. WeChat also has a Transit QR feature. The experience is nearly identical. If you've set up WeChat Pay with a foreign card (<a href="/guide/wechat-pay.html" style="color:var(--accent);font-weight:600;">here's how</a>), you can use it for metro rides too. Most travelers stick with Alipay since they're already using it for everything else.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Is there a daily or weekly pass?</h3>
+            <p>Some cities offer 24-hour, 48-hour, or 72-hour metro passes at the service counter. They're physical cards, usually ¥18–25 depending on the city and duration. Worth it if you're doing 6+ rides a day. For most tourists doing 3–5 rides daily, pay-per-ride with Alipay is cheaper.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Do I need to claim both metro and bus codes?</h3>
+            <p>Yes, they're separate — but the process is identical. Claim your metro code first (Transport — Metro — fill passport details — done), then your bus code (Transport — Bus — fill passport details — done). After that, both codes live in the Transport section and you just switch tabs. One-time per city.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Do I scan when getting off the bus?</h3>
+            <p>No — city buses charge a flat fare (usually ¥1–2), so you only scan when boarding. Some longer suburban routes charge by distance and have a scanner at the back door too. When in doubt, look at what other passengers are doing.</p>
+        </div>
+
+        <div class="article-cta">
+            <h3>Get the Free China Arrival Checklist</h3>
+            <p>Metro setup, DiDi, shared bikes, Alipay walkthrough — everything you need for getting around Chinese cities, in one PDF.</p>
+            <a href="/index.html#newsletter" class="btn btn-primary">Get the Free Checklist</a>
+        </div>
+
+        <p style="margin-top: 28px; font-size: var(--text-sm); color: var(--text-faint);">
+            <a href="/index.html#guides" class="nav-back"> — Back to all guides</a>
+        </p>
+
+    </div>
+</article>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 <a href="/index.html">China Travel OS</a>. Built for travelers, not algorithms.</p>
+    </div>
+</footer>
+
+</body>
+</html>

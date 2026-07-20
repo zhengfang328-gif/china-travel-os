@@ -1,0 +1,1020 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>China Travel OS — Modern China, Explained for Travelers</title>
+    <meta name="description" content="Everything you need to travel China confidently. Payments, VPN, trains, apps — explained by people who actually live here.">
+    <meta property="og:title" content="China Travel OS — Modern China, Explained">
+    <meta property="og:description" content="From payments to train tickets — everything first-time travelers need to know about visiting China.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chinatravelos.com/">
+    <meta property="og:image" content="https://chinatravelos.com/images/og-home.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://chinatravelos.com/">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "China Travel OS",
+        "url": "https://chinatravelos.com/",
+        "description": "Modern China travel explained for first-time visitors.",
+        "publisher": { "@type": "Organization", "name": "China Travel OS" }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400&amp;family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+    <style>
+        /* ============================================
+           CSS CUSTOM PROPERTIES
+           Color strategy: all neutrals tinted toward
+           the brand red hue (12°) — nothing reads as
+           pure gray. OKLCH used for perceptual uniformity.
+           ============================================ */
+        :root {
+            --bg:           #FAFAFA;
+            --surface:      #FFFFFF;
+            --text:         #1C1614;
+            --text-sub:     #5A4D49;
+            --text-faint:   #968883;
+            --accent:       #D94838;
+            --accent-hover: #B8382A;
+            --accent-muted: #FDF0ED;
+            --border:       #E6E0DD;
+            --border-light: #F2EFED;
+
+            --tint-peach:    #FFF3EB;
+            --tint-sky:      #EEF4FB;
+            --tint-lavender: #F3EFF9;
+            --tint-mint:     #EBF7EF;
+            --tint-yellow:   #FFFCF0;
+            --tint-cream:    #FAF7F2;
+            --tint-stone:    #F6F3F1;
+
+            --space-xs:  4px;
+            --space-sm:  8px;
+            --space-md:  16px;
+            --space-lg:  24px;
+            --space-xl:  32px;
+            --space-2xl: 48px;
+            --space-3xl: 64px;
+            --space-4xl: 96px;
+
+            --text-xs:   0.75rem;
+            --text-sm:   0.875rem;
+            --text-base: 1rem;
+            --text-md:   1.125rem;
+            --text-lg:   1.375rem;
+            --text-xl:   1.75rem;
+            --text-2xl:  2.25rem;
+            --text-3xl:  2.875rem;
+
+            --radius:     10px;
+            --radius-l:   16px;
+            --radius-pill: 999px;
+            --max-w:      1120px;
+            --nav-h:      64px;
+            --z-nav:      50;
+        }
+
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; max-width: 100%; }
+        body {
+            font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            font-size: var(--text-base);
+            max-width: 100%;
+        }
+        img, video { max-width: 100%; height: auto; }
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+        button, input { font-family: inherit; font-size: inherit; }
+        h1, h2, h3, h4 {
+            font-family: 'Literata', 'Georgia', 'Times New Roman', serif;
+            text-wrap: balance; line-height: 1.15;
+        }
+
+        /* Subtle section entrance — visible by default, animation enhances */
+        .section {
+            animation: section-in .6s cubic-bezier(.22, .61, .36, 1) both;
+            animation-timeline: view();
+            animation-range: entry 15%;
+        }
+        @keyframes section-in {
+            from { opacity: .6; translate: 0 24px; }
+            to   { opacity: 1;   translate: 0 0; }
+        }
+
+        /* ============================================
+           UTILITY CLASSES
+           ============================================ */
+        .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--space-lg); }
+        .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+        /* ============================================
+           BUTTONS — targeted transitions only
+           ============================================ */
+        .btn {
+            display: inline-flex; align-items: center; gap: var(--space-sm);
+            padding: 13px 26px; border-radius: var(--radius-pill); font-weight: 600;
+            font-size: var(--text-sm); cursor: pointer; border: none; white-space: nowrap;
+            font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            transition: background-color .2s cubic-bezier(.4, 0, 0, 1),
+                        color .2s cubic-bezier(.4, 0, 0, 1),
+                        transform .2s cubic-bezier(.4, 0, 0, 1);
+        }
+        .btn-primary { background: var(--accent); color: #fff; }
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+        .btn-outline {
+            background: transparent; color: var(--text);
+            border: 1.5px solid var(--border);
+        }
+        .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+        .btn-teal { background: #0D9488; color: #fff; }
+        .btn-teal:hover { background: #0F766E; transform: translateY(-1px); }
+        .btn-ghost {
+            background: transparent; color: var(--text-sub);
+            border: 1.5px solid var(--border-light);
+        }
+        .btn-ghost:hover { border-color: var(--border); color: var(--text); }
+
+        /* ============================================
+           NAVIGATION — solid, not glassy
+           ============================================ */
+        .nav {
+            position: sticky; top: 0; z-index: var(--z-nav);
+            background: var(--surface);
+            border-bottom: 1px solid var(--border-light);
+            height: var(--nav-h);
+        }
+        .nav .container {
+            display: flex; align-items: center; justify-content: space-between;
+            height: 100%;
+        }
+        .nav-logo {
+            font-family: 'Literata', 'Georgia', 'Times New Roman', serif;
+            font-weight: 700; font-size: 20px;
+            letter-spacing: -0.01em; color: var(--text);
+        }
+        .nav-logo span { color: var(--accent); }
+        .nav-links { display: flex; align-items: center; gap: var(--space-xl); }
+        .nav-links a {
+            font-size: var(--text-sm); font-weight: 500; color: var(--text-sub);
+            transition: color .15s;
+        }
+        .nav-links a:hover { color: var(--text); }
+        .nav-cta { display: none; }
+        .mobile-toggle {
+            display: none; background: none; border: none;
+            font-size: 20px; cursor: pointer; padding: var(--space-xs);
+            color: var(--text); line-height: 1;
+        }
+        .nav-links.open {
+            display: flex; flex-direction: column;
+            position: absolute; top: var(--nav-h); left: 0; right: 0;
+            background: var(--surface); border-bottom: 1px solid var(--border);
+            padding: var(--space-lg); gap: var(--space-md);
+        }
+
+        /* ============================================
+           HERO — editorial, no badge
+           ============================================ */
+        .hero {
+            padding: var(--space-4xl) 0 var(--space-3xl);
+            text-align: center;
+            background: linear-gradient(180deg,
+                var(--accent-muted) 0%,
+                var(--bg) 40%
+            );
+        }
+        .hero-badge { display: none; }
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700; color: var(--text);
+            max-width: 800px; margin: 0 auto var(--space-lg);
+            letter-spacing: -0.015em;
+        }
+        .hero h1 em {
+            font-style: italic; color: var(--accent);
+            text-decoration: underline;
+            text-decoration-color: var(--accent);
+            text-underline-offset: 6px;
+            text-decoration-thickness: 2px;
+        }
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.125rem);
+            color: var(--text-sub);
+            max-width: 560px; margin: 0 auto var(--space-2xl);
+            line-height: 1.55;
+        }
+        .hero-buttons { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+
+        /* ============================================
+           SECTION HEADERS
+           ============================================ */
+        .section { padding: var(--space-4xl) 0; }
+        .section-header { text-align: center; margin-bottom: var(--space-3xl); }
+        .section-label {
+            font-family: 'Work Sans', sans-serif;
+            font-size: var(--text-xs); font-weight: 700;
+            text-transform: uppercase; letter-spacing: .06em;
+            color: var(--accent); margin-bottom: var(--space-sm);
+        }
+        .section-header h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 600; color: var(--text);
+            letter-spacing: -0.01em; margin-bottom: var(--space-sm);
+        }
+        .section-header p {
+            color: var(--text-sub); font-size: var(--text-md);
+            max-width: 540px; margin: 0 auto; line-height: 1.5;
+        }
+
+        /* ============================================
+           ANXIETY CARDS — border-only hover, no shadow
+           ============================================ */
+        .anxiety-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-md);
+        }
+        .anxiety-card {
+            display: block;
+            background: var(--surface); border: 1px solid var(--border-light);
+            border-radius: var(--radius-l); padding: var(--space-lg) var(--space-xl);
+            transition: border-color .2s cubic-bezier(.4, 0, 0, 1),
+                        background-color .2s cubic-bezier(.4, 0, 0, 1);
+            cursor: pointer; color: var(--text);
+        }
+        .anxiety-card:hover { border-color: var(--border); background: #F8F6F5; }
+        .anxiety-card:hover .card-link { color: var(--accent-hover); }
+        .anxiety-card-icon {
+            font-size: 32px; margin-bottom: var(--space-md); display: block;
+            width: 52px; height: 52px; line-height: 52px; text-align: center;
+            background: var(--border-light); border-radius: 14px;
+        }
+        .anxiety-card h3 {
+            font-family: 'Work Sans', sans-serif;
+            font-size: var(--text-base); font-weight: 600;
+            margin-bottom: 6px; letter-spacing: -0.005em;
+        }
+        .anxiety-card p {
+            font-size: var(--text-sm); color: var(--text-sub);
+            line-height: 1.5;
+        }
+        .anxiety-card .card-link {
+            display: inline-block; margin-top: var(--space-sm);
+            font-size: var(--text-xs); font-weight: 600; color: var(--accent);
+            transition: color .15s;
+        }
+        .anxiety-card-soon { cursor: default; opacity: .5; }
+        .anxiety-card-soon:hover { border-color: var(--border-light); background: var(--surface); }
+        .card-link-soon {
+            display: inline-block; margin-top: var(--space-sm);
+            font-size: var(--text-xs); font-weight: 600; color: var(--text-faint);
+            background: var(--border-light); padding: 2px 10px; border-radius: var(--radius-pill);
+        }
+
+        /* ============================================
+           CITY CARDS — flat colors, no gradients
+           ============================================ */
+        .city-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: var(--space-md);
+        }
+        .city-card {
+            display: flex; flex-direction: column; justify-content: flex-end;
+            position: relative; border-radius: var(--radius-l); overflow: hidden;
+            min-height: 360px; padding: var(--space-xl) var(--space-lg);
+            color: #fff;
+            transition: transform .3s cubic-bezier(.4, 0, 0, 1);
+        }
+        .city-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,.18); }
+        .city-card::before {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(180deg, transparent 20%, rgba(0,0,0,.15) 50%, rgba(0,0,0,.5) 100%);
+            z-index: 1;
+        }
+        .city-card::after {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,.08) 0%, transparent 60%);
+            z-index: 1; pointer-events: none;
+        }
+        .city-card > * { position: relative; z-index: 2; }
+        .city-card h3 { font-size: 2rem; font-weight: 700; margin-bottom: 2px; letter-spacing: -0.01em; }
+        .city-card p  { font-size: var(--text-xs); opacity: .85; margin-bottom: var(--space-sm); line-height: 1.5; font-family: 'Work Sans', sans-serif; }
+        .city-card .city-tag {
+            display: inline-block; background: rgba(255,255,255,.12);
+            font-size: 11px; font-weight: 600; padding: 4px 12px;
+            border-radius: var(--radius-pill);
+            margin-bottom: auto; width: fit-content;
+            font-family: 'Work Sans', sans-serif; letter-spacing: .01em;
+        }
+        .city-card .city-link-text {
+            font-size: var(--text-xs); font-weight: 600;
+            opacity: 0; transform: translateY(4px);
+            transition: opacity .25s cubic-bezier(.4, 0, 0, 1),
+                        transform .25s cubic-bezier(.4, 0, 0, 1);
+            display: flex; align-items: center; gap: 4px;
+        }
+        .city-card:hover .city-link-text { opacity: 1; transform: translateY(0); }
+        /* Always show CTA on touch devices — no hover available */
+        @media (hover: none) {
+            .city-card .city-link-text { opacity: 1; transform: translateY(0); }
+        }
+        .city-hangzhou { background: #2D5A3B; }
+        .city-shanghai { background: #C0392B; }
+        .city-chengdu  { background: #9B4D2F; }
+        .city-chongqing{ background: #2C2A4A; }
+
+        /* ============================================
+           GUIDE SECTION — category cards preserved
+           ============================================ */
+        .guide-categories { display: grid; gap: var(--space-lg); }
+        .guide-category {
+            background: var(--surface); border-radius: var(--radius-l);
+            padding: var(--space-xl) var(--space-xl) var(--space-2xl);
+            border: 1px solid var(--border-light);
+        }
+        .guide-category h3 {
+            font-size: var(--text-lg); font-weight: 600; letter-spacing: -0.01em;
+            margin-bottom: 4px; display: flex; align-items: center; gap: 10px;
+        }
+        .guide-category .cat-icon { font-size: 22px; }
+        .guide-category > p { color: var(--text-sub); font-size: var(--text-sm); margin-bottom: var(--space-lg); }
+        .guide-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xs);
+        }
+        .guide-item {
+            display: flex; align-items: center; gap: var(--space-md);
+            padding: var(--space-md) var(--space-lg);
+            border-radius: var(--radius);
+            transition: background-color .15s cubic-bezier(.4, 0, 0, 1);
+            cursor: pointer; color: var(--text);
+            border: 1px solid transparent;
+        }
+        .guide-item:hover { background: #F8F6F5; border-color: var(--border-light); }
+        .guide-item .gi-arrow {
+            color: var(--text-faint); font-size: 13px; flex-shrink: 0;
+            transition: transform .2s cubic-bezier(.4, 0, 0, 1),
+                        color .2s cubic-bezier(.4, 0, 0, 1);
+        }
+        .guide-item:hover .gi-arrow { transform: translateX(3px); color: var(--accent); }
+        /* Visited links fade so returning users see what they've read */
+        .guide-item:visited .gi-title,
+        .anxiety-card:visited h3 { color: var(--text-faint); }
+        .guide-item-soon {
+            cursor: default; opacity: .5; pointer-events: none;
+        }
+        .guide-item-soon .gi-title { color: var(--text-sub); }
+        .guide-item-soon:hover { background: transparent; border-color: transparent; }
+        .gi-soon {
+            font-size: 11px; font-weight: 600; color: var(--text-faint);
+            background: var(--border-light); padding: 3px 10px;
+            border-radius: var(--radius-pill); flex-shrink: 0;
+        }
+        .guide-item .gi-text { flex: 1; min-width: 0; }
+        .guide-item .gi-title {
+            font-family: 'Work Sans', sans-serif;
+            font-size: var(--text-sm); font-weight: 600;
+            letter-spacing: -0.005em; margin-bottom: 1px;
+        }
+        .guide-item .gi-desc { font-size: var(--text-xs); color: var(--text-sub); }
+        .gi-tag {
+            display: inline-block; font-size: 10px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: .04em;
+            padding: 2px 8px; border-radius: var(--radius-pill); margin-left: var(--space-sm);
+            background: var(--accent-muted); color: var(--accent);
+            vertical-align: middle; position: relative; top: -1px;
+        }
+        .gi-badge-essential {
+            display: inline-block; font-size: 10px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: .04em;
+            padding: 3px 10px; border-radius: var(--radius-pill); margin-left: var(--space-sm);
+            background: var(--surface); color: var(--text);
+            border: 1px solid var(--border);
+            vertical-align: middle; position: relative; top: -1px;
+        }
+
+        /* ============================================
+           SOCIAL PROOF
+           ============================================ */
+        .social-section { background: var(--surface); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); }
+        .social-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-lg); text-align: center;
+        }
+        .social-item { padding: var(--space-lg); }
+        .social-item .si-icon { font-size: 40px; margin-bottom: var(--space-sm); }
+        .social-item h4 {
+            font-family: 'Work Sans', sans-serif;
+            font-size: var(--text-base); font-weight: 600; margin-bottom: 4px;
+        }
+        .social-item p { font-size: var(--text-sm); color: var(--text-sub); }
+
+        /* ============================================
+           NEWSLETTER — accent background block
+           ============================================ */
+        .newsletter-inner {
+            max-width: 600px; margin: 0 auto; text-align: center;
+            padding: var(--space-3xl) var(--space-xl);
+            background: var(--accent); color: #fff;
+            border-radius: var(--radius-l);
+        }
+        .newsletter-inner h2 {
+            color: #fff; font-weight: 600; margin-bottom: var(--space-sm);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+        .newsletter-inner p {
+            color: rgba(255,255,255,.8); font-size: var(--text-sm);
+            margin-bottom: var(--space-lg);
+        }
+
+        .newsletter-form { display: flex; gap: var(--space-sm); max-width: 420px; margin: 0 auto; }
+        .newsletter-form input {
+            flex: 1; padding: 13px 18px;
+            border: 1.5px solid rgba(255,255,255,.25);
+            border-radius: var(--radius-pill);
+            font-size: var(--text-sm); outline: none;
+            background: rgba(255,255,255,.1); color: #fff;
+            transition: border-color .15s;
+        }
+        .newsletter-form input::placeholder { color: rgba(255,255,255,.5); }
+        .newsletter-form input:focus { border-color: rgba(255,255,255,.5); }
+        .newsletter-form input.error { border-color: #FECACA; background: rgba(255,100,100,.15); }
+        .newsletter-form .btn {
+            background: #fff; color: var(--accent); font-weight: 700;
+            flex-shrink: 0;
+        }
+        .newsletter-form .btn:hover { background: #F5F0EE; transform: translateY(-1px); }
+        .form-msg { display: none; margin-top: var(--space-md); font-size: var(--text-xs); font-weight: 500; padding: 10px 16px; border-radius: var(--radius); }
+        .form-msg.success { display: block; background: rgba(255,255,255,.15); color: #fff; border: 1px solid rgba(255,255,255,.2); }
+        .form-msg.error   { display: block; background: rgba(255,100,100,.15); color: #fff; border: 1px solid rgba(255,255,255,.15); }
+
+           FOOTER
+           ============================================ */
+        .footer { padding: var(--space-3xl) 0 var(--space-xl); border-top: 1px solid var(--border-light); }
+        .footer-grid {
+            display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: var(--space-2xl); margin-bottom: var(--space-2xl);
+        }
+        .footer-col h4 {
+            font-family: 'Work Sans', sans-serif;
+            font-size: var(--text-xs); font-weight: 700;
+            text-transform: uppercase; letter-spacing: .04em;
+            margin-bottom: var(--space-md); color: var(--text-faint);
+        }
+        .footer-col a {
+            display: block; font-size: var(--text-sm); color: var(--text-sub);
+            margin-bottom: var(--space-sm); transition: color .15s;
+        }
+        .footer-col a:hover { color: var(--text); }
+        .footer-brand {
+            font-family: 'Literata', 'Georgia', 'Times New Roman', serif;
+            font-weight: 700; font-size: 20px; margin-bottom: var(--space-sm);
+        }
+        .footer-brand span { color: var(--accent); }
+        .footer-bottom {
+            text-align: center; padding-top: var(--space-lg);
+            border-top: 1px solid var(--border-light);
+            font-size: var(--text-xs); color: var(--text-faint);
+        }
+
+        /* ============================================
+           REDUCED MOTION
+           ============================================ */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+            }
+            .city-card:hover { transform: none; }
+            .btn:hover { transform: none; }
+            .guide-item:hover .gi-arrow { transform: none; }
+            .section { animation: none; }
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-cta  { display: none; }
+            .mobile-toggle { display: block; }
+            .hero { padding: var(--space-3xl) 0 var(--space-2xl); }
+            .hero h1 {
+                font-size: clamp(1.75rem, 8vw, 2rem);
+                overflow-wrap: anywhere;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .hero-buttons .btn,
+            .hero .btn-ghost {
+                width: 100%;
+                justify-content: center;
+                white-space: normal;
+            }
+            .section { padding: var(--space-3xl) 0; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--space-xl); }
+            .newsletter-form { flex-direction: column; }
+            .newsletter-inner { padding: var(--space-2xl) var(--space-lg); }
+            .guide-list { grid-template-columns: 1fr; }
+            .anxiety-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            .container { padding: 0 var(--space-md); }
+            .footer-grid { grid-template-columns: 1fr; }
+            .city-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================
+     NAVIGATION
+     ============================================ -->
+<nav class="nav">
+    <div class="container">
+        <a href="#" class="nav-logo">China<span>Travel</span>OS</a>
+        <div class="nav-links" id="navLinks">
+            <a href="#guides">Guides</a>
+            <a href="#cities">Cities</a>
+            <a href="#community">Community</a>
+            <a href="#newsletter">Free Guide</a>
+        </div>
+        <a href="/index.html#newsletter" class="btn btn-primary nav-cta">Start Planning</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+</nav>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-badge">🇨🇳 Now easier than you think</div>
+        <h1>China, <em>made simple.</em></h1>
+        <p>Payments, apps, metro, internet, first-day setup. Our free checklist covers everything you need before visiting China.</p>
+        <div class="hero-buttons">
+            <a href="/index.html#newsletter" class="btn btn-primary">Free China Arrival Checklist &#8595;</a>
+            <a href="#guides" class="btn btn-outline">Start Planning → See Guides</a>
+            <a href="#cities" class="btn btn-outline">Where to? →</a>
+        </div>
+        <div style="text-align:center; margin-top:var(--space-md);">
+            <a href="#community" class="btn btn-ghost">🎬 Watch on TikTok →</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     ANXIETY BUSTERS — What's Holding You Back?
+     ============================================ -->
+<section class="section" id="anxiety">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">Don't let these stop you</div>
+            <h2>What foreigners worry about most</h2>
+            <p>These are the questions every first-time visitor asks. We've answered them all, clearly and honestly, with zero jargon.</p>
+            <p style="margin-top:var(--space-sm);"><a href="/guide/checklist.html" style="font-weight:600; color:var(--accent);">New to China? Start with the free checklist →</a></p>
+        </div>
+        <div class="anxiety-grid">
+
+            <a href="/guide/alipay.html" class="anxiety-card">
+                <span class="anxiety-card-icon" aria-hidden="true">💳</span>
+                <h3>Can I Use My Foreign Card in China?</h3>
+                <p>Alipay, WeChat Pay, Visa and Mastercard explained.</p>
+                <span class="card-link">Read guide →</span>
+            </a>
+
+            <a href="/guide/vpn.html" class="anxiety-card">
+                <span class="anxiety-card-icon" aria-hidden="true">🔒</span>
+                <h3>Will Google Work in China?</h3>
+                <p>What happens to Gmail, WhatsApp, Instagram and Google Maps.</p>
+                <span class="card-link">Read guide →</span>
+            </a>
+
+            <a href="/guide/esim.html" class="anxiety-card">
+                <span class="anxiety-card-icon" aria-hidden="true">📶</span>
+                <h3>Do I Need a Chinese SIM or eSIM?</h3>
+                <p>eSIM vs roaming vs local SIM: which to pick, and when to buy.</p>
+                <span class="card-link">Read guide →</span>
+            </a>
+
+            <a href="/guide/trains.html" class="anxiety-card">
+                <span class="anxiety-card-icon" aria-hidden="true">🚄</span>
+                <h3>Can Foreigners Buy Train Tickets?</h3>
+                <p>12306, Trip.com, and how to book before you go.</p>
+                <span class="card-link">Read guide →</span>
+            </a>
+
+            <a href="/guide/metro.html" class="anxiety-card">
+                <span class="anxiety-card-icon" aria-hidden="true">🚇</span>
+                <h3>How Do I Get Around Chinese Cities?</h3>
+                <p>Metro, DiDi and bike sharing. The apps locals actually use.</p>
+                <span class="card-link">Read guide →</span>
+            </a>
+
+            <a href="/guide/apps.html" class="anxiety-card">
+                <span class="anxiety-card-icon" aria-hidden="true">📲</span>
+                <h3>Which Apps Do I Need Before Landing?</h3>
+                <p>Maps, translate, ride-hailing: the 8 essentials ranked.</p>
+                <span class="card-link">Read guide →</span>
+            </a>
+
+            <a href="/guide/safety.html" class="anxiety-card">
+                <span class="anxiety-card-icon" aria-hidden="true">🛡️</span>
+                <h3>Is China Safe for Tourists?</h3>
+                <p>Solo travel, women at night. The honest data, not clickbait.</p>
+                <span class="card-link">Read guide →</span>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     CITY GATEWAYS
+     ============================================ -->
+<section class="section" id="cities">
+    <div class="container">
+        <div class="section-header">
+            <h2>Where do you want to go?</h2>
+            <p>Each city is a different China. Start with one, and we'll show you around like a local.</p>
+        </div>
+        <div class="city-grid">
+
+            <a href="/city/hangzhou.html" class="city-card city-hangzhou">
+                <span class="city-tag">🌿 Nature meets AI</span>
+                <h3>Hangzhou</h3>
+                <p>West Lake, tea mountains, AI startups. Ancient beauty meets China's most dynamic tech ecosystem.</p>
+                <span class="city-link-text">Explore Hangzhou →</span>
+            </a>
+
+            <a href="/city/shanghai.html" class="city-card city-shanghai">
+                <span class="city-tag">🌆 First-timer favorite</span>
+                <h3>Shanghai</h3>
+                <p>Skyline bars, French Concession lanes, and the world's best metro.</p>
+                <span class="city-link-text">Explore Shanghai →</span>
+            </a>
+
+            <a href="/city/chengdu.html" class="city-card city-chengdu">
+                <span class="city-tag">🐼 Laid-back vibes</span>
+                <h3>Chengdu</h3>
+                <p>Pandas, spicy hotpot, teahouse culture, and the slowest-paced big city in China.</p>
+                <span class="city-link-text">Explore Chengdu →</span>
+            </a>
+
+            <a href="/city/chongqing.html" class="city-card city-chongqing">
+                <span class="city-tag">🚠 Cyberpunk realness</span>
+                <h3>Chongqing</h3>
+                <p>Trains run through buildings, roads stack 8 layers high, and the night views are absolutely unreal.</p>
+                <span class="city-link-text">Explore Chongqing →</span>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     GUIDE HUB — SEO Content
+     ============================================ -->
+<section class="section" id="guides">
+    <div class="container">
+        <div class="section-header">
+            <h2>Real questions, real answers</h2>
+            <p>Every article targets a real search query: the exact questions foreigners type before visiting China.</p>
+        </div>
+        <div class="guide-categories">
+
+            <!-- Category A: Payments -->
+            <div class="guide-category" style="background: var(--tint-peach);">
+                <h3><span class="cat-icon" aria-hidden="true">💳</span> Payments</h3>
+                <p>China runs on QR codes. Set these up before you fly.</p>
+                <div class="guide-list">
+                    <a href="/guide/alipay.html" class="guide-item">
+                        <span class="gi-text">
+                            <div class="gi-title">How to Use Alipay in China (With a Foreign Card)<span class="gi-badge-essential">⭐ Essential</span></div>
+                            <div class="gi-desc">Step-by-step setup. The one payment app you can't skip.</div>
+                        </span>
+                        <span class="gi-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a href="/guide/wechat-pay.html" class="guide-item">
+                        <span class="gi-text">
+                            <div class="gi-title">Can Foreigners Use WeChat Pay? The 2026 Guide</div>
+                            <div class="gi-desc">Yes. Setup guide, common pitfalls, and when to use it vs Alipay.</div>
+                        </span>
+                        <span class="gi-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Category B: Internet -->
+            <div class="guide-category" style="background: var(--tint-sky);">
+                <h3><span class="cat-icon" aria-hidden="true">📶</span> Internet &amp; Connectivity</h3>
+                <p>Google, WhatsApp, Instagram are all blocked. Here's how to stay online.</p>
+                <div class="guide-list">
+                    <a href="/guide/vpn.html" class="guide-item">
+                        <span class="gi-text">
+                            <div class="gi-title">How to Stay Connected in China: VPN Guide<span class="gi-badge-essential">⭐ Essential</span></div>
+                            <div class="gi-desc">Which VPNs work, how to install before you fly, tested monthly.</div>
+                        </span>
+                        <span class="gi-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a href="/guide/esim.html" class="guide-item">
+                        <span class="gi-text">
+                            <div class="gi-title">How to Get Internet in China: eSIM & Data Guide<span class="gi-badge-essential">⭐ Essential</span></div>
+                            <div class="gi-desc">eSIM, roaming, local SIM, portable WiFi: every option compared.</div>
+                        </span>
+                        <span class="gi-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Category C: Essential Apps -->
+            <div class="guide-category" style="background: var(--tint-lavender);">
+                <h3><span class="cat-icon" aria-hidden="true">📱</span> Essential Apps</h3>
+                <p>Maps, translate, ride-hailing, food delivery. The apps that make China easy.</p>
+                <div class="guide-list">
+                    <a href="/guide/apps.html" class="guide-item">
+                        <span class="gi-text">
+                            <div class="gi-title">China Travel Apps You Must Install Before Landing</div>
+                            <div class="gi-desc">8 apps ranked by importance. All work with foreign phone numbers.</div>
+                        </span>
+                        <span class="gi-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Category D: Intercity Travel -->
+            <div class="guide-category" style="background: var(--tint-mint);">
+                <h3><span class="cat-icon" aria-hidden="true">🚄</span> Intercity Travel</h3>
+                <p>The world's largest high-speed rail network, and how to use it as a foreigner.</p>
+                <div class="guide-list">
+                    <a href="/guide/trains.html" class="guide-item">
+                        <span class="gi-text">
+                            <div class="gi-title">How to Use China's High-Speed Trains as a Foreigner (2026 Guide)</div>
+                            <div class="gi-desc">12306, Trip.com, seat classes, station walkthrough: everything you need.</div>
+                        </span>
+                        <span class="gi-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Category E: City Transport -->
+            <div class="guide-category" style="background: var(--tint-yellow);">
+                <h3><span class="cat-icon" aria-hidden="true">🚇</span> City Transport: Metro, Didi, Bikes &amp; More</h3>
+                <p>Move through Chinese cities like you've lived here for years, not like a tourist staring at a map.</p>
+                <div class="guide-list">
+                    <a href="/guide/metro.html" class="guide-item">
+                        <span class="gi-text">
+                            <div class="gi-title">Metro &amp; Bus: How to Ride China's Public Transit with Alipay</div>
+                            <div class="gi-desc">One QR code for metro and bus. Skip the ticket machines. ¥1–6 per trip.</div>
+                        </span>
+                        <span class="gi-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a href="/guide/ride-hailing.html" class="guide-item">
+                        <span class="gi-text">
+                            <div class="gi-title">DiDi &amp; Amap: How to Get a Taxi Without Waving One Down</div>
+                            <div class="gi-desc">DiDi (China's Uber) and Amap's built-in ride-hailing. ¥12–40 per trip.</div>
+                        </span>
+                        <span class="gi-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a href="/guide/bike.html" class="guide-item">
+                        <span class="gi-text">
+                            <div class="gi-title">Shared Bikes: Hellobike, Meituan, DiDi &amp; More</div>
+                            <div class="gi-desc">How to unlock any shared bike with Alipay, costs, and where to park.</div>
+                        </span>
+                        <span class="gi-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- First-Time China Checklist (standalone card) -->
+            <div class="guide-category" style="background: var(--tint-cream);">
+                <h3><span class="cat-icon" aria-hidden="true">✅</span> First-Time China Checklist</h3>
+                <p>The master checklist. Everything above, organized by timeline: before you fly, when you land, first 48 hours.</p>
+                <div class="guide-list">
+                    <a href="/guide/checklist.html" class="guide-item">
+                        <span class="gi-text">
+                            <div class="gi-title">First-Time China Checklist: Interactive<span class="gi-badge-essential">⭐ Essential</span></div>
+                            <div class="gi-desc">21-item checklist. Check things off as you go. Free, no signup required.</div>
+                        </span>
+                        <span class="gi-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a href="/guide/safety.html" class="guide-item">
+                        <span class="gi-text">
+                            <div class="gi-title">Is China Safe for Tourists? Honest Answers</div>
+                            <div class="gi-desc">Solo travel, women, night safety: what the data and experience say.</div>
+                        </span>
+                        <span class="gi-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Category B: City Guides -->
+            <div class="guide-category" style="background: var(--tint-stone);">
+                <h3><span class="cat-icon" aria-hidden="true">📍</span> City Guides: Start with Hangzhou</h3>
+                <p>Written by someone who actually lives here. Firsthand knowledge, not recycled paragraphs.</p>
+                <div class="guide-list">
+                    <a href="/guide/hangzhou-3day.html" class="guide-item">
+                        <span class="gi-text">
+                            <div class="gi-title">Hangzhou 3-Day Itinerary for First-Time Visitors</div>
+                            <div class="gi-desc">West Lake, tea villages, night markets. The perfect intro.</div>
+                        </span>
+                        <span class="gi-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a href="/guide/hangzhou-neighborhoods.html" class="guide-item">
+                        <span class="gi-text">
+                            <div class="gi-title">Best Neighborhoods to Stay in Hangzhou</div>
+                            <div class="gi-desc">From lakeside luxury to quiet local neighborhoods.</div>
+                        </span>
+                        <span class="gi-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a href="/guide/hangzhou-nightlife.html" class="guide-item">
+                        <span class="gi-text">
+                            <div class="gi-title">Hangzhou Nightlife: Where Locals Actually Go</div>
+                            <div class="gi-desc">Bars, live houses, night markets. Not the TripAdvisor list.</div>
+                        </span>
+                        <span class="gi-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a href="/guide/hangzhou-hidden.html" class="guide-item">
+                        <span class="gi-text">
+                            <div class="gi-title">Hidden Places in Hangzhou Tourists Never Find</div>
+                            <div class="gi-desc">Secret temples, empty tea terraces, and the best sunset spot.</div>
+                        </span>
+                        <span class="gi-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Category C: Experience -->
+            <div class="guide-category">
+                <h3><span class="cat-icon" aria-hidden="true">✨</span> Experience China</h3>
+                <p>Deeper dives. The stories behind the sights. Designed to be shared.</p>
+                <div class="guide-list">
+                    <a href="/guide/daily-life.html" class="guide-item">
+                        <span class="gi-text">
+                            <div class="gi-title">How Daily Life Works Smoothly in China</div>
+                            <div class="gi-desc">Cashless payments, 30-minute deliveries, bike lanes everywhere. How the everyday things just work.</div>
+                        </span>
+                        <span class="gi-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a href="/guide/daily-routines.html" class="guide-item">
+                        <span class="gi-text">
+                            <div class="gi-title">Local Daily Routines Visitors Should Know</div>
+                            <div class="gi-desc">When locals eat, how they commute, and the daily rhythms you'll notice right away.</div>
+                        </span>
+                        <span class="gi-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a href="/guide/misunderstand.html" class="guide-item">
+                        <span class="gi-text">
+                            <div class="gi-title">What Foreigners Misunderstand About Modern China</div>
+                            <div class="gi-desc">The 7 biggest misconceptions, and what's actually true.</div>
+                        </span>
+                        <span class="gi-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     NEWSLETTER SIGNUP
+     ============================================ -->
+<section class="section" id="newsletter">
+    <div class="container">
+        <div class="newsletter-inner">
+            <h2>Get the Free China Arrival Checklist</h2>
+            <p>The exact setup guide I send to friends before they visit China.</p>
+            <p style="font-size:14px; color:rgba(255,255,255,.75); text-align:left; max-width:360px; margin:0 auto 20px; line-height:1.8;">
+                ✓ Alipay &nbsp;&nbsp; ✓ VPN &nbsp;&nbsp; ✓ eSIM<br>
+                ✓ Essential Apps &nbsp;&nbsp; ✓ First-Day Checklist
+            </p>
+            <p style="font-size:13px; color:rgba(255,255,255,.6); margin-bottom:20px;">Free PDF + email updates.</p>
+            <form action="https://buttondown.com/api/emails/embed-subscribe/pangda" method="post" class="newsletter-form" id="newsletterForm">
+                <input type="email" name="email" id="emailInput" placeholder="your@email.com" required autocomplete="email">
+                <button type="submit" class="btn btn-primary">Send Me the Checklist</button>
+            </form>
+            <p style="font-size:11px; color:rgba(255,255,255,.35); margin-top:12px;">
+                <a href="https://buttondown.com/refer/pangda" target="_blank" style="color:inherit;">Powered by Buttondown.</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SOCIAL PROOF
+     ============================================ -->
+<section class="social-section section" id="community">
+    <div class="container">
+        <div class="section-header">
+            <h2>Follow the journey</h2>
+            <p>Real perspectives from people living in China, unfiltered and personal.</p>
+        </div>
+        <div class="social-grid">
+            <a href="https://www.tiktok.com/@china_travel_os" class="social-item">
+                <div class="si-icon" aria-hidden="true">🎬</div>
+                <h4>TikTok</h4>
+                <p>Daily shorts: modern China in 60 seconds</p>
+            </a>
+            <a href="https://www.youtube.com/@%E9%83%91%E6%98%89-v1o" class="social-item">
+                <div class="si-icon" aria-hidden="true">▶️</div>
+                <h4>YouTube</h4>
+                <p>Long-form city tours &amp; deep dives</p>
+            </a>
+            <a href="https://www.instagram.com/china_travel_os/" class="social-item">
+                <div class="si-icon" aria-hidden="true">📸</div>
+                <h4>Instagram</h4>
+                <p>Visual storytelling from Hangzhou &amp; beyond</p>
+            </a>
+            <a href="#" class="social-item">
+                <div class="si-icon" aria-hidden="true">💬</div>
+                <h4>Discord Community</h4>
+                <p>Ask questions, share itineraries, meet travelers</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand">China<span>Travel</span>OS</div>
+                <p style="color:var(--text-sub);font-size:14px;">Modern China, explained, for travelers who want to get it right the first time.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Guides</h4>
+                <a href="/guide/alipay.html">Alipay</a>
+                <a href="/guide/wechat-pay.html">WeChat Pay</a>
+                <a href="/guide/vpn.html">VPN &amp; Internet</a>
+                <a href="/guide/trains.html">Trains</a>
+                <a href="/guide/apps.html">Essential Apps</a>
+                <a href="/guide/safety.html">Safety</a>
+            </div>
+            <div class="footer-col">
+                <h4>Cities</h4>
+                <a href="/city/hangzhou.html">Hangzhou</a>
+                <a href="/city/shanghai.html">Shanghai</a>
+                <a href="/city/chengdu.html">Chengdu</a>
+                <a href="/city/chongqing.html">Chongqing</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <a href="https://www.tiktok.com/@china_travel_os">TikTok</a>
+                <a href="https://www.youtube.com/@%E9%83%91%E6%98%89-v1o">YouTube</a>
+                <a href="https://www.instagram.com/china_travel_os/">Instagram</a>
+                <a href="#">Discord</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 China Travel OS. Built for travelers, not algorithms.
+        </div>
+    </div>
+</footer>
+
+<!-- ============================================
+     SCRIPTS
+     ============================================ -->
+<script>
+    /* ---- Mobile nav toggle ---- */
+    (function() {
+        var toggle = document.getElementById('mobileToggle');
+        var nav    = document.getElementById('navLinks');
+        if (!toggle || !nav) return;
+        toggle.addEventListener('click', function() {
+            var open = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            toggle.textContent = open ? '✕' : '☰';
+        });
+        // Close on nav link click
+        nav.querySelectorAll('a').forEach(function(a) {
+            a.addEventListener('click', function() {
+                nav.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+                toggle.textContent = '☰';
+            });
+        });
+    })();
+</script>
+
+</body>
+</html>

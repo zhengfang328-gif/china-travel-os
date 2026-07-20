@@ -1,0 +1,643 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangzhou Travel Guide for First-Time Visitors — China Travel OS</title>
+    <meta name="description" content="Hangzhou beyond West Lake: where to stay, what to eat, hidden spots, and how to actually get around. Written by someone who lives here.">
+    <meta property="og:title" content="Hangzhou Travel Guide for First-Time Visitors — China Travel OS">
+    <meta property="og:description" content="West Lake, tea villages, night markets, and the neighborhoods tourists never find. Hangzhou explained by someone who actually lives here.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://chinatravelos.com/city/images/hangzhou-hero.jpg">
+    <meta property="og:url" content="https://chinatravelos.com/city/hangzhou.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://chinatravelos.com/city/hangzhou.html">
+    <meta property="article:published_time" content="2026-06-30">
+    <meta property="article:modified_time" content="2026-07-01">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Hangzhou Made Simple: A Local's Guide for First-Time Visitors",
+        "description": "West Lake, tea hills, old streets, and the easiest first China city to explore. Written by someone who lives here.",
+        "datePublished": "2026-06-30",
+        "dateModified": "2026-07-01",
+        "author": { "@type": "Organization", "name": "China Travel OS" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chinatravelos.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Cities", "item": "https://chinatravelos.com/#cities" },
+            { "@type": "ListItem", "position": 3, "name": "Hangzhou", "item": "https://chinatravelos.com/city/hangzhou.html" }
+        ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:           #FAFAFA;
+            --surface:      #FFFFFF;
+            --text:         #1C1614;
+            --text-sub:     #5A4D49;
+            --text-faint:   #968883;
+            --accent:       #D94838;
+            --accent-hover: #B8382A;
+            --accent-muted: #FDF0ED;
+            --border:       #E6E0DD;
+            --border-light: #F2EFED;
+            --radius:       10px;
+            --radius-l:     16px;
+            --radius-pill:  999px;
+            --max-w:        1120px;
+            --content-w:    720px;
+            --nav-h:        64px;
+            --z-nav:        50;
+
+            --space-xs:  4px;
+            --space-sm:  8px;
+            --space-md:  16px;
+            --space-lg:  24px;
+            --space-xl:  32px;
+            --space-2xl: 48px;
+            --space-3xl: 64px;
+            --space-4xl: 96px;
+
+            --text-xs:   0.75rem;
+            --text-sm:   0.875rem;
+            --text-base: 1rem;
+            --text-md:   1.125rem;
+            --text-lg:   1.375rem;
+            --text-xl:   1.75rem;
+            --text-2xl:  2.25rem;
+            --text-3xl:  2.875rem;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+        body {
+            font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg); color: var(--text); line-height: 1.7; font-size: 1rem;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Literata', 'Georgia', 'Times New Roman', serif;
+            text-wrap: balance; line-height: 1.15;
+        }
+
+        .section {
+            animation: section-in .6s cubic-bezier(.22, .61, .36, 1) both;
+            animation-timeline: view();
+            animation-range: entry 15%;
+        }
+        @keyframes section-in {
+            from { opacity: .6; translate: 0 24px; }
+            to   { opacity: 1;   translate: 0 0; }
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; border-radius: var(--radius); }
+
+        .article-img {
+            margin: var(--space-xl) 0;
+        }
+        .article-img img {
+            border-radius: var(--radius-l);
+        }
+        .article-img figcaption {
+            font-size: var(--text-xs); color: var(--text-faint);
+            text-align: center; margin-top: var(--space-sm);
+            line-height: 1.5;
+        }
+        .article-img--hero {
+            margin-top: 0;
+            margin-bottom: var(--space-2xl);
+        }
+
+        /* Nav */
+        .nav {
+            position: sticky; top: 0; z-index: var(--z-nav);
+            background: var(--surface);
+            border-bottom: 1px solid var(--border-light); height: var(--nav-h);
+        }
+        .nav .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--space-lg); display: flex; align-items: center; justify-content: space-between; height: 100%; }
+        .nav-logo { font-family: 'Literata', 'Georgia', 'Times New Roman', serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em; }
+        .nav-logo span { color: var(--accent); }
+        .nav-links { display: flex; align-items: center; gap: var(--space-xl); }
+        .nav-links a { font-size: var(--text-sm); font-weight: 500; color: var(--text-sub); transition: color .15s; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-back { font-size: var(--text-sm); font-weight: 600; color: var(--accent); }
+        .nav-back:hover { color: var(--accent-hover); }
+
+        /* Hero — full-width with city color */
+        .city-hero {
+            background: #2D5A3B; color: #fff; padding: var(--space-4xl) 0 var(--space-3xl);
+            position: relative; overflow: hidden;
+        }
+        .city-hero::after {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .city-hero .container { max-width: var(--content-w); margin: 0 auto; padding: 0 var(--space-lg); position: relative; z-index: 1; }
+        .city-hero .breadcrumb { font-size: var(--text-xs); opacity: .7; margin-bottom: var(--space-xl); }
+        .city-hero .breadcrumb a { color: rgba(255,255,255,.7); transition: opacity .15s; }
+        .city-hero .breadcrumb a:hover { opacity: 1; }
+        .city-hero h1 {
+            font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700;
+            letter-spacing: -0.015em; line-height: 1.15; margin-bottom: var(--space-md);
+        }
+        .city-hero .hero-sub {
+            font-size: var(--text-md); opacity: .85; line-height: 1.6;
+            max-width: 580px; margin-bottom: var(--space-lg);
+        }
+        .city-hero .hero-stats {
+            display: flex; gap: var(--space-xl); flex-wrap: wrap;
+            font-size: var(--text-sm); opacity: .75;
+        }
+        .city-hero .hero-stats span { white-space: nowrap; }
+
+        /* Article layout */
+        .article { padding: var(--space-3xl) 0 var(--space-4xl); }
+        .article .container { max-width: var(--content-w); margin: 0 auto; padding: 0 var(--space-lg); }
+
+        .tldr {
+            background: var(--accent-muted); border: 1px solid var(--border); border-radius: var(--radius-l);
+            padding: var(--space-lg) var(--space-xl); margin-bottom: var(--space-2xl);
+        }
+        .tldr h3 { font-size: var(--text-sm); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--accent); margin-bottom: 10px; }
+        .tldr ul { list-style: none; }
+        .tldr li { font-size: var(--text-sm); padding: 4px 0; }
+        .tldr li::before { content: '✓ '; color: #0D9488; font-weight: 700; }
+
+        /* TOC */
+        .toc {
+            background: var(--surface); border: 1px solid var(--border-light);
+            border-radius: var(--radius-l); padding: var(--space-lg) var(--space-xl);
+            margin-bottom: var(--space-2xl);
+        }
+        .toc h3 {
+            font-size: var(--text-sm); font-weight: 700; text-transform: uppercase;
+            letter-spacing: .05em; color: var(--text-faint); margin-bottom: var(--space-md);
+            font-family: 'Work Sans', sans-serif;
+        }
+        .toc ol { list-style: none; padding: 0; margin: 0; }
+        .toc li { margin-bottom: 6px; }
+        .toc a {
+            font-size: var(--text-sm); color: var(--text-sub);
+            transition: color .15s; text-decoration: none;
+        }
+        .toc a:hover { color: var(--accent); }
+
+        .article h2 { font-size: var(--text-xl); font-weight: 600; letter-spacing: -0.01em; margin: 44px 0 14px; padding-top: 20px; scroll-margin-top: 80px; }
+        .article h3 { font-size: var(--text-md); font-weight: 600; margin: 28px 0 10px; }
+        .article p { margin-bottom: var(--space-md); color: var(--text); }
+        .article ul, .article ol { margin-bottom: 20px; padding-left: 24px; }
+        .article li { margin-bottom: var(--space-sm); }
+
+        .callout {
+            border: 1px solid var(--border); background: var(--accent-muted);
+            padding: var(--space-md) var(--space-lg); border-radius: var(--radius);
+            margin-bottom: var(--space-lg); font-size: var(--text-sm);
+        }
+        .callout strong { color: var(--accent); }
+        .callout-teal { border-color: #0D9488; background: #F0FDF9; }
+        .callout-teal strong { color: #0D9488; }
+
+        /* Neighborhood cards */
+        .hood-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-md); margin-bottom: var(--space-xl);
+        }
+        .hood-card {
+            background: var(--surface); border: 1px solid var(--border-light);
+            border-radius: var(--radius-l); padding: var(--space-xl);
+            transition: border-color .15s;
+        }
+        .hood-card:hover { border-color: var(--border); }
+        .hood-card h3 { font-size: var(--text-lg); margin-bottom: 6px; }
+        .hood-card .hood-tag {
+            display: inline-block; font-size: 10px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: .04em;
+            padding: 3px 10px; border-radius: var(--radius-pill);
+            background: #EBF7EF; color: #2D5A3B; margin-bottom: var(--space-sm);
+        }
+        .hood-card p { font-size: var(--text-sm); color: var(--text-sub); line-height: 1.55; }
+
+        /* Season cards */
+        .season-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--space-md); margin-bottom: var(--space-xl);
+        }
+        .season-card {
+            background: var(--surface); border: 1px solid var(--border-light);
+            border-radius: var(--radius-l); padding: var(--space-lg);
+            text-align: center;
+        }
+        .season-card .season-icon { font-size: 32px; margin-bottom: var(--space-sm); }
+        .season-card h3 { font-size: var(--text-base); font-weight: 600; margin-bottom: 2px; }
+        .season-card p { font-size: var(--text-xs); color: var(--text-sub); }
+
+        /* CTA */
+        .article-cta {
+            background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--radius-l);
+            padding: var(--space-xl); margin-top: var(--space-2xl); text-align: center;
+        }
+        .article-cta h3 { font-size: var(--text-lg); font-weight: 600; margin-bottom: var(--space-sm); }
+        .article-cta p { color: var(--text-sub); font-size: var(--text-sm); margin-bottom: var(--space-md); }
+
+        .btn {
+            display: inline-flex; align-items: center; gap: var(--space-sm);
+            padding: 13px 26px; border-radius: var(--radius-pill); font-weight: 600;
+            font-size: var(--text-sm); cursor: pointer; border: none; white-space: nowrap;
+            font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            transition: background-color .2s cubic-bezier(.4, 0, 0, 1),
+                        color .2s cubic-bezier(.4, 0, 0, 1),
+                        transform .2s cubic-bezier(.4, 0, 0, 1);
+        }
+        .btn-primary { background: var(--accent); color: #fff; }
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+        .btn-outline { background: transparent; color: var(--text); border: 1.5px solid var(--border); }
+        .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+        .footer { padding: var(--space-xl) 0; border-top: 1px solid var(--border-light); text-align: center; }
+        .footer .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--space-lg); }
+        .footer p { font-size: var(--text-xs); color: var(--text-faint); }
+        .footer a { color: var(--text-sub); transition: color .15s; }
+        .footer a:hover { color: var(--text); }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+            .btn:hover { transform: none; }
+            .section { animation: none; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-back { display: none; }
+            .city-hero h1 {
+                font-size: clamp(1.4rem, 7vw, 1.75rem);
+                max-width: 100%;
+                overflow-wrap: break-word;
+            }
+            .city-hero .hero-sub { font-size: var(--text-sm); }
+            .city-hero .hero-stats {
+                flex-direction: column;
+                gap: var(--space-xs);
+            }
+            .city-hero .hero-stats span { white-space: normal; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="container">
+        <a href="/index.html" class="nav-logo">China<span>Travel</span>OS</a>
+        <div class="nav-links">
+            <a href="/index.html#guides">Guides</a>
+            <a href="/index.html#cities">Cities</a>
+            <a href="/index.html#community">Community</a>
+            <a href="/index.html#newsletter">Free Guide</a>
+        </div>
+        <a href="/index.html" class="nav-back">← Back to Guides</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<header class="city-hero">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> &nbsp;/&nbsp;
+            <a href="/index.html#cities">Cities</a> &nbsp;/&nbsp;
+            Hangzhou
+        </div>
+        <h1>Hangzhou Made Simple</h1>
+        <p class="hero-sub">West Lake, tea hills, old streets, and the easiest first China city to explore. I've lived here for years — here's the real Hangzhou, not the tourism-bureau version.</p>
+        <div class="hero-stats">
+            <span>🌿 Tea fields × tech HQs</span>
+            <span>🚲 Bike lanes everywhere</span>
+            <span>🍜 ¥25 meals, ¥500 feasts</span>
+        </div>
+    </div>
+</header>
+
+<article class="article section">
+    <div class="container">
+
+        <figure class="article-img article-img--hero">
+            <img src="images/Hangzhou/首页.jpg" alt="Hangzhou — West Lake and city skyline" loading="eager">
+            <figcaption>Hangzhou, where tea hills meet the future — a city shaped by a lake for 2,200 years.</figcaption>
+        </figure>
+
+        <div class="tldr">
+            <h3>TL;DR — Hangzhou in 30 Seconds</h3>
+            <ul>
+                <li><strong>West Lake is worth the hype</strong> — but go at sunrise, not 11 AM with the selfie-stick crowd.</li>
+                <li><strong>The tea villages are the real draw.</strong> Longjing, Meijiawu, Manjuelong — 20 minutes from downtown by taxi, and they feel like another century.</li>
+                <li><strong>Stay in Xihu District</strong> for first-timers, Gongshu or Binjiang if you want fewer tourists.</li>
+                <li><strong>3 full days is the sweet spot.</strong> Day 1: Grab a shared bike, loop West Lake + explore the hills. Day 2: Tea villages + Lingyin. Day 3: CBD, neighborhoods + food crawl.</li>
+                <li><strong>Hangzhou food is different from what you think of as "Chinese food."</strong> Subtle, seasonal, not spicy. The local pride is Longjing shrimp and Dongpo pork — both worth the hype.</li>
+                <li><strong>Getting around is easy.</strong> Metro, shared bikes, DiDi — all covered in our other guides. Hangzhou's metro now connects the airport, West Lake, and all major neighborhoods.</li>
+            </ul>
+        </div>
+
+        <h2 id="first-time-decision">First-Time Visitor? Start Here.</h2>
+        <div class="hood-grid">
+            <div class="hood-card">
+                <span class="hood-tag">Where to stay</span>
+                <h3>Xihu District</h3>
+                <p>Near Fengqi Road or Longxiangqiao metro. Walking distance to the lake, easy access to everything.</p>
+            </div>
+            <div class="hood-card">
+                <span class="hood-tag">How long</span>
+                <h3>3 full days</h3>
+                <p>Day 1: Bike West Lake + hills. Day 2: Tea villages + Lingyin. Day 3: CBD + food crawl.</p>
+            </div>
+            <div class="hood-card">
+                <span class="hood-tag">Must prep</span>
+                <h3>4 apps</h3>
+                <p>Set up Alipay, eSIM/VPN, Amap, and DiDi before you land. <a href="/guide/checklist.html" style="color:var(--accent);">Full checklist →</a></p>
+            </div>
+            <div class="hood-card">
+                <span class="hood-tag">Biggest mistake</span>
+                <h3>Booking near the train station</h3>
+                <p>It's transport infrastructure, not a neighborhood. Stay near the lake or in Gongshu instead.</p>
+            </div>
+        </div>
+
+        <div class="callout callout-teal" style="text-align:center; margin-top:var(--space-md);">
+            <strong>📋 Visiting China for the first time?</strong> Start with the free arrival checklist — Alipay setup, VPN, eSIM, and everything you need before you fly.<br>
+            <a href="/index.html#newsletter" class="btn btn-primary" style="margin-top:12px; display:inline-block;">Send Me the Checklist →</a>
+        </div>
+
+        <nav class="toc" aria-label="Table of contents">
+            <h3>On this page</h3>
+            <ol>
+                <li><a href="#first-time-decision">First-time visitor quick start</a></li>
+                <li><a href="#why-hangzhou">Why Hangzhou — and why not just Shanghai</a></li>
+                <li><a href="#first-timer-route">3-day first-timer route</a></li>
+                <li><a href="#when-to-visit">Best time to visit</a></li>
+                <li><a href="#where-to-stay">Where to stay</a></li>
+                <li><a href="#essentials">West Lake, Lingyin, tea villages &amp; the old city</a></li>
+                <li><a href="#what-to-eat">What to eat — classic &amp; modern Hangzhou food</a></li>
+                <li><a href="#hidden-corners">Hidden corners</a></li>
+                <li><a href="#getting-around">Getting around</a></li>
+                <li><a href="#night-markets">Night markets</a></li>
+                <li><a href="#common-mistakes">Common mistakes</a></li>
+            </ol>
+        </nav>
+
+        <h2 id="why-hangzhou">Why Hangzhou — and Why Not Just Shanghai</h2>
+        <p>Shanghai shows you what China built in 30 years. Hangzhou shows you what China has been building for 2,200. This is a city where a 1,700-year-old Buddhist temple tucked into forested hills sits a 20-minute taxi ride from Alibaba's global headquarters. Where tea farmers still roast leaves by hand in iron woks in the morning, and AI engineers from the same village commute to companies worth tens of billions in the afternoon.</p>
+        <p>What sets Hangzhou apart isn't old-meets-new — plenty of cities do that. It's how nature and urban life don't just coexist here, they interlock. You bike past a UNESCO World Heritage lake on your morning commute. You eat ¥25 noodles in a 30-year-old shop, then walk two blocks to a startup campus with better architecture than most Western universities. The hills aren't a weekend escape — they frame every skyline. The tea terraces start where the metro line ends. This isn't a city with a famous lake; it's a city shaped by one.</p>
+        <p>Marco Polo called it "the city of heaven" 700 years ago. Today it's also the city of Alibaba, DeepSeek, and an AI ecosystem that's reshaping global tech. The magic of Hangzhou is that neither fact cancels the other out. Come on a spring morning when mist hangs over West Lake, then spend the afternoon walking through a tech park where the future is being built — and you'll understand why this city doesn't fit into anyone's idea of "China."</p>
+
+        <figure class="article-img">
+            <img src="images/Hangzhou/1.jpg" alt="West Lake at sunrise, mist on the water, morning light from the Su Causeway" loading="lazy">
+            <figcaption>West Lake at sunrise — the Su Causeway in early morning light, before the crowds arrive.</figcaption>
+        </figure>
+
+        <h2 id="first-timer-route">3-Day First-Timer Route</h2>
+        <p>Here's the route I send to friends visiting Hangzhou for the first time. It's not a minute-by-minute itinerary: it's a shape for three days that avoids the most common first-timer mistakes and hits the things that actually matter.</p>
+
+        <h3>Day 1: West Lake by Bike + the Old City at Dusk</h3>
+        <p>Start early. Grab a shared bike (<a href="/guide/bike.html" style="color:var(--accent);">guide here</a>) by 7:00 AM and ride the full 12 km lake loop. At sunrise the Su Causeway is almost empty: peach trees, willow fronds, six stone bridges, mist on the water. Stop at the Bai Causeway and Broken Bridge, then pedal up to Solitary Hill for the view back across the lake. By 10 AM the tour groups arrive and the magic fades, so that's your cue to leave.</p>
+        <p>Spend midday resting or exploring the lanes behind the lake. Late afternoon, head to the old city quarter: start at Southern Song Imperial Street, cut through Hefang Street when the lanterns come on, then walk north into Dama Lane and Shiwukui Lane for street food and market life. Dinner is whatever you grab from five different stalls. End the night at Wulin Night Market if you still have energy.</p>
+
+        <h3>Day 2: Tea Villages + Lingyin Temple</h3>
+        <p>Morning: go to Lingyin Temple. Arrive by 8:00 AM on a weekday — the grottoes and temple halls are best in early light, and the free-entry policy makes weekends extremely crowded. Reserve ahead through the "杭州灵隐飞来峰" mini program in Alipay; check current rules before you go. After the temple, eat the vegetarian noodles inside the grounds for lunch.</p>
+        <p>Afternoon: take a 20-minute taxi to Meijiawu (梅家坞) tea village. Terraced tea fields, family-run restaurants with tables between the rows, and farmers roasting leaves in iron woks. Order a pot of Longjing tea, a few home-style dishes, and sit until the light turns golden over the hills. This is the Hangzhou people mean when they say it's beautiful.</p>
+
+        <h3>Day 3: CBD, Grand Canal + Neighborhood Food Crawl</h3>
+        <p>Morning: cross the Qiantang River to Binjiang on Metro Line 1. Walk the riverfront promenade — the downtown skyline reflected in the water is the modern Hangzhou most tourists never see. Grab coffee at a café in the tech district, then head back across the river.</p>
+        <p>Afternoon and evening: explore Gongshu District along the Grand Canal. Start at Xiaohe Straight Street (小河直街), a preserved canal-side lane with small shops and tea houses. Walk north to Gongchen Bridge (拱宸桥) — the ancient stone bridge lit up at dusk is one of the best night views in the city. Eat dinner at Shengli River Food Street: 老头儿油爆虾 for Hangzhou-style shrimp, or any of the thirty-odd restaurants lining the canal. End with a walk along the water when the red lanterns are on.</p>
+
+        <h2 id="when-to-visit">When to Visit: Seasons, Honestly</h2>
+        <p>There's a Chinese saying: "Above there is heaven, below there is Suzhou and Hangzhou." The saying is most true in <strong>spring (March–May)</strong> and <strong>autumn (September–November)</strong>. Spring brings cherry blossoms and mild temperatures; autumn brings golden ginkgo trees and the best light of the year. These are the peak seasons, and for good reason.</p>
+        <p>Summer (June–August) is hot and humid — 35°C (95°F) days are normal, and you'll sweat through your shirt by 9 AM. But summer also means lotus flowers on West Lake in full bloom, and the tea hills are at their greenest. If you can handle the heat, it's still worth it. Winter (December–February) is damp-cold (0–8°C), gray, and the least photogenic season — though the lack of tourists makes West Lake genuinely peaceful, and a bowl of hot noodles at a lakeside restaurant in winter has its own charm.</p>
+
+        <div class="season-grid">
+            <div class="season-card">
+                <div class="season-icon">🌸</div>
+                <h3>Spring</h3>
+                <p>Mar–May<br>10–25°C<br>Best season. Cherry blossoms, mild</p>
+            </div>
+            <div class="season-card">
+                <div class="season-icon">☀️</div>
+                <h3>Summer</h3>
+                <p>Jun–Aug<br>28–38°C<br>Hot, humid, lotus blooms</p>
+            </div>
+            <div class="season-card">
+                <div class="season-icon">🍂</div>
+                <h3>Autumn</h3>
+                <p>Sep–Nov<br>12–25°C<br>Golden light, ginkgo trees</p>
+            </div>
+            <div class="season-card">
+                <div class="season-icon">❄️</div>
+                <h3>Winter</h3>
+                <p>Dec–Feb<br>0–8°C<br>Quiet, gray, no crowds</p>
+            </div>
+        </div>
+
+        <h2 id="where-to-stay">Where to Stay: Neighborhoods</h2>
+        <p>Hangzhou's neighborhoods each have a distinct personality. Pick based on what you want to do, not what's "best rated."</p>
+
+        <div class="hood-grid">
+            <div class="hood-card">
+                <span class="hood-tag">Best for first-timers</span>
+                <h3>Xihu (West Lake) District</h3>
+                <p>More than a lake — this is Hangzhou's cultural core. Ancient temples (Lingyin, Jingci), centuries-old pagodas, and forested hills wrap around the water. The northern and eastern shores put you walking distance from both the lake at sunrise and the hills in the afternoon. Stay near Fengqi Road or Longxiangqiao metro stations for easy access to everything.</p>
+            </div>
+            <div class="hood-card">
+                <span class="hood-tag">Local vibes</span>
+                <h3>Gongshu District</h3>
+                <p>The old city center along the Grand Canal. Fewer tourists, more old Hangzhou. Streets with plane trees, wet markets, noodle shops that have been open for 30 years. Good for travelers who want to feel like they're in a Chinese city, not a Chinese theme park.</p>
+            </div>
+            <div class="hood-card">
+                <span class="hood-tag">Modern & connected</span>
+                <h3>Binjiang District</h3>
+                <p>Across the river from downtown. New, clean, full of Alibaba offices and startup workers. The riverfront promenade at night is stunning — the downtown skyline reflected in the Qiantang River. Less character than the old city, but wider streets and better infrastructure.</p>
+            </div>
+            <div class="hood-card">
+                <span class="hood-tag">Tea village stay</span>
+                <h3>Longjing / Meijiawu</h3>
+                <p>For a completely different experience: stay at a guesthouse in the tea hills. You wake up to mist and birdsong instead of traffic. It means you're 25 minutes from downtown, but if your idea of Hangzhou is tea and nature, there's no better place to sleep.</p>
+            </div>
+        </div>
+
+        <figure class="article-img">
+            <img src="images/Hangzhou/2.png" alt="Binjiang District — Hangzhou's modern tech hub across the Qiantang River" loading="lazy">
+            <figcaption>Binjiang District across the river — Alibaba, startups, wide boulevards, and the new Hangzhou skyline.</figcaption>
+        </figure>
+
+        <h2 id="essentials">The Essentials: What You Should Actually Do</h2>
+
+        <h3>West Lake (西湖) — Yes, It's Worth It</h3>
+        <p>West Lake is the reason Hangzhou exists as a tourist destination. It's a UNESCO World Heritage site, painted and written about for over a thousand years. On a misty morning, it lives up to every bit of its reputation. But timing is everything: at 10 AM on a Saturday, it's a parade of matching tour-group hats and selfie sticks. Go at 6:30 AM — the light is soft, the crowds don't exist yet, and you'll understand why poets spent lifetimes here. Rent a bike (<a href="/guide/bike.html" style="color:var(--accent);">guide here</a>) and ride the full 12 km loop around the lake. The circuit takes you across the two causeways that are the lake's spine — and those causeways have stories worth knowing before you pedal over them.</p>
+        <p><strong>The Su Causeway (苏堤)</strong> — running 2.8 km north to south — was built around 1090 by <strong>Su Shi</strong> (also known as Su Dongpo), one of China's greatest poets. He'd been posted to Hangzhou as governor and found the lake choking with silt. He ordered a massive dredging operation and had the excavated mud piled into a long dyke with six arched bridges, letting boats pass while creating a walking route across the water. He then planted peach and willow trees along it — the same combination that still lines the causeway today. Su Shi later wrote the four lines that forever branded this lake: <em>"水光潋滟晴方好，山色空蒙雨亦奇。欲把西湖比西子，淡妆浓抹总相宜"</em> — roughly, <em>"The shimmering water looks best in sunlight; misty hills are just as lovely in rain. I would compare West Lake to Xi Shi, the great beauty of ancient China — she is captivating whether in light makeup or heavy adornment."</em> That poem gave West Lake its nickname, 西子湖 (Xi Zi Lake), and it still holds: the lake is beautiful in every weather except heavy fog. Spring is the best time to ride the Su Causeway, when the peach blossoms are out and the willows are fresh green.</p>
+        <p><strong>The Bai Causeway (白堤)</strong> — 1 km across the northern end of the lake, from the eastern shore to Solitary Hill — carries the name of <strong>Bai Juyi</strong>, the great Tang-dynasty poet who governed Hangzhou from 822 to 824. Bai Juyi built his own flood-control dyke near the city wall (long since vanished), but this particular causeway was renamed in his honor centuries later. He'd already written about it, describing his favorite walk: <em>"最爱湖东行不足，绿杨阴里白沙堤"</em> — <em>"I love the east side of the lake most of all — I could never walk there enough; the White Sand Causeway, shaded by green willows."</em> The Bai Causeway is also where you'll find Broken Bridge (断桥), famous for the winter scene "Remnant Snow on the Broken Bridge" — and, if you know the legend, the spot where the white snake spirit Bai Suzhen first met the mortal scholar Xu Xian in one of China's most famous love stories. In spring and summer the causeway is a tunnel of green willow fronds; in winter, when snow dusts the bridge, it's the most photogenic spot on the lake.</p>
+        <p>The lake also has <strong>three islands</strong>, all reachable by boat. The largest — <strong>小瀛洲</strong> (Xiaoyingzhou, "Lesser Yingzhou") — is a water garden built from dredged silt in 1607: an outer ring-shaped embankment enclosing an inner lake, crossed by zigzag bridges. Off its southern shore stand the three small stone pagodas that create the scene <strong>三潭印月</strong> ("Three Pools Mirroring the Moon"), the most iconic image of Hangzhou — and the picture on the back of the ¥1 RMB note. On the night of the Mid-Autumn Festival, candles are lit inside the pagodas and the glow combines with the moon's reflection. The second island, <strong>湖心亭</strong> (Mid-Lake Pavilion), dates to 1552 and is the oldest — essentially a single elegant pavilion floating in the exact center of the lake. The third, <strong>阮公墩</strong> (Ruan's Mound), was built in 1809 by the Qing-dynasty scholar-governor Ruan Yuan during another round of lake conservation; it's the smallest and most rustic, now a bamboo-shaded garden. Unless you're on a tight schedule, take a short boat trip out to at least Xiaoyingzhou — seeing the lake from <em>inside</em> it is a completely different experience.</p>
+
+        <figure class="article-img">
+            <img src="images/Hangzhou/3.png" alt="West Lake from the Su Causeway, early morning, looking across water to hills" loading="lazy">
+            <figcaption>West Lake from the Su Causeway — the classic Hangzhou view, best seen before the tour boats fill the water.</figcaption>
+        </figure>
+
+        <h3>Lingyin Temple (灵隐寺) — Ancient, Crowded, Still Worth It</h3>
+        <p>One of China's largest and most important Buddhist temples, tucked into forested hills 1,700 years ago. The Feilai Feng grottoes — hundreds of Buddhist carvings in the limestone cliffs — are the real highlight. Entry is free with real-name reservation; at time of writing, reservations must be made at least one day ahead and same-day bookings are not accepted. Foreign visitors can reserve through the "杭州灵隐飞来峰" mini program in Alipay or WeChat. <strong>Reservation rules can change — check the mini program before you go.</strong> Go on a weekday morning if possible — free entry makes the crowds even heavier. The vegetarian noodle restaurant inside the temple grounds is actually good — not a tourist trap, genuinely worth eating there.</p>
+
+        <figure class="article-img">
+            <img src="images/Hangzhou/4.jpg" alt="Lingyin Temple — main hall exterior nestled in forested hills" loading="lazy">
+            <figcaption>Lingyin Temple, tucked into the hillside for 1,700 years — one of China's largest and most important Buddhist temples.</figcaption>
+        </figure>
+
+        <h3>Tea Villages — The Real Hangzhou</h3>
+        <p>Longjing Village (龙井村) is the most famous — "Dragon Well" tea, the most prestigious green tea in China — but it's become a bit of a tourist conveyor belt. Better: <strong>Meijiawu (梅家坞)</strong>, 15 minutes further into the hills. Terraced tea fields, family-run restaurants with tables set up between the rows, and tea farmers who'll let you watch them roast leaves in iron woks. Go in late afternoon, sit at a farmhouse restaurant overlooking the fields, and eat home-style Hangzhou food while the light turns golden over the hills. This is what people mean when they say Hangzhou is special.</p>
+
+        <figure class="article-img">
+            <img src="images/Hangzhou/5.png" alt="Meijiawu tea terraces — rows of tea bushes on a hillside in late afternoon light" loading="lazy">
+            <figcaption>Meijiawu tea village — terraced fields where Longjing tea is still roasted by hand in iron woks.</figcaption>
+        </figure>
+
+        <div class="callout callout-teal">
+            <strong>🍵 Tea buying tip:</strong> Don't buy Longjing tea at the tourist shops in the village center. Ask a farmer who's roasting tea in their courtyard — you'll pay ¥200–400 for what the shops sell at ¥800+. Farmers are usually happy to brew you a cup to taste first. The harvest before Qingming Festival (early April) is the best quality; tea picked after mid-April is 30–50% cheaper.
+        </div>
+
+        <h3>Leifeng Pagoda (雷峰塔) — Go for the View, Not the Museum</h3>
+        <p>The current pagoda is a 2002 reconstruction with escalators and an elevator — not ancient China. But the view from the top, looking down on West Lake from above, is the best panorama in the city. Go an hour before sunset, ride the elevator up, and watch the lake change colors as the sun drops. The original pagoda's foundations are preserved in the basement if you're interested in archaeology. Entry: ¥40.</p>
+
+        <figure class="article-img">
+            <img src="images/Hangzhou/6.png" alt="View from Leifeng Pagoda — West Lake panorama from above at sunset" loading="lazy">
+            <figcaption>The view from Leifeng Pagoda — West Lake, the causeways, and the city skyline behind the hills.</figcaption>
+        </figure>
+
+        <h3>The Old City Quarter: Hefang, Imperial Street &amp; the Lanes</h3>
+        <p>Tucked between Wushan Hill and Zhongshan Road is Shangcheng District's most intact old neighborhood — four connected pieces that together form the deepest dive into old Hangzhou you can take without leaving the city.</p>
+        <p>Start with <strong>Southern Song Imperial Street</strong> (南宋御街). Eight hundred years ago, this 4-kilometer avenue paved with over 10,000 flagstones was the central axis of Lin'an, the imperial capital. Emperors processed down it for ancestral rites at the royal temple; it was the spine of one of the world's largest cities. Today it runs under the modern Zhongshan Road, with excavated sections visible through glass panels in the pavement. The street is flanked by both century-old brands and new arrivals — <strong>胡庆余堂</strong> (founded 1874) and <strong>方回春堂</strong> (founded 1649) still dispense herbal prescriptions from wooden drawers that haven't changed in a hundred years, while a few doors down, a Starbucks occupies a restored Song-style building and a sneaker shop displays rare Be@rBrick collections in a former silk merchant's storefront.</p>
+        <p><strong>Hefang Street</strong> (河坊街) branches off the Imperial Street — the tourist-facing strip of restored Ming and Qing shopfronts. Lanterns at night, crowds on weekends, plenty of snacks worth trying — stinky tofu, scallion-stuffed crepes, osmanthus cakes. It's a solid food street, and the prices are reasonable. But for the real depth, turn north: a two-minute walk brings you into <strong>Dama Lane</strong> (大马弄), Hangzhou's most famous open-air market street. Come at 8 AM and you'll find grandmas haggling over vegetables, vendors hanging braised ducks from hooks, and the smell of fresh soy milk from 游埠豆浆 — a shop that's been pouring the city's best salty soy milk for close to 30 years. Grab a 葱包烩 (scallion-stuffed crepe) from 吴阿姨's stall (she became locally famous after feeding Olympic athletes), then follow the lane into <strong>Shiwukui Lane</strong> (十五奎巷), a quiet residential alley where 新周记 has been serving Hangzhou classics from its Drum Tower location since long before anyone called food "Instagrammable."</p>
+        <p>Between 蒋师傅酥鱼 (crispy fish drenched in sweet-savory sauce, fried while you wait), 徐奶奶杭菜 (a 70-year-old lady selling the city's most famous braised pork intestines from her courtyard), and the pan-fried buns and sticky rice cakes at every other stall, you'll eat better here for ¥80 than at most ¥300 restaurant meals near West Lake. This isn't a theme-park version of "old China" — it's a living neighborhood where people still live, shop, and eat. The new stuff has to fit into the old bones rather than replace them.</p>
+
+        <figure class="article-img">
+            <img src="images/Hangzhou/7.jpg" alt="Hefang Street at night with lanterns lit, old city quarter" loading="lazy">
+            <figcaption>Hefang Street after dark — lanterns, street food, and the old city quarter at its most atmospheric.</figcaption>
+        </figure>
+
+        <h2 id="what-to-eat">What to Eat: Beyond "Chinese Food"</h2>
+        <p>Hangzhou cuisine (杭帮菜) is one of China's great regional cooking traditions, and it's nothing like the Sichuan-heavy, chili-oil image most foreigners have of Chinese food. It's subtle, seasonal, and emphasizes the natural flavor of ingredients. Key dishes:</p>
+        <ul>
+            <li><strong>Longjing Shrimp (龙井虾仁) 🍤</strong> — River shrimp stir-fried with young Dragon Well tea leaves. Light, delicate, the dish that best represents Hangzhou. Looks simple, tastes complex.</li>
+            <li><strong>Dongpo Pork (东坡肉) 🥩</strong> — Braised pork belly named after Su Dongpo, the 11th-century poet-governor who allegedly invented it. Melts in your mouth, rich but not heavy. One piece is plenty. Have it with rice.</li>
+            <li><strong>West Lake Vinegar Fish (西湖醋鱼) 🐟</strong> — Grass carp poached and dressed with a sweet-sour vinegar sauce. An acquired taste — the sauce is darker and more complex than what Western palates expect from "sweet and sour." I like it, but about half the foreigners I've hosted don't finish their plate.</li>
+            <li><strong>Beggar's Chicken (叫花鸡) 🐔</strong> — A whole chicken stuffed with mushrooms and aromatics, wrapped in lotus leaves and clay, then slow-roasted. Cracked open at your table. Theatrical and genuinely delicious.</li>
+            <li><strong>Pian'er Chuan (片儿川)</strong> — Hangzhou's signature noodle soup: thin slices of pork, pickled vegetables, bamboo shoots in a clear broth. Available at every noodle shop in town for ¥15–25. This is the dish locals actually eat for lunch, not the "famous" ones above.</li>
+        </ul>
+
+        <figure class="article-img">
+            <img src="images/Hangzhou/8.jpg" alt="Longjing Shrimp — Hangzhou's signature dish with Dragon Well tea leaves" loading="lazy">
+            <figcaption>Longjing Shrimp (龙井虾仁) — river shrimp stir-fried with young Dragon Well tea leaves, the dish that best represents Hangzhou.</figcaption>
+        </figure>
+
+        <div class="callout">
+            <strong>🍜 Where to actually eat these:</strong> Lou Wai Lou (楼外楼) is the famous lakeside restaurant everyone recommends — it's been there since 1848, and the location is unbeatable. But the food is tourist-grade these days and the prices are high. Better: <strong>Grandma's Kitchen (外婆家)</strong> for affordable, consistent Hangzhou dishes; <strong>Green Tea Restaurant (绿茶)</strong> in a bamboo grove near Lingyin for the setting; <strong>any noodle shop on Zhongshan Road</strong> for Pian'er Chuan where locals queue at lunchtime.
+        </div>
+
+        <p>That's the classic stuff. But Hangzhou's food scene today operates at every altitude. At the top end, restaurants like <strong>金沙厅</strong> (Jin Sha at the Four Seasons) and <strong>解香楼</strong> (Jie Xiang Lou) have put modern Hangzhou cuisine on the global map, though they come with fine-dining price tags. In the middle, old-name institutions like <strong>杭州酒家</strong> (Hangzhou Jiujia, open since 1921) and <strong>知味观</strong> (Zhiweiguan, the city's most famous snack-and-dining hall, going strong since 1913) serve solid classic dishes at ¥60–120 per person — a full table for what one dish costs uptown. And then there's street level: tiny noodle shops where the owner has been making one thing for twenty years, hole-in-the-wall 生煎包 (pan-fried buns) joints with lines out the door at breakfast, and the Instagram-era wave of stylish little cafés and dessert shops that have turned中山中路 and the lane houses around Gongshu into a weekend browsing ritual for locals. You can eat brilliantly in this city at ¥25 or ¥2,500 — the range is part of the appeal.</p>
+        <p>And if you need a break from Hangzhou food entirely? The city has you covered. Thanks to waves of internal migration, you can eat your way across China without leaving town — Sichuan hot pot, Xinjiang lamb skewers, Cantonese dim sum, Dongbei dumplings. Western options run from burger joints to Italian trattorias to brunch spots in the Binjiang tech district that wouldn't look out of place in Brooklyn. Halal restaurants are clustered around the Phoenix Mosque (凤凰寺) on Zhongshan Road, serving Lanzhou-style hand-pulled noodles and northwest Chinese barbecue. For vegetarians, Buddhist temple restaurants — especially the one at Lingyin — offer elaborate multi-course meals that are an experience in themselves, and plant-forward cafés have been popping up in the Xihu and Gongshu districts over the past few years.</p>
+
+        <h2 id="hidden-corners">Hidden Corners Tourists Never Find</h2>
+
+        <h3>Manjuelong (满觉陇) in Autumn</h3>
+        <p>The whole village smells like osmanthus flowers in September and October. It's a hillside neighborhood of tea houses and small restaurants where Hangzhou people go to escape — almost no foreign tourists know about it. Come for lunch at a terrace restaurant, walk the stone paths between houses, and buy a jar of osmanthus honey from someone selling it from their front door.</p>
+
+        <figure class="article-img">
+            <img src="images/Hangzhou/9.jpg" alt="Manjuelong village — stone steps, osmanthus trees, tea house terrace" loading="lazy">
+            <figcaption>Manjuelong (满觉陇) — a hillside village of tea houses and stone paths where the air smells like osmanthus in autumn.</figcaption>
+        </figure>
+
+        <h3>Xixi Wetlands (西溪湿地)</h3>
+        <p>China's first national wetland park — 1,150 hectares of ponds, waterways, and reed marshes. You take a wooden boat through narrow water lanes past traditional houses on stilts. It's quiet, green, and feels nothing like the rest of Hangzhou. Very few foreign tourists come here; it's mostly local families on weekend outings. Budget 3–4 hours. Entry + boat ride: about ¥140.</p>
+        <p>The place comes with a good story. In 1129, Emperor Gaozong of the Southern Song fled south to Hangzhou with his court, pursued by Jin armies. He arrived at Xixi and was so taken by the landscape — reed flowers like snow, still water winding through willow banks — that he wanted to build his palace right there. His advisors eventually talked him into Phoenix Hill instead, the more defensible high ground that would become the imperial city of Lin'an. As he left, he looked back and said three words: <strong>"西溪且留下"</strong> — "Xixi, let it stay." That phrase gave the neighboring town its name, 留下 (Liuxia), which it still carries nine centuries later. The emperor never did build his palace here, but he ordered a road cut through the wetlands so he could return each spring for the plum blossoms. Today you're paddling through the same reeds that made an emperor pause mid-flight — and they still look the part.</p>
+
+        <h3>The Qiantang River Tidal Bore</h3>
+        <p>Once a year, around the Mid-Autumn Festival (September/October), the Qiantang River produces the world's largest tidal bore — a wall of water that rushes upstream at up to 40 km/h. It's been documented here for over 2,000 years. If your trip coincides with it, go to Yanguan Town (about an hour east of Hangzhou) and watch it from the riverbank. It's not a "hidden" thing — thousands of locals show up — but it's almost completely unknown to foreign tourists. Check dates online before planning around it.</p>
+
+        <h3>Night Walk Along the Grand Canal</h3>
+        <p>The Beijing-Hangzhou Grand Canal is the world's longest man-made waterway, and its southern terminus is right here. The area around Gongchen Bridge (拱宸桥) at night is one of my favorite places to walk: the old stone bridge lit up, canal boats drifting past, families eating at waterside restaurants. No admission fee, no opening hours, no crowds. Start at Xiaohe Straight Street (小河直街) and walk north.</p>
+
+        <figure class="article-img">
+            <img src="images/Hangzhou/10.jpg" alt="Grand Canal at night — Gongchen Bridge lit up, canal reflections" loading="lazy">
+            <figcaption>The Grand Canal at night — Gongchen Bridge (拱宸桥) lit up, the world's longest man-made waterway ending its journey in Hangzhou.</figcaption>
+        </figure>
+
+        <h2 id="getting-around">Getting Around Hangzhou</h2>
+        <p>Hangzhou is one of the easiest Chinese cities to navigate. The metro system is modern and expanding — Line 1 connects the east railway station, downtown, and West Lake. Metro is usually the fastest way from the airport into the city — budget 35–60 minutes depending on your hotel location and transfers. Fares are usually under ¥10.</p>
+        <ul>
+            <li><strong>Metro:</strong> 12 lines and growing. Clean, air-conditioned, announcements in English. ¥2–8 per trip. Use Alipay's Transit QR code — <a href="/guide/metro.html" style="color:var(--accent);">full guide here</a>.</li>
+            <li><strong>Shared bikes:</strong> Everywhere. Hellobike (blue) and Meituan (yellow) are the most common. Unlock with Alipay scan. ¥1.5–3 per ride. <a href="/guide/bike.html" style="color:var(--accent);">Full guide here</a>.</li>
+            <li><strong>DiDi:</strong> Reliable and cheap. A 20-minute ride across the city costs ¥25–40. <a href="/guide/ride-hailing.html" style="color:var(--accent);">Full guide here</a>.</li>
+            <li><strong>Walking:</strong> The lakeside areas, hills, and tea villages are best explored on foot. Hangzhou rewards walking in a way Shanghai and Beijing don't.</li>
+        </ul>
+
+        <h2 id="night-markets">Night Markets: Where the City Actually Eats After Dark</h2>
+        <p>Chinese cities come alive at night in a way that surprises most first-time visitors, and Hangzhou has several distinct night markets worth knowing about. Not the tourist version — the ones where locals go.</p>
+        <p><strong>武林夜市 (Wulin Night Market)</strong> is the big one. Tucked along Wulin Road and Longyou Road in Gongshu District, it packs nearly 200 stalls into a pedestrian strip lit up like a carnival. This is where you come for volume and variety — traditional Hangzhou snacks (葱包烩, sticky rice lotus root, 定胜糕) next to Changsha stinky tofu, Thai cheese sticks, and Vietnamese spring rolls. There's also a strong craft-and-handmade scene: embroidery, leatherwork, calligraphy, young artists selling prints. It's the most photogenic of the markets and the easiest to reach — walk from West Lake in 10 minutes, or take Metro Line 1 to Fengqi Road. Open roughly 17:00–23:00.</p>
+        <p><strong>吴山夜市 (Wushan Night Market)</strong> is the veteran. This was Hangzhou's original night market, and while it's shifted locations over the decades, it still runs on Renhe Road near Huixing Road in Shangcheng District. The balance tilts more toward stuff than food — about three-quarters of the stalls sell clothes, accessories, and knickknacks. Bargaining is expected, and on a good night you can find interesting things. There's food too: skewers, fried noodles, the usual suspects. It opens around 18:00 and runs late. Metro: Ding'an Road (Line 1).</p>
+        <p><strong>胜利河美食街 (Shengli River Food Street)</strong> is less a market and more a canal-side restaurant row. Thirty-odd eateries line the water in Gongshu District, red lanterns strung between whitewashed buildings. This is where locals go for late dinner and drinks — 老头儿油爆虾 (Old Man's Oil-Blasted Shrimp, a Hangzhou institution), beef offal hotpot, 小厨师沈家门海鲜 (fresh seafood from the Zhoushan fishing ports). Grab an outdoor table by the canal, order a cold beer, and watch the boats drift past. 17:00–次日2:00. Closest landmark: Xiangji Temple.</p>
+        <p>If you're staying in Qiantang District, the newer <strong>吾角金街 (Wujiao Jinjie)</strong> night market near Jinsha Avenue has 100+ food stalls and stays open past midnight — more of a student-and-young-crowd vibe. And of course <strong>Hefang Street</strong> (covered above) transforms at night when the lanterns come on, though it's more about atmosphere than serious eating.</p>
+        <p>A practical note: most night market vendors take Alipay or WeChat Pay. Cash is sometimes accepted but slows things down. And go hungry — the point isn't to sit down for a meal, it's to eat five small things from five different stalls and call it dinner.</p>
+
+        <div class="callout" style="text-align:center; margin-top:var(--space-lg);">
+            <strong>📋 Don't land unprepared.</strong> Get the free China Arrival Checklist — Alipay, VPN, eSIM, and the exact steps for your first 48 hours.<br>
+            <a href="/index.html#newsletter" class="btn btn-primary" style="margin-top:12px; display:inline-block;">Send Me the Checklist →</a>
+        </div>
+
+        <h2 id="common-mistakes">Common Mistakes First-Time Visitors Make</h2>
+        <ol>
+            <li><strong>Trying to "do West Lake" in 2 hours.</strong> It's not a single attraction. It's a 12 km loop with dozens of spots worth stopping at. Budget at least half a day, ideally a full morning + afternoon.</li>
+            <li><strong>Going to Lingyin Temple on a weekend at 10 AM.</strong> You'll spend the whole time in a crowd. Weekday morning, or don't bother.</li>
+            <li><strong>Staying near the train station because it's "convenient."</strong> Hangzhou East Railway Station area is transport infrastructure, not a neighborhood. Stay near the lake or in Gongshu.</li>
+            <li><strong>Expecting to pay with a foreign credit card everywhere.</strong> Small restaurants, tea houses, and street vendors take Alipay or WeChat Pay. Cash is legal but cumbersome. Set up Alipay before your trip. <a href="/guide/alipay.html" style="color:var(--accent);">Guide here</a>.</li>
+            <li><strong>Packing a 7-city itinerary with Hangzhou as a day trip.</strong> Hangzhou is a 3-5 day city minimum. One day means you'll see West Lake, take a photo with a tour group, and leave without understanding why anyone calls it beautiful.</li>
+        </ol>
+
+        <h2>Practical Tips</h2>
+        <ul>
+            <li><strong>Download Amap (高德地图) before you arrive.</strong> Google Maps is inaccurate in China. Amap — in Chinese, but with maps that actually work — is what locals use. The app has bare-bones English for navigation. <a href="/guide/apps.html" style="color:var(--accent);">More apps here</a>.</li>
+            <li><strong>Hangzhou Xiaoshan Airport (HGH) is about 30 km east of downtown.</strong> Metro is usually the fastest option — budget 35–60 minutes depending on your hotel location and transfers. Fares are usually under ¥10. DiDi costs ¥100–150.</li>
+            <li><strong>Visit West Lake on foot or bike, not by tour bus.</strong> The bus tour shows you the lake through a window, which misses the entire point.</li>
+            <li><strong>Green tea is everywhere. Drink it.</strong> Even the free tea at restaurants is usually decent Longjing.</li>
+            <li><strong>Bring comfortable walking shoes.</strong> Hangzhou is a city of hills, stone paths, and long walks. You'll regret heels or stiff dress shoes by noon.</li>
+        </ul>
+
+        <div class="callout callout-teal">
+            <strong>📱 Connectivity:</strong> Set up your VPN and eSIM before you land. Hangzhou's free public WiFi (in metro stations, some tourist areas) requires a Chinese phone number to register, which you probably won't have. <a href="/guide/vpn.html" style="color:#0D9488;">VPN setup guide</a> · <a href="/guide/esim.html" style="color:#0D9488;">eSIM guide</a>
+        </div>
+
+        <div class="article-cta">
+            <h3>Get the Free China Arrival Checklist</h3>
+            <p>The exact setup guide I send to friends before they visit China — Alipay, VPN, eSIM, and everything you need for your first 48 hours.</p>
+            <a href="/index.html#newsletter" class="btn btn-primary">Send Me the Checklist →</a>
+        </div>
+
+    </div>
+</article>
+
+<footer class="footer">
+    <div class="container">
+        <p>
+            <a href="/index.html">Home</a> &nbsp;·&nbsp;
+            <a href="/index.html#guides">All Guides</a> &nbsp;·&nbsp;
+            <a href="/guide/checklist.html">Checklist</a>
+        </p>
+        <p>© 2026 China Travel OS. Built for travelers, not algorithms.</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "framework": "static-multi-page",
+  "files": ["index.html", "guide/*.html", "city/*.html"],
+  "insertBefore": "</body>",
+  "commentSyntax": "html",
+  "cspChecked": false,
+  "devServerHint": "Run npx serve in the project root to start a dev server, then run impeccable live."
+}

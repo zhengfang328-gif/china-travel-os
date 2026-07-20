@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-08T10:30:00.000Z",
+  "title": "Design System: China Travel OS",
+  "extensions": {
+    "colorMeta": {
+      "accent-red": {
+        "role": "primary",
+        "displayName": "Accent Red",
+        "canonical": "#D94838",
+        "tonalRamp": [
+          "#1A0806", "#2D0F0B", "#411510", "#541C15",
+          "#68221A", "#7B291F", "#8F3024", "#A23629",
+          "#B63D2E", "#C94433", "#D94838", "#DF5D4E",
+          "#E47364", "#EA887A", "#F09E90", "#F5B3A6",
+          "#F9C9BC", "#FCDED2", "#FDF0ED", "#FEFAF9"
+        ]
+      },
+      "accent-red-deep": {
+        "role": "primary",
+        "displayName": "Accent Red Deep",
+        "canonical": "#B8382A"
+      },
+      "accent-red-soft": {
+        "role": "primary",
+        "displayName": "Accent Red Soft",
+        "canonical": "#FDF0ED"
+      },
+      "neutral-bg": {
+        "role": "neutral",
+        "displayName": "Neutral BG",
+        "canonical": "#FAFAFA"
+      },
+      "neutral-surface": {
+        "role": "neutral",
+        "displayName": "Neutral Surface",
+        "canonical": "#FFFFFF"
+      },
+      "neutral-ink": {
+        "role": "neutral",
+        "displayName": "Neutral Ink",
+        "canonical": "#1C1614"
+      },
+      "neutral-ink-sub": {
+        "role": "neutral",
+        "displayName": "Neutral Ink Sub",
+        "canonical": "#5A4D49"
+      },
+      "neutral-ink-faint": {
+        "role": "neutral",
+        "displayName": "Neutral Ink Faint",
+        "canonical": "#968883"
+      },
+      "neutral-border": {
+        "role": "neutral",
+        "displayName": "Neutral Border",
+        "canonical": "#E6E0DD"
+      },
+      "neutral-border-light": {
+        "role": "neutral",
+        "displayName": "Neutral Border Light",
+        "canonical": "#F2EFED"
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headlines only. Literata 700 italic variant for accent words in red." },
+      "heading": { "displayName": "Heading", "purpose": "Section h2 titles. Stands alone without eyebrow label." },
+      "body": { "displayName": "Body", "purpose": "Primary reading text. 65-75ch max line length." },
+      "label": { "displayName": "Label", "purpose": "Section eyebrow (Anxiety zone only), footer headings, badges." }
+    },
+    "shadows": [
+      {
+        "name": "city-card-hover",
+        "value": "0 12px 40px rgba(0,0,0,0.18)",
+        "purpose": "Sole shadow in the system. Applied on hover to city cards only, paired with translateY(-3px)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-interactive",
+        "value": "cubic-bezier(0.4, 0, 0, 1)",
+        "purpose": "Default easing for all interactive state transitions (buttons, links, hovers)."
+      },
+      {
+        "name": "ease-section-in",
+        "value": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+        "purpose": "Scroll-driven section entrance animation (opacity + translateY)."
+      }
+    ],
+    "breakpoints": [
+      { "name": "md", "value": "768px", "purpose": "Tablet: nav collapses to hamburger, footer grid 2-col" },
+      { "name": "sm", "value": "480px", "purpose": "Mobile: single-column grids, reduced hero type, full-width cards" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA. Accent red background, white text, full pill. Lifts 1px on hover.",
+      "html": "<button class=\"ds-btn-primary\">Start Planning</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px; border-radius: 999px; font-weight: 600; font-size: 0.875rem; cursor: pointer; border: none; font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif; background: #D94838; color: #fff; transition: background-color 0.2s cubic-bezier(0.4, 0, 0, 1), color 0.2s cubic-bezier(0.4, 0, 0, 1), transform 0.2s cubic-bezier(0.4, 0, 0, 1); } .ds-btn-primary:hover { background: #B8382A; transform: translateY(-1px); }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action. Transparent with border, shifts to accent on hover.",
+      "html": "<button class=\"ds-btn-outline\">See Guides</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px; border-radius: 999px; font-weight: 600; font-size: 0.875rem; cursor: pointer; border: 1.5px solid #E6E0DD; font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif; background: transparent; color: #1C1614; transition: background-color 0.2s cubic-bezier(0.4, 0, 0, 1), color 0.2s cubic-bezier(0.4, 0, 0, 1), transform 0.2s cubic-bezier(0.4, 0, 0, 1); } .ds-btn-outline:hover { border-color: #D94838; color: #D94838; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Tertiary action. Subtle border, muted text. Used for cancel/secondary flows.",
+      "html": "<button class=\"ds-btn-ghost\">Cancel</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px; border-radius: 999px; font-weight: 600; font-size: 0.875rem; cursor: pointer; border: 1.5px solid #F2EFED; font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif; background: transparent; color: #5A4D49; transition: background-color 0.2s cubic-bezier(0.4, 0, 0, 1), color 0.2s cubic-bezier(0.4, 0, 0, 1); } .ds-btn-ghost:hover { border-color: #E6E0DD; color: #1C1614; }"
+    },
+    {
+      "name": "Navigation Bar",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Sticky top nav, solid white background, 1px hairline bottom border. Logo in Literata with accent dot.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" class=\"ds-nav-logo\">China<span class=\"ds-nav-dot\">Travel</span>OS</a><div class=\"ds-nav-links\"><a href=\"#\">Guides</a><a href=\"#\">Cities</a></div></nav>",
+      "css": ".ds-nav { position: sticky; top: 0; z-index: 50; background: #FFFFFF; border-bottom: 1px solid #F2EFED; height: 64px; display: flex; align-items: center; padding: 0 24px; } .ds-nav-logo { font-family: 'Literata', Georgia, 'Times New Roman', serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em; color: #1C1614; text-decoration: none; } .ds-nav-dot { color: #D94838; } .ds-nav-links { display: flex; align-items: center; gap: 32px; } .ds-nav-links a { font-size: 0.875rem; font-weight: 500; color: #5A4D49; text-decoration: none; transition: color 0.15s; } .ds-nav-links a:hover { color: #1C1614; }"
+    },
+    {
+      "name": "Anxiety Card",
+      "kind": "card",
+      "refersTo": "anxiety-card",
+      "description": "Question-format card for the Anxiety section. White surface, hairline border, icon nook, hover border shift.",
+      "html": "<a href=\"#\" class=\"ds-anxiety-card\"><span class=\"ds-card-icon\">💳</span><h3>Can I use my foreign card?</h3><p>Yes — Alipay now accepts Visa and Mastercard directly.</p><span class=\"ds-card-link\">Read guide →</span></a>",
+      "css": ".ds-anxiety-card { display: block; background: #FFFFFF; border: 1px solid #F2EFED; border-radius: 16px; padding: 24px 32px; transition: border-color 0.2s cubic-bezier(0.4,0,0,1), background-color 0.2s cubic-bezier(0.4,0,0,1); cursor: pointer; color: #1C1614; text-decoration: none; } .ds-anxiety-card:hover { border-color: #E6E0DD; background: #F8F6F5; } .ds-card-icon { font-size: 32px; display: block; width: 52px; height: 52px; line-height: 52px; text-align: center; background: #F2EFED; border-radius: 14px; margin-bottom: 16px; } .ds-anxiety-card h3 { font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 1rem; font-weight: 600; margin-bottom: 6px; letter-spacing: -0.005em; } .ds-anxiety-card p { font-size: 0.875rem; color: #5A4D49; line-height: 1.5; } .ds-card-link { display: inline-block; margin-top: 8px; font-size: 0.75rem; font-weight: 600; color: #D94838; transition: color 0.15s; } .ds-anxiety-card:hover .ds-card-link { color: #B8382A; }"
+    },
+    {
+      "name": "City Card",
+      "kind": "card",
+      "refersTo": "city-card",
+      "description": "Photography-first city card with solid color background, radial light source, and hover lift. The only component with a shadow.",
+      "html": "<a href=\"#\" class=\"ds-city-card\" style=\"background:#2D5A3B\"><span class=\"ds-city-tag\">Coming soon</span><h3>Hangzhou</h3><p>Nature meets AI</p><span class=\"ds-city-link\">Explore →</span></a>",
+      "css": ".ds-city-card { display: flex; flex-direction: column; justify-content: flex-end; position: relative; border-radius: 16px; overflow: hidden; min-height: 360px; padding: 32px 24px; color: #fff; text-decoration: none; transition: transform 0.3s cubic-bezier(0.4,0,0,1); } .ds-city-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 20%, rgba(0,0,0,.15) 50%, rgba(0,0,0,.5) 100%); z-index: 1; } .ds-city-card::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,.08) 0%, transparent 60%); z-index: 1; pointer-events: none; } .ds-city-card > * { position: relative; z-index: 2; } .ds-city-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,.18); } .ds-city-card h3 { font-size: 2rem; font-weight: 700; margin-bottom: 2px; letter-spacing: -0.01em; font-family: 'Literata', Georgia, serif; } .ds-city-card p { font-size: 0.75rem; opacity: 0.85; margin-bottom: 8px; font-family: 'Work Sans', sans-serif; } .ds-city-tag { display: inline-block; background: rgba(255,255,255,.12); font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 999px; margin-bottom: auto; width: fit-content; font-family: 'Work Sans', sans-serif; } .ds-city-link { font-size: 0.75rem; font-weight: 600; opacity: 0; transform: translateY(4px); transition: opacity 0.25s, transform 0.25s; display: flex; align-items: center; gap: 4px; } .ds-city-card:hover .ds-city-link { opacity: 1; transform: translateY(0); }"
+    },
+    {
+      "name": "Guide Item",
+      "kind": "card",
+      "refersTo": "guide-item",
+      "description": "List-style guide entry with icon, title, description, tag, and sliding arrow on hover.",
+      "html": "<a href=\"#\" class=\"ds-guide-item\"><span>💳</span><div class=\"ds-gi-text\"><span class=\"ds-gi-title\">Alipay Setup<span class=\"ds-gi-tag\">Payments</span></span><span class=\"ds-gi-desc\">Link your foreign card in 10 minutes</span></div><span class=\"ds-gi-arrow\">→</span></a>",
+      "css": ".ds-guide-item { display: flex; align-items: center; gap: 16px; padding: 16px 24px; border-radius: 10px; transition: background-color 0.15s cubic-bezier(0.4,0,0,1); cursor: pointer; color: #1C1614; text-decoration: none; border: 1px solid transparent; } .ds-guide-item:hover { background: #F8F6F5; border-color: #F2EFED; } .ds-gi-text { flex: 1; min-width: 0; } .ds-gi-title { font-family: 'Work Sans', sans-serif; font-size: 0.875rem; font-weight: 600; letter-spacing: -0.005em; } .ds-gi-desc { font-size: 0.75rem; color: #5A4D49; display: block; } .ds-gi-tag { display: inline-block; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; padding: 2px 8px; border-radius: 999px; margin-left: 8px; background: #FDF0ED; color: #D94838; vertical-align: middle; } .ds-gi-arrow { color: #968883; font-size: 13px; flex-shrink: 0; transition: transform 0.2s cubic-bezier(0.4,0,0,1), color 0.2s cubic-bezier(0.4,0,0,1); } .ds-guide-item:hover .ds-gi-arrow { transform: translateX(3px); color: #D94838; }"
+    },
+    {
+      "name": "Callout Box",
+      "kind": "custom",
+      "refersTo": "callout",
+      "description": "Full-border alert box with tinted background. Used for tips, warnings, and TL;DR summaries. Never uses border-left stripe.",
+      "html": "<div class=\"ds-callout\"><strong>💡 Tip:</strong> Download Alipay <em>before</em> you leave home — SMS verification works best on your home network.</div>",
+      "css": ".ds-callout { border: 1px solid #E6E0DD; background: #FDF0ED; border-radius: 16px; padding: 24px; font-size: 0.875rem; line-height: 1.6; color: #1C1614; font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif; }"
+    },
+    {
+      "name": "Newsletter Block",
+      "kind": "custom",
+      "refersTo": "newsletter",
+      "description": "Full-bleed accent red CTA block with white text, pill input, and white submit button.",
+      "html": "<div class=\"ds-newsletter\"><h2>Get the Free China Arrival Checklist</h2><p>A 21-step timeline. Made a mistake on my first trip so you won't.</p><form class=\"ds-nl-form\"><input type=\"email\" placeholder=\"Your email\"><button class=\"ds-nl-btn\">Send Me the Checklist</button></form></div>",
+      "css": ".ds-newsletter { max-width: 600px; margin: 0 auto; text-align: center; padding: 64px 32px; background: #D94838; color: #fff; border-radius: 16px; } .ds-newsletter h2 { color: #fff; font-weight: 600; margin-bottom: 8px; font-family: 'Literata', Georgia, serif; font-size: clamp(1.5rem, 3vw, 2rem); } .ds-newsletter p { color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-bottom: 24px; } .ds-nl-form { display: flex; gap: 8px; max-width: 420px; margin: 0 auto; } .ds-nl-form input { flex: 1; padding: 13px 18px; border: 1.5px solid rgba(255,255,255,0.25); border-radius: 999px; font-size: 0.875rem; outline: none; background: rgba(255,255,255,0.1); color: #fff; font-family: 'Work Sans', sans-serif; transition: border-color 0.15s; } .ds-nl-form input::placeholder { color: rgba(255,255,255,0.5); } .ds-nl-form input:focus { border-color: rgba(255,255,255,0.5); } .ds-nl-btn { background: #fff; color: #D94838; font-weight: 700; font-size: 0.875rem; padding: 13px 26px; border-radius: 999px; border: none; cursor: pointer; font-family: 'Work Sans', sans-serif; transition: background-color 0.2s, transform 0.2s; } .ds-nl-btn:hover { background: #F5F0EE; transform: translateY(-1px); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Field Notebook",
+    "overview": "China Travel OS looks like a well-kept traveler's notebook: honest, lived-in, organized with care but never precious. Every visual choice serves one goal — getting the reader to the answer as directly as possible, with warmth that comes from the voice and the details, not from decorative styling. The palette is built around a single committed red, used boldly on the newsletter block and buttons, whisper-quiet everywhere else. Typography pairs a literary serif for headings with a humanist sans for body, creating hierarchy through scale and weight contrast without resorting to all-caps eyebrow labels above every section.",
+    "keyCharacteristics": [
+      "Single committed accent color carrying 30–60% of visible surface",
+      "Border-based depth hierarchy — no shadows except on city card hover",
+      "Serif headings + sans body with ≥1.25 scale ratio between steps",
+      "Flat backgrounds, chroma-neutral off-white, no warm-cream tint",
+      "Section labels used exactly once (Anxiety zone), not as site-wide scaffolding",
+      "All motion respects prefers-reduced-motion and uses targeted transitions only"
+    ],
+    "rules": [
+      { "name": "The No-Pure-Gray Rule", "body": "Every neutral on the site is tinted toward the brand red hue. If a gray reads as purely achromatic, it's wrong. The shift is barely perceptible (0.002–0.005 chroma) — it should feel natural, not colored.", "section": "colors" },
+      { "name": "The Committed Red Rule", "body": "Brand red is not an accent sprinkle; it's a structural color. The newsletter block, primary buttons, links, and logo all use it. Together they occupy 30–60% of the visible surface on any given scroll.", "section": "colors" },
+      { "name": "The Not-Cream Rule", "body": "The body background (#FAFAFA) is chroma-zero off-white. It must never drift into warm-neutral territory (cream, sand, parchment, ivory). If it looks like paper aged in a drawer, it's wrong.", "section": "colors" },
+      { "name": "The One Eyebrow Rule", "body": "The .section-label (small uppercase tracked label) appears in exactly one place: the Anxiety section on the homepage. Every other section lets its h2 carry meaning without a kicker.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Surfaces are flat at rest. If an element needs depth, use a border or a background-color shift. Never use box-shadow as decoration.", "section": "elevation" },
+      { "name": "The Border-Not-Shadow Rule", "body": "Cards, nav, and sections are separated by 1px solid borders. A 1px border and a soft wide drop shadow on the same element is prohibited. Pick the border.", "section": "elevation" }
+    ],
+    "dos": [
+      "Use the single brand red (#D94838) for buttons, links, the newsletter block, and the logo accent",
+      "Differentiate surfaces with 1px borders (#F2EFED / #E6E0DD), not shadows",
+      "Pair Literata headings with Work Sans body text",
+      "Use cubic-bezier(0.4, 0, 0, 1) for all interactive transitions; target specific properties",
+      "Wrap every animation in @media (prefers-reduced-motion: reduce)",
+      "Use text-wrap: balance on all h1–h3 elements"
+    ],
+    "donts": [
+      "Don't use Chinese cultural motifs, red lanterns, gold accents, or ornate decoration",
+      "Don't use SaaS landing-page clichés: gradient buttons, hero-metric templates, buzzwords",
+      "Don't use AI-generated marketing cadences: aphoristic negation, em-dash overuse, identical card grids",
+      "Don't use border-left greater than 1px as a colored accent stripe",
+      "Don't add .section-label to any new section beyond the Anxiety zone",
+      "Don't use warm-tinted backgrounds (cream, sand, parchment, ivory)",
+      "Don't pair 1px border with soft wide drop shadow on the same element",
+      "Don't use border-radius larger than 16px on cards or sections",
+      "Don't use transition: all — target properties explicitly",
+      "Don't use glassmorphism, backdrop-filter blur, or gradient text"
+    ]
+  }
+}

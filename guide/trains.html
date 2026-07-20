@@ -1,0 +1,559 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use China's High-Speed Trains as a Foreigner (2026 Guide) — China Travel OS</title>
+    <meta name="description" content="How to book, board, and navigate China's high-speed trains as a foreigner. 12306, Trip.com, seat classes, station guide — all explained by people who actually ride them.">
+    <meta property="og:title" content="How to Use China's High-Speed Trains as a Foreigner (2026 Guide)">
+    <meta property="og:description" content="Booking, boarding, seat classes, and everything you need to know about China's high-speed rail. Book tickets with your passport — most steps are in English.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://chinatravelos.com/guide/images/og-trains.jpg">
+    <meta property="og:url" content="https://chinatravelos.com/guide/trains.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="High-Speed Trains Guide — China Travel OS">
+    <meta name="twitter:description" content="Practical, honest guide for first-time travelers to China.">
+    <meta name="twitter:image" content="https://chinatravelos.com/guide/images/og-trains.jpg">
+    <meta property="article:modified_time" content="2026-07-01">
+    <link rel="canonical" href="https://chinatravelos.com/guide/trains.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400&amp;family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:           #FAFAFA;
+            --surface:      #FFFFFF;
+            --text:         #1C1614;
+            --text-sub:     #5A4D49;
+            --text-faint:   #968883;
+            --accent:       #D94838;
+            --accent-hover: #B8382A;
+            --accent-muted: #FDF0ED;
+            --border:       #E6E0DD;
+            --border-light: #F2EFED;
+            --radius:       10px;
+            --radius-l:     16px;
+            --radius-pill:  999px;
+            --max-w:        1120px;
+            --content-w:    720px;
+            --nav-h:        64px;
+            --z-nav:        50;
+
+            --space-xs:  4px;
+            --space-sm:  8px;
+            --space-md:  16px;
+            --space-lg:  24px;
+            --space-xl:  32px;
+            --space-2xl: 48px;
+            --space-3xl: 64px;
+            --space-4xl: 96px;
+
+            --text-xs:   0.75rem;
+            --text-sm:   0.875rem;
+            --text-base: 1rem;
+            --text-md:   1.125rem;
+            --text-lg:   1.375rem;
+            --text-xl:   1.75rem;
+            --text-2xl:  2.25rem;
+            --text-3xl:  2.875rem;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; max-width: 100%; }
+        body {
+            max-width: 100%; font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg); color: var(--text); line-height: 1.7; font-size: 1rem;
+        }
+        a { color: inherit; text-decoration: none; }
+        img, video { max-width: 100%; height: auto; display: block; border-radius: var(--radius); }
+        .article img.screenshot { display: block; max-width: 480px; border-radius: var(--radius-l); margin: 24px 0; }
+
+        /* Nav */
+        .nav {
+            position: sticky; top: 0; z-index: var(--z-nav);
+            background: var(--surface);
+            border-bottom: 1px solid var(--border-light); height: var(--nav-h);
+        }
+        .nav .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--space-lg); display: flex; align-items: center; justify-content: space-between; height: 100%; }
+        .nav-logo { font-family: 'Literata', 'Georgia', 'Times New Roman', serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em; }
+        .nav-logo span { color: var(--accent); }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-links a { font-size: var(--text-sm); font-weight: 500; color: var(--text-sub); transition: color .15s; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-back { font-size: var(--text-sm); font-weight: 600; color: var(--accent); }
+        .nav-back:hover { color: var(--accent-hover); }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+        }
+
+        /* Article layout */
+        .article { padding: 56px 0 80px; }
+        .article .container { max-width: var(--content-w); margin: 0 auto; padding: 0 var(--space-lg); }
+
+        .breadcrumb { font-size: var(--text-xs); color: var(--text-faint); margin-bottom: 32px; }
+        .breadcrumb a { color: var(--text-sub); transition: color .15s; }
+        .breadcrumb a:hover { color: var(--text); }
+
+        .article h1 {
+            font-size: clamp(28px, 5vw, 42px); font-weight: 800;
+            letter-spacing: -.03em; line-height: 1.15; margin-bottom: 12px;
+        }
+        .article .byline { font-size: var(--text-sm); color: var(--text-faint); margin-bottom: 36px; }
+        .article .byline strong { color: var(--text-sub); font-weight: 600; }
+
+        /* TL;DR box */
+        .tldr {
+            background: #FEF9F3; border: 1px solid #FDE8D8; border-radius: var(--radius-l);
+            padding: 24px 28px; margin-bottom: 40px;
+        }
+        .tldr h3 { font-size: var(--text-sm); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--accent); margin-bottom: 10px; }
+        .tldr ul { list-style: none; }
+        .tldr li { font-size: var(--text-sm); padding: 4px 0; }
+        .tldr li::before { content: '—'; color: #0D9488; font-weight: 700; }
+
+        /* Content */
+        
+        /* TOC */
+        .toc {
+            background: var(--surface); border: 1px solid var(--border-light);
+            border-radius: var(--radius-l); padding: var(--space-lg) var(--space-xl);
+            margin-bottom: var(--space-2xl);
+        }
+        .toc h3 {
+            font-size: var(--text-sm); font-weight: 700; text-transform: uppercase;
+            letter-spacing: .05em; color: var(--text-faint); margin-bottom: var(--space-md);
+            font-family: 'Work Sans', sans-serif;
+        }
+        .toc ol { list-style: none; padding: 0; margin: 0; }
+        .toc li { margin-bottom: 6px; }
+        .toc a {
+            font-size: var(--text-sm); color: var(--text-sub);
+            transition: color .15s; text-decoration: none;
+        }
+        .toc a:hover { color: var(--accent); }
+.article h2 {
+            font-size: 24px; font-weight: 700; letter-spacing: -.02em;
+            margin: 44px 0 14px; padding-top: 20px; scroll-margin-top: 80px;
+        .article h3 { font-size: 18px; font-weight: 700; margin: 28px 0 10px; }
+        .article p { margin-bottom: 16px; color: var(--text); }
+        .article ul, .article ol { margin-bottom: 20px; padding-left: 24px; }
+        .article li { margin-bottom: 8px; }
+
+        /* Tip / Warning boxes */
+        .callout {
+            border: 1px solid var(--border); background: #FFF5F3;
+            padding: 16px 20px; border-radius: var(--radius);
+            margin-bottom: 24px; font-size: var(--text-sm);
+        }
+        .callout strong { color: var(--accent); }
+        .callout-teal { border-color: #0D9488; background: #F0FDF9; }
+        .callout-teal strong { color: #0F766E; }
+
+        /* Step number */
+        .step-num {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 28px; height: 28px; background: var(--accent); color: #fff;
+            border-radius: var(--radius-pill); font-size: var(--text-xs); font-weight: 700; margin-right: 8px;
+            flex-shrink: 0;
+        }
+
+        /* Seat class cards */
+        .seat-grid {
+            display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 24px;
+        }
+        .seat-card {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 20px; text-align: center;
+        }
+        .seat-card h3 { font-size: var(--text-sm); font-weight: 700; margin-bottom: 4px; }
+        .seat-card .seat-price { font-size: 20px; font-weight: 800; color: var(--accent); margin-bottom: 4px; }
+        .seat-card p { font-size: var(--text-xs); color: var(--text-sub); margin: 0; }
+        @media (max-width: 500px) { .seat-grid { grid-template-columns: 1fr; } }
+
+        /* CTA at bottom */
+        .article-cta {
+            background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-l);
+            padding: 32px; margin-top: 48px; text-align: center;
+        }
+        .article-cta h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+        .article-cta p { color: var(--text-sub); font-size: var(--text-sm); margin-bottom: 16px; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 28px; border-radius: var(--radius-pill); font-weight: 600;
+            font-size: var(--text-sm); transition: background-color .2s cubic-bezier(.4, 0, 0, 1); cursor: pointer;
+            border: none; white-space: nowrap;
+        }
+        .btn-primary { background: var(--accent); color: #fff; }
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+
+        /* Footer */
+        .footer { padding: 32px 0; border-top: 1px solid var(--border); text-align: center; }
+        .footer .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--space-lg); }
+        .footer p { font-size: var(--text-xs); color: var(--text-faint); }
+        .footer a { color: var(--text-sub); transition: color .15s; }
+        .footer a:hover { color: var(--text); }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+            .btn:hover { transform: none; }
+            .section { animation: none; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How to Use China's High-Speed Trains as a Foreigner (2026)",
+        "description": "Everything foreign travelers need to know about China's high-speed rail: booking, seat classes, station navigation, and common mistakes.",
+        "image": "https://chinatravelos.com/guide/images/og-trains.jpg",
+        "dateModified": "2026-07-01",
+        "author": { "@type": "Organization", "name": "China Travel OS" },
+        "publisher": { "@type": "Organization", "name": "China Travel OS" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chinatravelos.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://chinatravelos.com/#guides" },
+            { "@type": "ListItem", "position": 3, "name": "High-Speed Train Guide", "item": "https://chinatravelos.com/guide/trains.html" }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="container">
+        <a href="/index.html" class="nav-logo">China<span>Travel</span>OS</a>
+        <div class="nav-links">
+            <a href="/index.html#guides">Guides</a>
+            <a href="/index.html#cities">Cities</a>
+            <a href="/index.html#community">Community</a>
+            <a href="/index.html#newsletter">Free Guide</a>
+        </div>
+        <a href="/index.html" class="nav-back"> — Back to Guides</a>
+    </div>
+</nav>
+
+<article class="article">
+    <div class="container">
+
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> &nbsp;/&nbsp;
+            <a href="/index.html#guides">Guides</a> &nbsp;/&nbsp;
+            High-Speed Rail Guide
+        </div>
+
+        <h1>How to Use China's High-Speed Trains<br>as a Foreigner (2026 Guide)</h1>
+        <p class="byline">By <strong>China Travel OS</strong> &nbsp;·&nbsp; Updated for 2026 travelers — because 12306 changes their English UI every few months</p>
+
+        <div class="tldr">
+            <h3>TL;DR — The Short Version</h3>
+            <ul>
+                <li>China's high-speed rail is <strong>genuinely impressive</strong> — clean, punctual, and shockingly affordable</li>
+                <li>Book via <strong>Trip.com</strong> (easiest) or the official <strong>12306 app</strong> (cheapest, has English)</li>
+                <li>Bring your <strong>physical passport.</strong> Your passport <em>is</em> your ticket — no paper pickup needed</li>
+                <li>Arrive at the station <strong>45–60 minutes early</strong> for your first trip — security lines can be long</li>
+                <li>Three seat classes: Second (cheap, comfortable), First (wider seats), Business (lie-flat, lounge access)</li>
+            </ul>
+        </div>
+
+        <!-- TOC -->
+        <nav class="toc">
+            <h3>On this page</h3>
+            <ol>
+                <li><a href="#how-to-book">How to Book Tickets</a></li>
+                <li><a href="#seat-classes">Seat Classes Explained</a></li>
+                <li><a href="#alipay-flow">Book via Alipay (Step-by-Step)</a></li>
+                <li><a href="#at-the-station">At the Station</a></li>
+                <li><a href="#on-the-train">On the Train</a></li>
+                <li><a href="#arriving">Arriving</a></li>
+                <li><a href="#route-cheat-sheet">Route Cheat Sheet</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#common-mistakes">Common Mistakes</a></li>
+                <li><a href="#pro-tips">Pro Tips</a></li>
+            </ol>
+        </nav>
+
+        <h2 id="the-train-system">The Train System Foreigners Can't Believe Exists</h2>
+        <p>I've taken high-speed trains in Japan, France, Germany, and Italy. China's system is bigger than all of them combined — over 40,000 km of track connecting every major city — and somehow, it's also the cheapest. A 5-hour ride from Shanghai to Beijing costs about ¥550 ($75) in second class. The same distance in France would be triple that.</p>
+        <p>The trains run at 300–350 km/h (186–217 mph). They leave exactly on time — not "roughly," not "give or take" — the doors close 3–5 minutes before departure and you are <em>not</em> getting on after that. Every station has English signage. Every seat has a power outlet. The WiFi is unreliable (Chinese intranet only, no Google), but the ride is so smooth you can balance a coin on its edge on the tray table. I've done this. It stayed standing for 20 minutes.</p>
+        <p>Here's everything you need to know to ride them — from booking your first ticket to walking off the platform like you've done it a hundred times.</p>
+
+        <h2 id="how-to-book">How to Book Tickets</h2>
+        <p>There are three ways. Here they are, ranked from easiest to most involved.</p>
+
+        <h3><span class="step-num">1</span> Trip.com (Easiest — Recommended for First-Timers)</h3>
+        <p>Trip.com (formerly Ctrip) is an English-language travel platform. It's not the official railway app, so tickets cost about ¥30–50 ($4–7) more per booking in service fees. For that small premium, you get:</p>
+        <ul>
+            <li><strong>Full English interface.</strong> Search cities, dates, seat classes — all in English. No translation apps needed.</li>
+            <li><strong>Foreign card payment.</strong> Visa, Mastercard, Amex — all accepted. No Chinese bank account required.</li>
+            <li><strong>Clear seat selection.</strong> You can see which seats are available and pick window or aisle.</li>
+        </ul>
+        <p>The tradeoff: Trip.com is a third party. If a train gets canceled or you need to change your ticket, you're going through their customer service — not the railway directly. For 90% of trips this is fine. For complex itineraries, use 12306.</p>
+        <p style="margin-bottom:28px;"><a href="https://www.trip.com/trains/china" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600;">Trip.com China Trains </a></p>
+
+        <h3><span class="step-num">2</span> Railway 12306 — Official, Cheapest, No Fees</h3>
+        <p>12306 is the official China Railway system. It's the only place to buy tickets at face value with zero booking fees. And you don't need to download a separate app —<strong>12306 works as a mini-program inside Alipay.</strong> Just open Alipay, search "12306," and tap Railway 12306. No app store, no extra download, no registration hassle. There's also a standalone app if you prefer, but the Alipay mini-program does the same thing and is already on your phone if you have Alipay installed.</p>
+
+        <p><strong>Two ways to use 12306:</strong></p>
+        <ol>
+            <li><strong>Alipay mini-program (recommended).</strong> Open Alipay — Search "12306" — Tap Railway 12306. You're in. No extra setup — it uses your Alipay account and linked payment method. We walk through the full booking flow with screenshots <a href="#alipay-flow" style="color:var(--accent);font-weight:600;">below </a>.</li>
+            <li><strong>Standalone app.</strong> Download "Railway 12306" from your app store. The icon is a blue and red train on a white background. You'll need to register separately with your passport number and verify your identity — either via a Chinese phone number or in person at a station ticket window.</li>
+        </ol>
+
+        <div class="callout callout-teal"><strong>💡 Even if you book via Trip.com, use 12306 on travel day.</strong> The 12306 mini-program in Alipay shows live train status, platform numbers, and delay updates. On travel days, I check it constantly — it tells you which gate and platform before the station boards even update.</div>
+
+        <h3><span class="step-num">3</span> Buy at the Station (Last Resort)</h3>
+        <p>You can walk up to any train station ticket window with your passport and buy a ticket for the next available train. But here's why you shouldn't:</p>
+        <ul>
+            <li>Popular routes (Shanghai–Beijing, Hangzhou–Shanghai, Guangzhou–Shenzhen) <strong>sell out</strong> hours or days in advance</li>
+            <li>The ticket agent might not speak English — have your destination written in Chinese</li>
+            <li>You'll almost certainly get a worse seat (middle seat, last row) or a later train than you wanted</li>
+        </ul>
+        <p>Use this only if your plans changed and you're already at the station. Otherwise, book ahead.</p>
+
+        <h2 id="seat-classes">Seat Classes Explained</h2>
+        <p>China high-speed trains (G-series and D-series) have three classes. They're not like European classes — the gap between Second and First is modest, but Business is a whole different world.</p>
+
+        <div class="seat-grid">
+            <div class="seat-card">
+                <h3>Second Class</h3>
+                <div class="seat-price">~¥550</div>
+                <p>3+2 seating. Plenty of legroom. Power outlet under every seat. This is what 90% of people take — and it's already better than most European first class. Example price: Shanghai — Beijing (5 hours).</p>
+            </div>
+            <div class="seat-card">
+                <h3>First Class</h3>
+                <div class="seat-price">~¥930</div>
+                <p>2+2 seating. Wider seats, more recline, slightly more legroom. Quieter car. Worth it for trips over 4 hours if you want to work or sleep. About 70% more than Second Class.</p>
+            </div>
+            <div class="seat-card">
+                <h3>👑 Business Class</h3>
+                <div class="seat-price">~¥1,750</div>
+                <p>2+1 or 1+1 lie-flat seats. Dedicated check-in counter, lounge access with free drinks and snacks, priority boarding. Feels like an international first-class flight. About 3× Second Class.</p>
+            </div>
+        </div>
+
+        <h2 id="alipay-flow">Step-by-Step: Book via Alipay (With Screenshots)</h2>
+        <p>This is the most reliable way to book directly through China's official railway system — using the 12306 mini-program inside Alipay. Fair warning: the process has a lot of steps. But <strong>read each one carefully.</strong> One wrong tap — picking the wrong station, skipping the passport field — can cost you hours on travel day. I've seen it happen.</p>
+
+        <h3><span class="step-num">1</span> Open Alipay and tap the Search bar</h3>
+        <p>Launch Alipay. At the top of the home screen, tap the <strong>Search</strong> bar.</p>
+        <img src="images/railway/0.jpg" alt="Alipay home screen — tap the Search bar at the top" class="screenshot" loading="lazy">
+
+        <h3><span class="step-num">2</span> Search for "12306"</h3>
+        <p>Type <strong>12306</strong> in the search box. The top result will be <strong>Railway 12306</strong> — a mini-program with a blue and red train icon. This is the official China Railway mini-program, not a third-party service. It's safe to use.</p>
+        <img src="images/railway/1.jpg" alt="Alipay search results showing Railway 12306 mini-program" class="screenshot" loading="lazy">
+
+        <h3><span class="step-num">3</span> Enter the mini-program and set your route</h3>
+        <p>Tap Railway 12306. You'll see the main booking screen: departure city on the left, destination city on the right. <strong>Check the box below the cities</strong> that says "Only view high-speed rail" — this filters out slow trains.</p>
+        <img src="images/railway/2.jpg" alt="12306 mini-program main screen — departure city left, destination right, high-speed rail checkbox" class="screenshot" loading="lazy">
+
+        <h3><span class="step-num">4</span> Choose your departure city and station</h3>
+        <p>Tap the departure city box. Type the <strong>pinyin</strong> of your city — for example, "hangzhou" for Hangzhou. You'll see "City Hangzhou City" plus a list of specific stations: Hangzhou East Station, Hangzhou Station, Hangzhou South Railway Station, Hangzhou West Railway Station.</p>
+        <p><strong>Do NOT just select the city name.</strong> Most Chinese cities have multiple train stations, and they can be an hour apart by metro. Pick the specific station closest to where you're staying. If you select just the city, the system picks a default — which might be the wrong one.</p>
+        <img src="images/railway/3.jpg" alt="Selecting departure station — Hangzhou with multiple station options" class="screenshot" loading="lazy">
+
+        <div class="callout"><strong>⚠️ Real story:</strong> A friend of mine was staying in Hangzhou's Future Tech City (west side) and accidentally booked from Hangzhou South Railway Station — on the opposite side of the city. He spent an extra hour in traffic and showed up late to his meeting. Even locals mess this up. Take 30 seconds to check which station is closest to you.</div>
+
+        <h3><span class="step-num">5</span> Choose your destination city and station</h3>
+        <p>Tap the destination city box. Type the pinyin — for example, "beijing". Beijing has more stations than any other city in China. <strong>You must know which station is closest to your destination.</strong> Beijing South serves high-speed trains from Shanghai and Hangzhou; Beijing West serves routes from the south and west. Pick the wrong one and you'll face a long cross-city transfer.</p>
+        <img src="images/railway/4.jpg" alt="Selecting destination — Beijing with its many station options" class="screenshot" loading="lazy">
+
+        <h3><span class="step-num">6</span> Tap "Check Tickets"</h3>
+        <p>With both stations selected, tap the <strong>Check tickets</strong> button.</p>
+        <img src="images/railway/5.jpg" alt="Check tickets button on the route selection screen" class="screenshot" loading="lazy">
+
+        <h3><span class="step-num">7</span> Select your travel date</h3>
+        <p>The screen defaults to today's trains. Tap the <strong>calendar icon</strong> at the top of the page to pick your departure date. Tickets are usually available 15 days before departure.</p>
+        <img src="images/railway/6.jpg" alt="Calendar date picker — tickets available 15 days before departure" class="screenshot" loading="lazy">
+
+        <h3><span class="step-num">8</span> Pick your date (up to 15 days ahead)</h3>
+        <p>Select your date from the calendar. The available trains for that day will load.</p>
+        <img src="images/railway/7.jpg" alt="Calendar view — select a date up to 15 days ahead" class="screenshot" loading="lazy">
+
+        <h3><span class="step-num">9</span> Choose your train</h3>
+        <p>You'll see a list of trains with departure times, arrival times, and durations. Hangzhou to Beijing is about 1,200 km — the fastest train covers that in <strong>4 hours and 35 minutes.</strong> That's kind of insane, right? Pick the one that fits your schedule. Faster trains cost slightly more.</p>
+        <img src="images/railway/8.jpg" alt="Train list showing departure times, durations, and prices" class="screenshot" loading="lazy">
+
+        <h3><span class="step-num">10</span> Choose your seat class</h3>
+        <p>After selecting a train, you'll see the seat options. There are typically four types —<strong>Second Class</strong> (affordable, comfortable), <strong>First Class</strong> (wider seats, more legroom), <strong>Business Class</strong> (lie-flat, lounge access), and standing tickets (don't). See the <a href="#seat-classes" style="color:var(--accent);font-weight:600;">seat class comparison above </a> for details. Choose based on your budget and trip length — for anything over 4 hours, First Class is worth the upgrade.</p>
+        <img src="images/railway/9.jpg" alt="Seat class selection — Second, First, Business, and standing options" class="screenshot" loading="lazy">
+
+        <div class="callout callout-teal"><strong>💡 Tip:</strong> If you see only standing tickets left, that means the train is nearly sold out. Standing for 5 hours is not an experience you want. Check the next train instead — there's usually another one within an hour on major routes.</div>
+
+        <h3><span class="step-num">11</span> Add passenger information</h3>
+        <p>After choosing your seat class, tap <strong>Select passenger type</strong> to enter your details.</p>
+        <img src="images/railway/10.jpg" alt="Select passenger type button on the booking screen" class="screenshot" loading="lazy">
+
+        <h3><span class="step-num">12</span> Enter your passport details</h3>
+        <p>This is the most important screen. Three fields to fill:</p>
+        <ol>
+            <li><strong>Name</strong> — enter exactly as it appears on your passport</li>
+            <li><strong>ID type</strong> — tap to open the dropdown and select <strong>"Foreign passport"</strong> (or the option matching your document)</li>
+            <li><strong>ID number</strong> — enter your passport number exactly as printed</li>
+        </ol>
+        <p>If any of these don't match your passport exactly, you won't get through the gate. Double-check every character.</p>
+        <img src="images/railway/11.jpg" alt="Passenger information form — name, ID type, and passport number fields" class="screenshot" loading="lazy">
+
+        <h3><span class="step-num">13</span> Select passenger type and complete payment</h3>
+        <p>Under <strong>Additional Information</strong>, select Adult or Child as needed. Then tap <strong>Complete</strong> at the bottom to proceed to payment. Pay with Alipay (your linked foreign card works). Once payment goes through, your ticket is confirmed — your passport number is now linked to that train.</p>
+        <img src="images/railway/12.jpg" alt="Final step — passenger type selection and Complete button" class="screenshot" loading="lazy">
+
+        <div class="callout callout-teal"><strong> — Done!</strong> You'll receive a confirmation in the 12306 mini-program and usually an SMS. Remember: <strong>no paper ticket needed.</strong> Your passport IS your ticket. At the station, go straight to the manual gate line — they'll scan your passport and the system knows you're booked. Now let's walk through what happens when you actually get to the station.</div>
+
+        <h2 id="at-the-station">At the Station — Step by Step</h2>
+        <p>Many of China's train stations are enormous. Here's exactly what to do, in order:</p>
+
+        <h3><span class="step-num">1</span> Arrive Early</h3>
+        <p>For your first trip: <strong>60 minutes</strong> before departure. Once you know the routine: 30–60 minutes is fine. The bottleneck is security — most major stations have airport-style scanners for luggage and body. Lines can be 5 minutes or 25 minutes. You never know. Budget the time.</p>
+
+        <h3><span class="step-num">2</span> Security Check</h3>
+        <p>Put your bags on the conveyor belt, walk through the metal detector. Same as an airport but faster — you don't need to take out liquids or laptops. Your passport stays in your hand.</p>
+
+        <h3><span class="step-num">3</span> Find Your Gate</h3>
+        <p>After security, look up at the giant departure board. Find your train number (e.g., G12). It'll show: departure time, destination (in Chinese — match the characters to your ticket), gate number, and status. Gates are numbered (e.g., "A12" or "B5"). Follow the signs — they're in English and Chinese.</p>
+
+        <h3><span class="step-num">4</span> Wait (Don't Wander)</h3>
+        <p>Gates usually show up on the board 15–20 minutes before departure. Until then, grab a coffee or sit near your gate area. Convenience stores and fast food (KFC, McDonald's, local noodle shops) are in every station. Prices are slightly higher than outside — a coffee is ¥25–35 ($3.50–5.00).</p>
+
+        <h3><span class="step-num">5</span> Boarding</h3>
+        <p>When your gate opens, you'll see two lines: <strong>manual check</strong> (passport) and <strong>automatic gate</strong> (Chinese ID card). <strong>Take the manual line.</strong> The automatic gates only work with Chinese national ID cards — if you queue there with a foreign passport, you'll hold up the line and feel embarrassed. Just go to the manual counter; it's always next to the automatic gates. An attendant will scan your passport, check your face against the photo, and wave you through to the platform.</p>
+        <p>On the platform: look down. Carriage numbers are painted on the ground. Find your carriage (e.g., Car 6), stand in the marked area. The train arrives, doors open, you get on. <strong>Boarding may close a few minutes before departure</strong> — not at departure time. Be on board early.</p>
+
+        <h2 id="on-the-train">On the Train</h2>
+        <p>Once you're seated, it's smooth sailing. Here's what to expect:</p>
+        <ul>
+            <li><strong>Snacks and drinks:</strong> Staff walk through selling coffee, tea, snacks, and sometimes hot meals. Prices: ¥5–15 for drinks, ¥15–25 for meals. You can also bring your own food — everyone does. Instant noodles are a Chinese train tradition.</li>
+            <li><strong>Hot water:</strong> Most carriages have a free hot water dispenser. Bring a cup or instant noodles. This is not a joke — hot water is everywhere in China and it's genuinely useful.</li>
+            <li><strong>Power outlets:</strong> Under your seat (Second Class) or in the armrest (First/Business). China uses Type A and Type I sockets — same voltage as most of the world (220V). A universal adapter is useful but often not needed for USB charging — most trains also have USB ports now.</li>
+            <li><strong>WiFi:</strong> Most G-series trains have free WiFi, but it's China's intranet — you can access Chinese sites and apps, but Google, Instagram, WhatsApp are blocked. Use your eSIM or VPN if you need Western sites.</li>
+            <li><strong>Toilets:</strong> Generally clean. Western-style toilets at one end of each carriage, squat toilets at the other. Bring your own tissues — they sometimes run out.</li>
+            <li><strong>Quiet car rule:</strong> If you see a car marked "Quiet Carriage" (静音车厢), phones on silent, no loud conversations. It's enforced — people will shush you.</li>
+        </ul>
+
+        <h2 id="arriving">Arriving — Don't Put Your Passport Away</h2>
+        <p>At your destination, you'll need your passport to <strong>exit</strong> the station — just like boarding, the exit gates scan your passport to verify your ticket. Same rule applies: manual lane for foreign passports. Don't put your passport away until you're outside the station. If you lose it between the train and the exit gate, you'll be stuck explaining things to station staff for a while.</p>
+
+        <h2 id="route-cheat-sheet">Route Cheat Sheet</h2>
+        <p>Popular high-speed routes for travelers, with approximate times and Second Class prices:</p>
+
+        <table style="width:100%; border-collapse:collapse; margin-bottom:28px; font-size:14px; border:1px solid var(--border); border-radius:var(--radius); overflow:hidden;">
+            <thead>
+                <tr>
+                    <th style="background:var(--border-light); text-align:left; padding:10px 14px; font-weight:700; font-size:13px;">Route</th>
+                    <th style="background:var(--border-light); text-align:left; padding:10px 14px; font-weight:700; font-size:13px;">Duration</th>
+                    <th style="background:var(--border-light); text-align:left; padding:10px 14px; font-weight:700; font-size:13px;">2nd Class (—</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td style="padding:10px 14px; border-top:1px solid var(--border-light);">Shanghai — Beijing</td><td style="padding:10px 14px; border-top:1px solid var(--border-light);">4.5–5.5 hours</td><td style="padding:10px 14px; border-top:1px solid var(--border-light);">¥550–700</td></tr>
+                <tr><td style="padding:10px 14px; border-top:1px solid var(--border-light);">Shanghai — Hangzhou</td><td style="padding:10px 14px; border-top:1px solid var(--border-light);">45–60 min</td><td style="padding:10px 14px; border-top:1px solid var(--border-light);">¥73–95</td></tr>
+                <tr><td style="padding:10px 14px; border-top:1px solid var(--border-light);">Hangzhou — Beijing</td><td style="padding:10px 14px; border-top:1px solid var(--border-light);">4.5–5.5 hours</td><td style="padding:10px 14px; border-top:1px solid var(--border-light);">¥530–700</td></tr>
+                <tr><td style="padding:10px 14px; border-top:1px solid var(--border-light);">Beijing — Xi'an</td><td style="padding:10px 14px; border-top:1px solid var(--border-light);">4.5–5.5 hours</td><td style="padding:10px 14px; border-top:1px solid var(--border-light);">¥515–650</td></tr>
+                <tr><td style="padding:10px 14px; border-top:1px solid var(--border-light);">Shanghai — Nanjing</td><td style="padding:10px 14px; border-top:1px solid var(--border-light);">1–1.5 hours</td><td style="padding:10px 14px; border-top:1px solid var(--border-light);">¥135–245</td></tr>
+                <tr><td style="padding:10px 14px; border-top:1px solid var(--border-light);">Guangzhou — Shenzhen</td><td style="padding:10px 14px; border-top:1px solid var(--border-light);">30–60 min</td><td style="padding:10px 14px; border-top:1px solid var(--border-light);">¥75–100</td></tr>
+                <tr><td style="padding:10px 14px; border-top:1px solid var(--border-light);">Chengdu — Chongqing</td><td style="padding:10px 14px; border-top:1px solid var(--border-light);">1–1.5 hours</td><td style="padding:10px 14px; border-top:1px solid var(--border-light);">¥145–270</td></tr>
+            </tbody>
+        </table>
+        <p style="font-size:13px; color:var(--text-faint); margin-top:-16px; margin-bottom:28px;">Prices fluctuate by season and how far in advance you book. Chinese New Year and National Day (first week of October): book weeks ahead or don't travel.</p>
+
+        <h2 id="faq">FAQ — The Questions Everyone Asks</h2>
+
+        <h3>"Can I buy tickets with a foreign credit card?"</h3>
+        <p><strong>Trip.com:</strong> Yes — Visa, Mastercard, Amex all work. <strong>12306:</strong> Yes, via Alipay or WeChat Pay linked to your foreign card. Direct foreign card payment on 12306 is still hit-or-miss — use Alipay as a bridge.</p>
+
+        <h3>"Do I need to print a physical ticket?"</h3>
+        <p>Not anymore. Your passport <em>is</em> your ticket. When you book, your passport number is linked to the reservation. At the gate, the attendant scans your passport and the system knows you have a valid ticket. That said, if you're nervous, you can print a paper ticket at any station machine — it's a receipt, not required for boarding.</p>
+
+        <h3>"How early should I book?"</h3>
+        <p>Tickets go on sale <strong>15 days</strong> before departure. Popular routes sell out on the first day — especially Friday evenings, Sunday afternoons, and any day during Chinese holidays. Book as soon as your dates are firm. For Shanghai–Beijing on a Friday: book at exactly 15 days out, the moment tickets release. For Shanghai–Hangzhou on a random Tuesday: you can probably book 2–3 days before.</p>
+
+        <h3>"What if I miss my train?"</h3>
+        <p>You can change your ticket to a later train (same route) at the ticket counter — usually for a small fee (¥5–10) if you do it before departure. After departure, the ticket is void and you'll need to buy a new one. If you're running late and know you'll miss it, <strong>change the ticket in the app</strong> before the departure time.</p>
+
+        <h3>"Can I bring luggage? How much?"</h3>
+        <p>Officially: 20 kg per adult. In practice: nobody weighs your bag. If you can carry it, you can bring it. Overhead racks fit standard carry-on sizes. Large suitcases go in the luggage area at the end of each carriage. Trains are more generous than airlines — I've seen people bring massive suitcases, boxes of fruit, and once, a framed painting.</p>
+
+        <h3>"Is it safe?"</h3>
+        <p>Extremely. China's high-speed rail has a strong safety record. Stations are well-lit, staffed, and covered in security cameras. Solo travelers — including women — report feeling generally safe. The biggest danger is missing your train because you queued in the wrong line.</p>
+
+        <h2 id="common-mistakes">Common Mistakes Foreigners Make</h2>
+        <p>Every one of these has happened to someone I know. Learn from their pain.</p>
+
+        <h3>Mistake #1 — Booking the wrong station</h3>
+        <p>You search "Shanghai" and pick the first result. Later you realize your train leaves from Shanghai Hongqiao — but you're standing at Shanghai Station, 40 minutes away by metro. Most Chinese cities have 2 — train stations. Always check the <strong>exact station name</strong> on your booking, not just the city.</p>
+
+        <h3>Mistake #2 — Queuing in the Chinese ID line</h3>
+        <p>You see two boarding lines. One is fast — people just scan their phones and walk through. You join it. When you reach the gate, the machine beeps red. It only reads Chinese national ID cards. Foreign passports go through the <strong>manual lane</strong> with an attendant. Look for a staff member, not a scanner.</p>
+
+        <h3>Mistake #3 — Forgetting your passport</h3>
+        <p>You packed everything — phone, charger, snacks, ticket screenshot. But your passport is in the hotel safe. Without your physical passport, you cannot board. Period. A photo of your passport won't work. A driver's license won't work. Nothing else works.</p>
+
+        <h3>Mistake #4 — Booking too late for holidays</h3>
+        <p>You decide to take a train during Chinese New Year or National Day (October 1–7). You try to book three days before. Every train is sold out. Every single one. During these periods, 1.5 billion trips happen in two weeks. Book the moment tickets release — 15 days out, at 8am China time.</p>
+
+        <h3>Mistake #5 — Trusting Google Maps for the station</h3>
+        <p>Google Maps in China is unreliable — it might place the station entrance on the wrong side of the building, or route you to a staff-only gate. Use <strong>Apple Maps</strong> (works well in China) or <strong>Amap</strong> (高德地图). Both give accurate walking and metro directions to the correct entrance.</p>
+
+        <h3>Mistake #6 — Showing up 10 minutes before departure</h3>
+        <p>You think "the train leaves at 2pm, I'll get there at 1:50." But you forgot: security line (5–20 min), finding your gate in a station the size of a small city (5–20 min), and the fact that <strong>boarding closes 3–5 minutes before departure.</strong> That 2pm train? You need to be through security by 1:40 at the latest. For your first trip, arrive 45–60 minutes early.</p>
+
+        <h2 id="pro-tips">Pro Tips From Someone Who Rides These Monthly</h2>
+        <ul>
+            <li><strong>Screen the Chinese name of your destination.</strong> Station names on departure boards are in Chinese. Screenshot the characters from your booking confirmation so you can match them on the board. Example: 上海 (Shanghai), 北京 (Beijing), 杭州 (Hangzhou), 南京 (Nanjing).</li>
+            <li><strong>Big cities have multiple stations.</strong> Shanghai has Hongqiao (虹桥), Shanghai Station (上海站), and Shanghai South (上海南). Beijing has Beijing South (北京南), Beijing West (北京西), and more. Double-check which station your train departs from — they can be an hour apart by metro.</li>
+            <li><strong>Seat selection matters.</strong> Window seat = A (last letter of row). Aisle seat = C or D. Middle seat = B. If you book on Trip.com, you can pick. On 12306, it's assigned — but you can change it once if you're quick.</li>
+            <li><strong>Download shows and podcasts before your trip.</strong> Train WiFi won't let you stream YouTube or Netflix. Download entertainment at your hotel before heading to the station.</li>
+            <li><strong>Bring snacks from outside.</strong> Station food is overpriced and the hot meals on board are — inconsistent. Grab a sandwich, fruit, and a bottle of water before you enter the station. Or do as the locals do: bring instant noodles and use the hot water dispenser.</li>
+            <li><strong>Chinese holidays = don't travel.</strong> Chinese New Year (late January / early February) and National Day (October 1–7) are the world's largest human migration. Trains are packed, tickets sell out instantly, and stations are chaos. If you're visiting during these periods, book everything weeks in advance or — better — stay in one city.</li>
+        </ul>
+
+        <h2 id="also-need">You'll Also Need These Guides</h2>
+        <p>Getting around China is a system. Here's what to set up next:</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:32px;">
+            <a href="/guide/esim.html" style="display:block; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:16px 18px; transition:all .2s; color:var(--text);">
+                <div style="font-size:14px; font-weight:700; margin-bottom:4px;">📱 eSIM &amp; Internet Guide</div>
+                <div style="font-size:13px; color:var(--text-faint);">Stay connected on the train. eSIM vs roaming vs local SIM — which one actually works.</div>
+            </a>
+            <a href="/guide/alipay.html" style="display:block; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:16px 18px; transition:all .2s; color:var(--text);">
+                <div style="font-size:14px; font-weight:700; margin-bottom:4px;">💳 Alipay With a Foreign Card</div>
+                <div style="font-size:13px; color:var(--text-faint);">Set up in 10 minutes — you'll need it to pay for tickets on 12306.</div>
+            </a>
+            <a href="/guide/apps.html" style="display:block; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:16px 18px; transition:all .2s; color:var(--text);">
+                <div style="font-size:14px; font-weight:700; margin-bottom:4px;">📲 Essential China Travel Apps</div>
+                <div style="font-size:13px; color:var(--text-faint);">Maps, translate, ride-hailing — the 8 apps to install before you land.</div>
+            </a>
+            <a href="/guide/vpn.html" style="display:block; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:16px 18px; transition:all .2s; color:var(--text);">
+                <div style="font-size:14px; font-weight:700; margin-bottom:4px;">🔒 VPN &amp; Internet Setup</div>
+                <div style="font-size:13px; color:var(--text-faint);">You'll want this for train WiFi and hotel networks. Install before you fly.</div>
+            </a>
+        </div>
+
+        <div class="article-cta">
+            <h3>Get the Free China Arrival Checklist</h3>
+            <p>The exact setup guide I send to friends before they visit China. High-speed rail cheat sheet, Alipay walkthrough, VPN picks — all in one PDF.</p>
+            <a href="/index.html#newsletter" class="btn btn-primary">Get the Free Checklist</a>
+        </div>
+
+        <p style="margin-top: 32px; font-size: var(--text-sm); color: var(--text-faint);">
+            <a href="/index.html#guides" class="nav-back"> — Back to all guides</a>
+        </p>
+
+    </div>
+</article>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 <a href="/index.html">China Travel OS</a>. Built for travelers, not algorithms.</p>
+    </div>
+</footer>
+
+</body>
+</html>

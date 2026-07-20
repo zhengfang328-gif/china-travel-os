@@ -1,0 +1,514 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use DiDi in China — Ride-Hailing Guide for Foreigners (2026) — China Travel OS</title>
+    <meta name="description" content="DiDi China: Ride Hailing is China's Uber. English interface, foreign phone numbers, international credit cards — no Chinese reading required. Step-by-step guide with real screenshots.">
+    <meta property="og:title" content="How to Use DiDi in China — Ride-Hailing Guide for Foreigners (2026)">
+    <meta property="og:description" content="DiDi China: Ride Hailing — English interface, foreign phone numbers, international cards. Step-by-step guide with real screenshots.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://chinatravelos.com/guide/images/og-ride-hailing.jpg">
+    <meta property="og:url" content="https://chinatravelos.com/guide/ride-hailing.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ride-Hailing Guide — China Travel OS">
+    <meta name="twitter:description" content="Practical, honest guide for first-time travelers to China.">
+    <meta name="twitter:image" content="https://chinatravelos.com/guide/images/og-ride-hailing.jpg">
+    <meta property="article:modified_time" content="2026-07-01">
+    <link rel="canonical" href="https://chinatravelos.com/guide/ride-hailing.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:           #FAFAFA;
+            --surface:      #FFFFFF;
+            --text:         #1C1614;
+            --text-sub:     #5A4D49;
+            --text-faint:   #968883;
+            --accent:       #D94838;
+            --accent-hover: #B8382A;
+            --accent-muted: #FDF0ED;
+            --border:       #E6E0DD;
+            --border-light: #F2EFED;
+            --radius:       10px;
+            --radius-l:     16px;
+            --radius-pill:  999px;
+            --max-w:        1120px;
+            --content-w:    720px;
+            --nav-h:        64px;
+            --z-nav:        50;
+
+            --space-xs:  4px;
+            --space-sm:  8px;
+            --space-md:  16px;
+            --space-lg:  24px;
+            --space-xl:  32px;
+            --space-2xl: 48px;
+            --space-3xl: 64px;
+            --space-4xl: 96px;
+
+            --text-xs:   0.75rem;
+            --text-sm:   0.875rem;
+            --text-base: 1rem;
+            --text-md:   1.125rem;
+            --text-lg:   1.375rem;
+            --text-xl:   1.75rem;
+            --text-2xl:  2.25rem;
+            --text-3xl:  2.875rem;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; max-width: 100%; }
+        body {
+            max-width: 100%; font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg); color: var(--text); line-height: 1.7; font-size: 1rem;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Literata', 'Georgia', 'Times New Roman', serif;
+            text-wrap: balance; line-height: 1.15;
+        }
+
+        .section {
+            animation: section-in .6s cubic-bezier(.22, .61, .36, 1) both;
+            animation-timeline: view();
+            animation-range: entry 15%;
+        }
+        @keyframes section-in {
+            from { opacity: .6; translate: 0 24px; }
+            to   { opacity: 1;   translate: 0 0; }
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img, video { max-width: 100%; height: auto; display: block; border-radius: var(--radius); }
+
+        /* Nav */
+        .nav {
+            position: sticky; top: 0; z-index: var(--z-nav);
+            background: var(--surface);
+            border-bottom: 1px solid var(--border-light); height: var(--nav-h);
+        }
+        .nav .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--space-lg); display: flex; align-items: center; justify-content: space-between; height: 100%; }
+        .nav-logo { font-family: 'Literata', 'Georgia', 'Times New Roman', serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em; }
+        .nav-logo span { color: var(--accent); }
+        .nav-links { display: flex; align-items: center; gap: var(--space-xl); }
+        .nav-links a { font-size: var(--text-sm); font-weight: 500; color: var(--text-sub); transition: color .15s; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-back { font-size: var(--text-sm); font-weight: 600; color: var(--accent); }
+        .nav-back:hover { color: var(--accent-hover); }
+
+        @media (max-width: 768px) { .nav-links { display: none; } .nav-back { display: none; } .article h1 { font-size: clamp(1.5rem, 8vw, 2rem); overflow-wrap: anywhere; } }
+
+        /* Article layout */
+        .article { padding: var(--space-3xl) 0 var(--space-4xl); }
+        .article .container { max-width: var(--content-w); margin: 0 auto; padding: 0 var(--space-lg); }
+        .breadcrumb { font-size: var(--text-xs); color: var(--text-faint); margin-bottom: var(--space-xl); }
+        .breadcrumb a { color: var(--text-sub); transition: color .15s; }
+        .breadcrumb a:hover { color: var(--text); }
+
+        .article h1 { font-size: clamp(1.75rem, 5vw, 2.75rem); font-weight: 700; letter-spacing: -0.015em; line-height: 1.15; margin-bottom: 12px; }
+        .article .byline { font-size: var(--text-sm); color: var(--text-faint); margin-bottom: var(--space-2xl); }
+        .article .byline strong { color: var(--text-sub); font-weight: 600; }
+
+        /* TL;DR */
+        .tldr {
+            background: var(--accent-muted); border: 1px solid var(--border); border-radius: var(--radius-l);
+            padding: var(--space-lg) var(--space-xl); margin-bottom: var(--space-2xl);
+        }
+        .tldr h3 { font-size: var(--text-sm); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--accent); margin-bottom: 10px; }
+        .tldr ul { list-style: none; }
+        .tldr li { font-size: var(--text-sm); padding: 4px 0; }
+        .tldr li::before { content: '—'; color: #0D9488; font-weight: 700; }
+
+        /* Content */
+        
+        /* TOC */
+        .toc {
+            background: var(--surface); border: 1px solid var(--border-light);
+            border-radius: var(--radius-l); padding: var(--space-lg) var(--space-xl);
+            margin-bottom: var(--space-2xl);
+        }
+        .toc h3 {
+            font-size: var(--text-sm); font-weight: 700; text-transform: uppercase;
+            letter-spacing: .05em; color: var(--text-faint); margin-bottom: var(--space-md);
+            font-family: 'Work Sans', sans-serif;
+        }
+        .toc ol { list-style: none; padding: 0; margin: 0; }
+        .toc li { margin-bottom: 6px; }
+        .toc a {
+            font-size: var(--text-sm); color: var(--text-sub);
+            transition: color .15s; text-decoration: none;
+        }
+        .toc a:hover { color: var(--accent); }
+.article h2 { font-size: var(--text-xl); font-weight: 600; letter-spacing: -0.01em; margin: 44px 0 14px; padding-top: 20px; scroll-margin-top: 80px; }
+        .article h3 { font-size: var(--text-md); font-weight: 600; margin: 28px 0 10px; }
+        .article p { margin-bottom: var(--space-md); color: var(--text); }
+        .article ul, .article ol { margin-bottom: 20px; padding-left: 24px; }
+        .article li { margin-bottom: var(--space-sm); }
+
+        .callout {
+            border: 1px solid var(--border); background: var(--accent-muted);
+            padding: var(--space-md) var(--space-lg); border-radius: var(--radius);
+            margin-bottom: var(--space-lg); font-size: var(--text-sm);
+        }
+        .callout strong { color: var(--accent); }
+        .callout-teal { border-color: #0D9488; background: #F0FDF9; }
+        .callout-teal strong { color: #0F766E; }
+
+        .step-num {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 28px; height: 28px; background: var(--accent); color: #fff;
+            border-radius: var(--radius-pill); font-size: var(--text-xs); font-weight: 700; margin-right: var(--space-sm);
+            flex-shrink: 0; position: relative; top: -1px;
+        }
+        .step-block { margin-bottom: var(--space-2xl); }
+        .step-block h3 { display: flex; align-items: flex-start; gap: 10px; }
+
+        /* Step images */
+        .step-img {
+            max-width: 380px; margin: var(--space-md) 0 var(--space-lg);
+            border-radius: var(--radius-l);
+            border: 1px solid var(--border);
+        }
+        .step-img-row {
+            display: flex; flex-wrap: wrap; gap: var(--space-md);
+            margin: var(--space-md) 0 var(--space-lg);
+        }
+        .step-img-row .step-img { margin: 0; }
+
+        /* Mistake card */
+        .mistake-card {
+            background: var(--surface); border: 1px solid var(--border-light);
+            border-radius: var(--radius-l); padding: 24px 28px; margin-bottom: 16px;
+        }
+        .mistake-card h4 { font-size: var(--text-base); font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 10px; }
+        .mistake-card h3 .mistake-num {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 26px; height: 26px; background: var(--accent); color: #fff;
+            border-radius: var(--radius-pill); font-size: var(--text-xs); font-weight: 700; flex-shrink: 0;
+        }
+        .mistake-card p { font-size: var(--text-sm); color: var(--text-sub); margin-bottom: 0; }
+
+        .article-cta {
+            background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--radius-l);
+            padding: var(--space-xl); margin-top: var(--space-2xl); text-align: center;
+        }
+        .article-cta h3 { font-size: var(--text-lg); font-weight: 600; margin-bottom: var(--space-sm); }
+        .article-cta p { color: var(--text-sub); font-size: var(--text-sm); margin-bottom: var(--space-md); }
+        .btn {
+            display: inline-flex; align-items: center; gap: var(--space-sm);
+            padding: 13px 26px; border-radius: var(--radius-pill); font-weight: 600;
+            font-size: var(--text-sm); cursor: pointer; border: none; white-space: nowrap;
+            font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            transition: background-color .2s cubic-bezier(.4, 0, 0, 1),
+                        color .2s cubic-bezier(.4, 0, 0, 1),
+                        transform .2s cubic-bezier(.4, 0, 0, 1);
+        }
+        .btn-primary { background: var(--accent); color: #fff; }
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+        .btn-outline { background: transparent; color: var(--text); border: 1.5px solid var(--border); }
+        .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+        .faq-item {
+            background: var(--surface); border: 1px solid var(--border-light);
+            border-radius: var(--radius); padding: 20px 24px; margin-bottom: 12px;
+        }
+        .faq-item h4 { font-size: var(--text-base); font-weight: 700; margin-bottom: 6px; }
+        .faq-item p { font-size: var(--text-sm); color: var(--text-sub); margin-bottom: 0; }
+
+        .footer { padding: var(--space-xl) 0; border-top: 1px solid var(--border-light); text-align: center; }
+        .footer .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--space-lg); }
+        .footer p { font-size: var(--text-xs); color: var(--text-faint); }
+        .footer a { color: var(--text-sub); transition: color .15s; }
+        .footer a:hover { color: var(--text); }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+            .btn:hover { transform: none; }
+            .section { animation: none; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How to Use DiDi in China as a Foreigner",
+        "description": "Step-by-step guide to using DiDi, China's ride-hailing app, with a foreign phone number and international credit card. English interface, English-friendly flow.",
+        "image": "https://chinatravelos.com/guide/images/og-ride-hailing.jpg",
+        "dateModified": "2026-07-01",
+        "author": { "@type": "Organization", "name": "China Travel OS" },
+        "publisher": { "@type": "Organization", "name": "China Travel OS" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chinatravelos.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://chinatravelos.com/#guides" },
+            { "@type": "ListItem", "position": 3, "name": "Ride-Hailing with DiDi", "item": "https://chinatravelos.com/guide/ride-hailing.html" }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="container">
+        <a href="/index.html" class="nav-logo">China<span>Travel</span>OS</a>
+        <div class="nav-links">
+            <a href="/index.html#guides">Guides</a>
+            <a href="/index.html#cities">Cities</a>
+            <a href="/index.html#community">Community</a>
+            <a href="/index.html#newsletter">Free Guide</a>
+        </div>
+        <a href="/index.html" class="nav-back"> — Back to Guides</a>
+    </div>
+</nav>
+
+<article class="article">
+    <div class="container">
+
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> &nbsp;/&nbsp;
+            <a href="/index.html#guides">Guides</a> &nbsp;/&nbsp;
+            Ride-Hailing in China
+        </div>
+
+        <h1>How to Use DiDi in China as a Foreigner</h1>
+        <p class="byline">By <strong>China Travel OS</strong> &nbsp;·&nbsp; Updated 2026 — DiDi now supports foreign phone numbers and international credit cards directly</p>
+
+        <div class="tldr">
+            <h3>TL;DR — The Short Version</h3>
+            <ul>
+                <li><strong>DiDi China: Ride Hailing</strong> is China's Uber — English interface, foreign phone numbers, international card support.</li>
+                <li><strong>⚠️ Do NOT download "DiDi Rider."</strong> That's the international version and it doesn't work in mainland China.</li>
+                <li><strong>Rides are cheap.</strong> ¥12–18 for short trips, ¥20–50 across town. All prices shown upfront before you confirm.</li>
+                <li><strong>English interface for standard rides.</strong> GPS sets your pickup. The driver already knows where to go. In-app messages auto-translate for most situations.</li>
+                <li><strong>Get out and walk away.</strong> Enable auto-pay and the fare deducts automatically — no cash, no tipping, no awkward payment moment.</li>
+            </ul>
+        </div>
+
+        <!-- TOC -->
+        <nav class="toc">
+            <h3>On this page</h3>
+            <ol>
+                <li><a href="#setup-didi">Set Up DiDi — Step by Step</a></li>
+                <li><a href="#airports">Using DiDi at Airports</a></li>
+                <li><a href="#alipay-wechat">DiDi Inside Alipay or WeChat</a></li>
+                <li><a href="#alternatives">What About Amap & CaoCao?</a></li>
+                <li><a href="#common-mistakes">Common Mistakes</a></li>
+                <li><a href="#things-to-know">Things to Know</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ol>
+        </nav>
+
+        <h2 id="the-app">The App That Replaced Waving at the Curb</h2>
+        <p>Last month a friend landed at Hangzhou Xiaoshan Airport, walked outside, opened an app, and had a car pull up 3 minutes later. No Chinese. No cash. No standing at the curb with his arm out hoping a taxi would stop. He texted me from the back seat: "this is actually better than Uber."</p>
+        <p>That's DiDi — China's ride-hailing giant, with over 70% market share and service in more than 400 cities. And since late 2024, it's become dramatically easier for foreign travelers: English interface, foreign phone number registration, and direct international credit card support. Here's exactly how to set it up and book your first ride.</p>
+
+        <div class="callout">
+            <strong>⚠️ Important:</strong> Download <strong>"DiDi China: Ride Hailing"</strong> — NOT "DiDi Rider." DiDi Rider is the international version and <strong>does not work in mainland China.</strong> If your app icon says "DiDi Rider," you downloaded the wrong one. Search your app store for "DiDi China" — the correct app has an English interface and the Chinese name 滴滴出行 on the icon.
+        </div>
+
+        <h2 id="setup-didi">Set Up DiDi — Step by Step</h2>
+
+        <!-- Step 1: Register -->
+        <div class="step-block">
+            <h3><span class="step-num">1</span> Register with your phone number</h3>
+            <p>Open the app and tap <strong>Account</strong> in the bottom-right corner. You'll land on the login page — no need to set language first; if your phone is in English, the app defaults to English.</p>
+            <img src="images/DIDI/1.jpg" alt="DiDi app home screen with Account button in bottom-right corner" class="step-img" loading="lazy">
+            <p>Select your country's area code, enter your phone number, and complete the SMS verification. That's it — you're registered. Foreign phone numbers work; you don't need a Chinese SIM.</p>
+            <img src="images/DIDI/2.jpg" alt="DiDi registration screen — select country code and enter phone number" class="step-img" loading="lazy">
+        </div>
+
+        <!-- Step 2: Add payment -->
+        <div class="step-block">
+            <h3><span class="step-num">2</span> Add a payment method</h3>
+            <p>DiDi is almost entirely cashless — to book anything beyond a traditional taxi, you need an online payment method. Tap <strong>Account</strong> (bottom-right) —<strong>Wallet</strong> —<strong>Payment Methods</strong>.</p>
+            <div class="step-img-row">
+                <img src="images/DIDI/3.jpg" alt="DiDi Account screen — tap Account in bottom-right" class="step-img" loading="lazy">
+                <img src="images/DIDI/4.jpg" alt="DiDi Wallet screen — tap Wallet to manage payment" class="step-img" loading="lazy">
+            </div>
+            <p>Supported options: <strong>Visa and Mastercard</strong> credit and debit cards, plus Alipay, WeChat Pay, and other digital wallets as shown in the app. Pick whichever works for you and follow the prompts to link it.</p>
+            <div class="step-img-row">
+                <img src="images/DIDI/5.jpg" alt="DiDi Payment Methods screen — add a card or choose a payment option" class="step-img" loading="lazy">
+                <img src="images/DIDI/6.jpg" alt="DiDi add card screen — enter international credit card details" class="step-img" loading="lazy">
+            </div>
+            <p><strong>I recommend enabling password-free auto-payment.</strong> It's capped at a set amount per transaction, and it means you can just get out and walk away when the ride ends — the fare deducts automatically. No fumbling with your phone while the driver waits.</p>
+        </div>
+
+        <!-- Step 3: Book a ride -->
+        <div class="step-block">
+            <h3><span class="step-num">3</span> Book your first ride</h3>
+            <p>Allow DiDi to access your location (this lets the app detect where you are and shows the real-time distance to your driver). On the home screen, tap <strong>"Where to?"</strong> and enter your destination. You can type in English — most hotels, landmarks, and metro stations are recognized.</p>
+            <div class="step-img-row">
+                <img src="images/DIDI/7.jpg" alt="DiDi home screen — tap Where to? to enter destination" class="step-img" loading="lazy">
+                <img src="images/DIDI/8.jpg" alt="DiDi destination input — type your destination in English" class="step-img" loading="lazy">
+            </div>
+            <p>DiDi automatically picks the fastest route. You can tap to choose a different vehicle type — Express (standard, cheapest), Comfort (nicer car, slightly more), or Premier (luxury). Higher price = nicer vehicle. When you're ready, tap <strong>Confirm</strong> and DiDi matches you with a driver.</p>
+            <img src="images/DIDI/9.jpg" alt="DiDi booking screen — choose vehicle type and tap Confirm" class="step-img" loading="lazy">
+        </div>
+
+        <!-- Step 4: Matched -->
+        <div class="step-block">
+            <h3><span class="step-num">4</span> You're matched — now wait (usually 2–5 minutes)</h3>
+            <p>Once matched, you'll see the driver's photo, vehicle type, license plate number, car color, and real-time distance on a map. In China, ride-hailing matches are usually very fast, but I recommend booking 5–10 minutes before you actually need to leave — gives you time to get your shoes on.</p>
+            <img src="images/DIDI/10.jpg" alt="DiDi matched screen — driver photo, license plate, car color, real-time location" class="step-img" loading="lazy">
+        </div>
+
+        <!-- Step 5: Communicate while waiting -->
+        <div class="step-block">
+            <h3><span class="step-num">5</span> Message the driver while you wait</h3>
+            <p>While the car is on its way, you can message the driver in real time — messages are auto-translated, which usually bridges the gap. If the driver needs to clarify your pickup spot or there's a gate the car can't enter, you'll see it in English and can reply right back.</p>
+            <img src="images/DIDI/13.jpg" alt="DiDi in-app messaging with auto-translate between English and Chinese" class="step-img" loading="lazy">
+        </div>
+
+        <!-- Step 6: Safety -->
+        <div class="step-block">
+            <h3><span class="step-num">6</span> Safety check — tap the blue shield</h3>
+            <p>While you wait, tap the <strong>blue cross/shield icon</strong> in the top-left corner. This opens the Safety Center, where you can enable trip sharing (send your live location to a friend), read safety tips, or use the one-tap emergency alarm — it connects directly to 110 (police). China is generally very safe for travelers, and DiDi's safety features are useful for travelers.</p>
+            <div class="step-img-row">
+                <img src="images/DIDI/11.jpg" alt="DiDi trip screen — tap the blue shield for Safety Center" class="step-img" loading="lazy">
+                <img src="images/DIDI/12.jpg" alt="DiDi Safety Center — trip sharing, emergency alarm, safety options" class="step-img" loading="lazy">
+            </div>
+        </div>
+
+        <!-- Step 7: Get in -->
+        <div class="step-block">
+            <h3><span class="step-num">7</span> The car is here — match the plate and get in</h3>
+            <p>When the car arrives, use the details on your phone to locate it — match the <strong>license plate number</strong> before opening the door. At busy spots like train stations and airports, multiple people are waiting for their DiDi, and getting into the wrong car is awkward for everyone.</p>
+            <img src="images/DIDI/14.jpg" alt="DiDi screen showing driver and vehicle details — match the license plate before getting in" class="step-img" loading="lazy">
+            <div class="callout">
+                <strong>🔑 The last-4-digits trick:</strong> When you get in, the driver will ask for the last 4 digits of your phone number — it's how they verify they picked up the right passenger. Most drivers don't speak English. <strong>Before your first ride, take a screenshot of the last 4 digits and save it to your favorites.</strong> Every time you get in, just show the photo. Takes 2 seconds, zero confusion.
+            </div>
+        </div>
+
+        <!-- Step 8: Arrive -->
+        <div class="step-block">
+            <h3><span class="step-num">8</span> Arrive, get out, walk away</h3>
+            <p>When you reach your destination, just get out. If you enabled auto-pay, the fare deducts automatically — no cash, no tip, no "do I pay now?" moment. If you didn't enable auto-pay, DiDi will remind you of the outstanding amount the next time you open the app.</p>
+            <img src="images/DIDI/15.jpg" alt="DiDi trip completion screen — fare summary and auto-payment confirmation" class="step-img" loading="lazy">
+        </div>
+
+        <div class="callout callout-teal">
+            <strong>💡 How much does it cost?</strong> A 20-minute ride across Hangzhou runs about ¥25–50 ($3.50–7.00). A 10-minute hop is ¥12–18. Airport runs are ¥80–150 depending on distance. Most fares are shown upfront before you confirm; tolls, waiting, or route changes may affect the final amount.
+        </div>
+
+        <h2 id="airports">Using DiDi at Chinese Airports</h2>
+        <p>Here's something nobody tells you before you land: Chinese airports have <strong>designated ride-hailing pickup zones</strong>. You can't just walk outside and get picked up at the curb — the car won't be there, and the driver will message you saying "I'm at P2 B3" while you're standing at P1 wondering what went wrong.</p>
+        <p>Walk to the ride-hailing pickup zone first, then book. Follow signs for <strong>"网约车 (ride-hailing pickup)</strong> — don't wait at the arrivals exit. You'll usually need to walk to a specific parking level or zone (the signs are clear once you know to look for them). Only book your DiDi once you're there, so you don't end up with the driver already waiting while you're still finding the right floor.</p>
+        <p>At major airports like <strong>Shanghai Pudong, Beijing Capital, and Hangzhou Xiaoshan</strong>, the walk from arrivals to the pickup zone takes <strong>3 to 10 minutes</strong>. This is normal — the pickup zones are set further from the terminal to avoid congestion. Follow the 网约车 signs, find the zone, then book. Skip the regular taxi queue that's usually 40 people deep.</p>
+
+        <h2 id="alipay-wechat">Alternative: Use DiDi Inside Alipay or WeChat</h2>
+        <p>If you've already set up Alipay or WeChat Pay and don't want another app, you can use DiDi's mini-program directly inside either app. It's the same service, same cars, same drivers — just no extra download.</p>
+
+        <h3>Via Alipay</h3>
+        <p>Open Alipay, tap <strong>Search</strong> at the top, type "didi," and select the orange <strong>DiDi Chuxing</strong> result. The first time, you'll see a login prompt — just confirm and tap one-tap login. After that, the flow is identical to the app: Where to? — choose car type — Confirm — ride. Payment defaults to Alipay automatically.</p>
+        <div class="step-img-row">
+            <img src="images/DIDI/16.jpg" alt="Alipay home screen — tap Search at the top" class="step-img" loading="lazy">
+            <img src="images/DIDI/17.jpg" alt="Alipay search results — select orange DiDi Chuxing" class="step-img" loading="lazy">
+        </div>
+        <img src="images/DIDI/18.png" alt="DiDi mini-program in Alipay — login confirmation screen" class="step-img" loading="lazy">
+        <div class="step-img-row">
+            <img src="images/DIDI/19.jpg" alt="DiDi mini-program booking — enter destination" class="step-img" loading="lazy">
+            <img src="images/DIDI/20.jpg" alt="DiDi mini-program — choose vehicle type and confirm" class="step-img" loading="lazy">
+            <img src="images/DIDI/21.jpg" alt="DiDi mini-program — matched with driver, real-time tracking" class="step-img" loading="lazy">
+        </div>
+
+        <h3>Via WeChat</h3>
+        <p>Open WeChat, tap the <strong>search icon (🔍)</strong> at the top, type "didi," and select <strong>滴滴出行 | 打车</strong>. The interface may show some Chinese, but the core flow — Where to? — Confirm — ride — is visual and easy to follow. Payment defaults to WeChat Pay.</p>
+        <div class="step-img-row">
+            <img src="images/DIDI/22.jpg" alt="WeChat home screen — tap the search icon at the top" class="step-img" loading="lazy">
+            <img src="images/DIDI/23.jpg" alt="WeChat search — type didi and search" class="step-img" loading="lazy">
+        </div>
+        <div class="step-img-row">
+            <img src="images/DIDI/24.jpg" alt="WeChat search results — select 滴滴出行" class="step-img" loading="lazy">
+            <img src="images/DIDI/25.jpg" alt="DiDi mini-program in WeChat — enter destination" class="step-img" loading="lazy">
+        </div>
+
+        <h2 id="alternatives">What About Amap and CaoCao?</h2>
+        <p>Amap (高德地图) has built-in ride-hailing that aggregates multiple platforms including CaoCao (曹操出行) and others. The interface is primarily in Chinese and the English support is limited. For foreign travelers, <strong>start with DiDi</strong> — it's by far the most internationalized option, with the best English interface, foreign phone number support, and international card acceptance. Amap's ride-hailing is a handy backup if DiDi has a long queue during peak hours.</p>
+
+        <h2 id="common-mistakes">Common Mistakes</h2>
+
+        <div class="mistake-card">
+            <h3><span class="mistake-num">1</span> Downloading "DiDi Rider" instead of "DiDi China: Ride Hailing"</h3>
+            <p>This is the most common mistake — and the most frustrating, because DiDi Rider opens, looks normal, and shows zero available cars. DiDi Rider is for countries outside China. You need the China-specific app. Check your app icon: if it says "DiDi Rider," delete it and search again.</p>
+        </div>
+
+        <div class="mistake-card">
+            <h3><span class="mistake-num">2</span> Not matching the license plate before getting in</h3>
+            <p>At busy pickup spots — train stations, airports, shopping streets — multiple people are waiting for their DiDi. Always check the license plate number in the app against the car before opening the door.</p>
+        </div>
+
+        <div class="mistake-card">
+            <h3><span class="mistake-num">3</span> Setting the wrong pickup point</h3>
+            <p>GPS is accurate to about 10–20 meters. In dense areas with multiple exits (metro stations, malls), the driver may end up on the wrong side of the building. Look at the map in the app and make sure the pickup pin is on the correct road. If you're at a metro station, specify which exit you're at.</p>
+        </div>
+
+        <div class="mistake-card">
+            <h3><span class="mistake-num">4</span> Forgetting the last-4-digits trick</h3>
+            <p>Most DiDi drivers ask for the last 4 digits of your phone number when you get in. It's their passenger verification. Most drivers don't speak English, and spelling out digits through hand gestures while the car is idling is stressful. Screenshot the digits once, favorite the photo, and you're set for the entire trip.</p>
+        </div>
+
+        <h2 id="things-to-know">Things to Know</h2>
+        <ul>
+            <li><strong>It's cheap.</strong> ¥12–18 for short trips, ¥20–50 across town, ¥80–150 for airport runs. All displayed upfront.</li>
+            <li><strong>Multiple car types.</strong> DiDi Express (standard), DiDi Comfort (nicer cars, ¥5–10 more), DiDi Premier (luxury, ¥15–30 more), and DiDi Taxi (traditional metered taxi booked through the app). Start with Express.</li>
+            <li><strong>Peak hours matter.</strong> During rush hour (7:30 — :00 AM, 5:30 — :00 PM) and in heavy rain, prices surge and wait times double. If you can, wait 20 minutes after peak.</li>
+            <li><strong>No tipping.</strong> Not expected, not built into the app. The fare you see is the fare you pay.</li>
+            <li><strong>Seatbelts.</strong> Drivers wear them. You should too. Back-seat belt enforcement varies by city.</li>
+            <li><strong>Auto-pay is capped at a set amount per trip.</strong> For anything above that (rare for standard rides), the app asks for manual confirmation.</li>
+        </ul>
+
+        <h2 id="faq">FAQ</h2>
+
+        <div class="faq-item">
+            <h3>Can I use DiDi with a foreign phone number?</h3>
+            <p>Yes. Since late 2024, DiDi China supports registration with international phone numbers from most countries. You don't need a Chinese SIM card. The app also has a full English interface.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Do I need Alipay or WeChat Pay to use DiDi?</h3>
+            <p>No. The standalone DiDi app supports international credit cards directly — you can link a card without going through Alipay or WeChat. If you use DiDi inside the Alipay or WeChat mini-programs, payment goes through those platforms instead.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can I pay with cash?</h3>
+            <p>Only if you specifically select "DiDi Taxi" (traditional taxi booked through the app) and pay the driver directly. But most travelers avoid this. China is largely cashless, and drivers may not have change. Auto-pay is faster and more reliable.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What if the driver cancels?</h3>
+            <p>It happens — the driver accepts, then cancels 30 seconds later. Don't take it personally. The app immediately reassigns to another driver. During peak rain or rush hour, you might get 2–3 cancellations before one sticks. Just wait.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Is DiDi safe?</h3>
+            <p>Yes. Every ride is GPS-tracked in real time. The app shows driver identity, car plate, and rating before you get in. You can share your trip status with a friend, and there's a one-tap emergency alarm connected directly to police (110). Chinese ride-hailing is generally safer than hailing a random taxi in many places.</p>
+        </div>
+
+        <div class="article-cta">
+            <h3>Get the Free China Arrival Checklist</h3>
+            <p>DiDi setup, metro, shared bikes, Alipay — everything you need for getting around Chinese cities, in one PDF.</p>
+            <a href="/index.html#newsletter" class="btn btn-primary">Get the Free Checklist</a>
+        </div>
+
+        <p style="margin-top: var(--space-xl); font-size: var(--text-sm); color: var(--text-faint);">
+            <a href="/index.html#guides" class="nav-back"> — Back to all guides</a>
+        </p>
+
+    </div>
+</article>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 <a href="/index.html">China Travel OS</a>. Built for travelers, not algorithms.</p>
+    </div>
+</footer>
+
+</body>
+</html>

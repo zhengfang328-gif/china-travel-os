@@ -1,0 +1,466 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use Shared Bikes in China with Alipay — China Travel OS</title>
+    <meta name="description" content="Shared bikes are everywhere in Chinese cities. Here's how to unlock one with Alipay in 30 seconds — no Chinese app store needed, usually no deposit.">
+    <meta property="og:title" content="How to Use Shared Bikes in China with Alipay — Step-by-Step Guide">
+    <meta property="og:description" content="Hellobike, Meituan Bike, DiDi Qingju — unlock any of them with Alipay in seconds. Step-by-step guide with screenshots.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://chinatravelos.com/guide/images/og-bike.jpg">
+    <meta property="og:url" content="https://chinatravelos.com/guide/bike.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bike Sharing Guide — China Travel OS">
+    <meta name="twitter:description" content="Practical, honest guide for first-time travelers to China.">
+    <meta name="twitter:image" content="https://chinatravelos.com/guide/images/og-bike.jpg">
+    <meta property="article:modified_time" content="2026-07-01">
+    <link rel="canonical" href="https://chinatravelos.com/guide/bike.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400&amp;family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:           #FAFAFA;
+            --surface:      #FFFFFF;
+            --text:         #1C1614;
+            --text-sub:     #5A4D49;
+            --text-faint:   #968883;
+            --accent:       #D94838;
+            --accent-hover: #B8382A;
+            --accent-muted: #FDF0ED;
+            --border:       #E6E0DD;
+            --border-light: #F2EFED;
+            --radius:       10px;
+            --radius-l:     16px;
+            --radius-pill:  999px;
+            --max-w:        1120px;
+            --content-w:    720px;
+            --nav-h:        64px;
+            --z-nav:        50;
+
+            --space-xs:  4px;
+            --space-sm:  8px;
+            --space-md:  16px;
+            --space-lg:  24px;
+            --space-xl:  32px;
+            --space-2xl: 48px;
+            --space-3xl: 64px;
+            --space-4xl: 96px;
+
+            --text-xs:   0.75rem;
+            --text-sm:   0.875rem;
+            --text-base: 1rem;
+            --text-md:   1.125rem;
+            --text-lg:   1.375rem;
+            --text-xl:   1.75rem;
+            --text-2xl:  2.25rem;
+            --text-3xl:  2.875rem;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; max-width: 100%; }
+        body {
+            max-width: 100%; font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg); color: var(--text); line-height: 1.7; font-size: 1rem;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Literata', 'Georgia', 'Times New Roman', serif;
+            text-wrap: balance; line-height: 1.15;
+        }
+        a { color: inherit; text-decoration: none; }
+        img, video { max-width: 100%; height: auto; display: block; border-radius: var(--radius); }
+
+        /* Nav */
+        .nav {
+            position: sticky; top: 0; z-index: var(--z-nav);
+            background: var(--surface);
+            border-bottom: 1px solid var(--border-light); height: var(--nav-h);
+        }
+        .nav .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--space-lg); display: flex; align-items: center; justify-content: space-between; height: 100%; }
+        .nav-logo { font-family: 'Literata', 'Georgia', 'Times New Roman', serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em; }
+        .nav-logo span { color: var(--accent); }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-links a { font-size: var(--text-sm); font-weight: 500; color: var(--text-sub); transition: color .15s; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-back { font-size: var(--text-sm); font-weight: 600; color: var(--accent); }
+        .nav-back:hover { color: var(--accent-hover); }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+        }
+
+        /* Article layout */
+        .article { padding: 56px 0 80px; }
+        .article .container { max-width: var(--content-w); margin: 0 auto; padding: 0 var(--space-lg); }
+
+        .breadcrumb { font-size: var(--text-xs); color: var(--text-faint); margin-bottom: 32px; }
+        .breadcrumb a { color: var(--text-sub); transition: color .15s; }
+        .breadcrumb a:hover { color: var(--text); }
+
+        .article h1 {
+            font-size: clamp(28px, 5vw, 42px); font-weight: 800;
+            letter-spacing: -.03em; line-height: 1.15; margin-bottom: 12px;
+        }
+        .article .byline { font-size: var(--text-sm); color: var(--text-faint); margin-bottom: 36px; }
+        .article .byline strong { color: var(--text-sub); font-weight: 600; }
+
+        /* TL;DR box */
+        .tldr {
+            background: #FEF9F3; border: 1px solid #FDE8D8; border-radius: var(--radius-l);
+            padding: 24px 28px; margin-bottom: 40px;
+        }
+        .tldr h3 { font-size: var(--text-sm); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--accent); margin-bottom: 10px; }
+        .tldr ul { list-style: none; }
+        .tldr li { font-size: var(--text-sm); padding: 4px 0; }
+        .tldr li::before { content: '—'; color: #0D9488; font-weight: 700; }
+
+        /* Content */
+        
+        /* TOC */
+        .toc {
+            background: var(--surface); border: 1px solid var(--border-light);
+            border-radius: var(--radius-l); padding: var(--space-lg) var(--space-xl);
+            margin-bottom: var(--space-2xl);
+        }
+        .toc h3 {
+            font-size: var(--text-sm); font-weight: 700; text-transform: uppercase;
+            letter-spacing: .05em; color: var(--text-faint); margin-bottom: var(--space-md);
+            font-family: 'Work Sans', sans-serif;
+        }
+        .toc ol { list-style: none; padding: 0; margin: 0; }
+        .toc li { margin-bottom: 6px; }
+        .toc a {
+            font-size: var(--text-sm); color: var(--text-sub);
+            transition: color .15s; text-decoration: none;
+        }
+        .toc a:hover { color: var(--accent); }
+.article h2 {
+            font-size: 24px; font-weight: 700; letter-spacing: -.02em;
+            margin: 44px 0 14px; padding-top: 20px;
+            scroll-margin-top: 80px;
+        }
+        .article h3 { font-size: 18px; font-weight: 700; margin: 28px 0 10px; }
+        .article p { margin-bottom: 16px; color: var(--text); }
+        .article ul, .article ol { margin-bottom: 20px; padding-left: 24px; }
+        .article li { margin-bottom: 8px; }
+
+        /* Tip / Warning boxes */
+        .callout {
+            border: 1px solid var(--border); background: #FFF5F3;
+            padding: 16px 20px; border-radius: var(--radius);
+            margin-bottom: 24px; font-size: var(--text-sm);
+        }
+        .callout strong { color: var(--accent); }
+        .callout-teal { border-color: #0D9488; background: #F0FDF9; }
+        .callout-teal strong { color: #0F766E; }
+
+        /* Step number */
+        .step-num {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 28px; height: 28px; background: var(--accent); color: #fff;
+            border-radius: var(--radius-pill); font-size: var(--text-xs); font-weight: 700; margin-right: 8px;
+            flex-shrink: 0; position: relative; top: -1px;
+        }
+
+        /* Screenshot image */
+        .article img.screenshot {
+            display: block; max-width: 420px; border-radius: var(--radius-l);
+            margin: 20px 0 28px; border: 1px solid var(--border);
+        }
+        .article img.bike-photo,
+        .article img.screenshot {
+            display: block; width: 100%; max-width: 480px;
+            border-radius: var(--radius-l); margin: 16px 0 24px;
+        }
+
+        /* Brand card */
+        .brand-card {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius-l); padding: 24px 28px; margin-bottom: 16px;
+            display: flex; gap: 20px; align-items: flex-start;
+        }
+        .brand-card .brand-icon {
+            width: 56px; height: 56px; border-radius: 16px; flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 28px; font-weight: 800; color: #fff;
+        }
+        .brand-hello  { background: #1677FF; }
+        .brand-meituan { background: #FFC700; color: #1A1A1A !important; }
+        .brand-didi   { background: #00D4AA; }
+        .brand-card .brand-info { flex: 1; }
+        .brand-card .brand-info h4 { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
+        .brand-card .brand-info p  { font-size: var(--text-sm); color: var(--text-sub); margin-bottom: 0; }
+
+        /* Step block */
+        .step-block { margin-bottom: 32px; }
+        .step-block h3 { display: flex; align-items: flex-start; gap: 10px; }
+
+        /* CTA at bottom */
+        .article-cta {
+            background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-l);
+            padding: 32px; margin-top: 48px; text-align: center;
+        }
+        .article-cta h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+        .article-cta p { color: var(--text-sub); font-size: var(--text-sm); margin-bottom: 16px; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 28px; border-radius: var(--radius-pill); font-weight: 600;
+            font-size: var(--text-sm); transition: background-color .2s cubic-bezier(.4, 0, 0, 1); cursor: pointer;
+            border: none; white-space: nowrap;
+        }
+        .btn-primary { background: var(--accent); color: #fff; }
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+        .btn-outline { background: var(--surface); color: var(--text); border: 1.5px solid var(--border); }
+        .btn-outline:hover { border-color: var(--border); background: var(--border-light); }
+
+        /* Footer */
+        .footer { padding: 32px 0; border-top: 1px solid var(--border); text-align: center; }
+        .footer .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--space-lg); }
+        .footer p { font-size: var(--text-xs); color: var(--text-faint); }
+        .footer a { color: var(--text-sub); transition: color .15s; }
+        .footer a:hover { color: var(--text); }
+
+        .related-guides-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+            margin-top: 16px;
+        }
+        .related-guide-card {
+            display: block; background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 16px 18px; transition: background-color .2s cubic-bezier(.4, 0, 0, 1);
+            color: var(--text); cursor: pointer;
+        }
+        .related-guide-card:hover { border-color: var(--border);  transform: translateY(-1px); }
+
+        @media (max-width: 500px) {
+            .brand-card { flex-direction: column; gap: 12px; }
+            .related-guides-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+            .btn:hover { transform: none; }
+            .section { animation: none; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How to Use Shared Bikes in China with Alipay",
+        "dateModified": "2026-07-01",
+        "author": { "@type": "Organization", "name": "China Travel OS" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chinatravelos.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://chinatravelos.com/#guides" },
+            { "@type": "ListItem", "position": 3, "name": "Shared Bikes in China", "item": "https://chinatravelos.com/guide/bike.html" }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="container">
+        <a href="/index.html" class="nav-logo">China<span>Travel</span>OS</a>
+        <div class="nav-links">
+            <a href="/index.html#guides">Guides</a>
+            <a href="/index.html#cities">Cities</a>
+            <a href="/index.html#community">Community</a>
+            <a href="/index.html#newsletter">Free Guide</a>
+        </div>
+        <a href="/index.html" class="nav-back">— Back to Guides</a>
+    </div>
+</nav>
+
+<article class="article">
+    <div class="container">
+
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> &nbsp;/&nbsp;
+            <a href="/index.html#guides">Guides</a> &nbsp;/&nbsp;
+            Shared Bikes in China
+        </div>
+
+        <h1>How to Use Shared Bikes in China with Alipay</h1>
+        <p class="byline">By <strong>China Travel OS</strong> &nbsp;·&nbsp; Updated 2026 — because bike-share apps change their UI every other month</p>
+
+        <div class="tldr">
+            <h3>TL;DR — The Short Version</h3>
+            <ul>
+                <li>Shared bikes are <strong>everywhere</strong> in major Chinese cities</li>
+                <li>You don't need a separate app —<strong>Alipay or WeChat scans the QR code directly</strong></li>
+                <li>Three main brands: <strong>Hellobike (blue), Meituan Bike (yellow), DiDi Qingju (green)</strong></li>
+                <li>It costs <strong>around ¥1.5–2 per ride</strong> ($0.20–0.40 USD). Seriously.</li>
+                <li>Always park inside the painted rectangle on the ground — or the system won't let you return the bike</li>
+            </ul>
+        </div>
+
+        <nav class="toc" aria-label="Table of contents">
+            <h3>On this page</h3>
+            <ol>
+                <li><a href="#why-bikes">Why shared bikes matter</a></li>
+                <li><a href="#bike-brands">The three bikes you'll see</a></li>
+                <li><a href="#how-to-unlock">How to unlock &amp; ride</a></li>
+                <li><a href="#cost">How much does it cost?</a></li>
+                <li><a href="#mistakes">Common mistakes</a></li>
+                <li><a href="#before-you-ride">Before you ride</a></li>
+                <li><a href="#troubleshooting">Troubleshooting</a></li>
+            </ol>
+        </nav>
+
+        <h2 id="why-bikes">Why Shared Bikes Matter</h2>
+        <p>Chinese cities are big. Not "take a nice walk and you'll get there" big —"the nearest metro station is a 20-minute walk, and you're already tired from walking 18,000 steps through a museum" big. A shared bike turns a sweaty 20-minute walk into a breezy 5-minute ride. It's often faster than waiting for a DiDi in traffic, costs almost nothing, and — honestly — riding through a Chinese city at street level, wind in your hair, is one of the most underrated travel experiences here.</p>
+        <p>And they're everywhere. Outside every metro exit. Clustered at every intersection. Leaning against fences near tourist spots. You can't walk 200 meters in any Chinese city without seeing a row of colorful bikes waiting for you. The system works: scan, ride, park, walk away. No docking station, no reservation, no key.</p>
+
+        <h2 id="bike-brands">The Three Bikes You'll See Everywhere</h2>
+
+        <div class="brand-card">
+            <div class="brand-icon brand-hello">H</div>
+            <div class="brand-info">
+                <h4>Hellobike <span style="font-weight:400;color:var(--text-faint);font-size:14px;">(哈啰 Hāluō)</span></h4>
+                <p><strong>Bright blue.</strong> The most common bike in most cities. Hellobike (sometimes branded "Hello" in English) is the biggest player — you'll see these at basically every metro station. Clean bikes, good app experience, reliable unlocking.</p>
+            </div>
+        </div>
+        <img src="images/bike/1.jpg" alt="Blue Hellobike parked on a street in China" class="bike-photo" loading="lazy">
+
+        <div class="brand-card">
+            <div class="brand-icon brand-meituan">M</div>
+            <div class="brand-info">
+                <h4>Meituan Bike <span style="font-weight:400;color:var(--text-faint);font-size:14px;">(美团单车 Měituán Dānchē)</span></h4>
+                <p><strong>Bright yellow.</strong> Owned by Meituan, the mega-app that does everything from food delivery to hotel booking. These used to be the old "Mobike" brand. Same concept, just yellow. You'll see a lot of these in bigger cities.</p>
+            </div>
+        </div>
+        <img src="images/bike/2.jpg" alt="Yellow Meituan Bike parked on a street in China" class="bike-photo" loading="lazy">
+
+        <div class="brand-card">
+            <div class="brand-icon brand-didi">D</div>
+            <div class="brand-info">
+                <h4>DiDi Qingju Bike <span style="font-weight:400;color:var(--text-faint);font-size:14px;">(滴滴青桔 Dīdī Qīngjú)</span></h4>
+                <p><strong>Cyan / mint green.</strong> Run by DiDi, the ride-hailing giant. "Qingju" means "green tangerine." These have a slightly lighter frame and are common in cities where DiDi has a strong presence. The unlocking experience is identical to the other two.</p>
+            </div>
+        </div>
+        <img src="images/bike/3.jpg" alt="Cyan DiDi Qingju Bike parked on a street in China" class="bike-photo" loading="lazy">
+
+        <div class="callout">
+            <strong>— The red bikes in Hangzhou:</strong> You might spot red shared bikes in Hangzhou. These are run by the city government and are <strong>free</strong> — but they require a Hangzhou Citizen Card (市民—, which you can only get as a registered resident. For a foreign traveler, they're not accessible. Just walk past them and pick a blue, yellow, or green one instead.
+        </div>
+
+        <p><strong>All three brands work the same way:</strong> open Alipay or WeChat, scan the QR code on the bike, tap unlock, and ride. In most cases, you can unlock through Alipay without downloading a separate bike app; requirements may vary by brand, city, and account status. If you have Alipay set up with a foreign card (which you should —<a href="/guide/alipay.html" style="color:var(--accent);font-weight:600;">here's how</a>), you're good to go.</p>
+
+        <h2 id="how-to-unlock">How to Unlock &amp; Ride — Step by Step (Hellobike + Alipay)</h2>
+        <p>I'll walk through the exact flow with Hellobike and Alipay, because that's what my friends use most. But here's the secret: <strong>unlocking Meituan Bike or DiDi Qingju is exactly the same.</strong> The button is always at the bottom of the screen, the process is identical. Once you've done one, you've done them all.</p>
+
+        <div class="step-block">
+            <h3><span class="step-num">1</span> Open Alipay and tap "Scan"</h3>
+            <p>On the Alipay home screen, the Scan button is in the <strong>top-left corner</strong>. Don't overthink this — it's a prominent icon, hard to miss. Tap it to open the QR scanner.</p>
+            <img src="images/bike/4.jpg" alt="Alipay home screen with Scan button highlighted in the top-left corner" class="screenshot" loading="lazy">
+        </div>
+
+        <div class="step-block">
+            <h3><span class="step-num">2</span> Scan the QR code on the bike</h3>
+            <p>Point your phone at the QR code. It's usually on the <strong>rear mudguard</strong> (the plastic cover over the back wheel), right below the seat. On some bikes it's on the frame under the seat. Either way — it's clearly visible, usually printed on a small white sticker or a metal plate.</p>
+            <img src="images/bike/5.jpg" alt="QR code on the rear mudguard of a shared bike being scanned" class="screenshot" loading="lazy">
+        </div>
+
+        <div class="step-block">
+            <h3><span class="step-num">3</span> Tap "Unlocking"</h3>
+            <p>After scanning, Alipay shows a screen with the bike details and a button at the bottom. Tap <strong>"Unlocking"</strong> (解锁). This is always at the bottom of the screen — for Hellobike, Meituan Bike, and DiDi Qingju, the unlock button is always in the same spot. You really can't miss it.</p>
+            <img src="images/bike/6.jpg" alt="Alipay screen showing the Unlocking button at the bottom after scanning a bike QR code" class="screenshot" loading="lazy">
+        </div>
+
+        <div class="step-block">
+            <h3><span class="step-num">4</span> Wait a few seconds — the lock opens</h3>
+            <p>The bike makes a cheerful beeping sound, the electronic lock on the rear wheel clicks open, and Alipay shows a confirmation screen with a timer. You're now riding. The bike is yours until you return it. At the bottom of this screen you'll see the <strong>"Return the Vehicle"</strong> button — this is what you'll tap when you're done. (Meituan Bike and DiDi Qingju put the return button in the exact same place.)</p>
+            <img src="images/bike/7.jpg" alt="Alipay screen showing the bike unlocked and timer running, with Return the Vehicle button at the bottom" class="screenshot" loading="lazy">
+        </div>
+
+        <div class="step-block">
+            <h3><span class="step-num">5</span> Park inside the painted rectangle</h3>
+            <p>When you're done riding, you <strong>must</strong> park the bike inside a designated parking zone. These are rectangles painted on the ground — usually white or yellow lines — near metro stations, intersections, and busy areas. The app uses GPS to check your location. If you try to return the bike outside a zone, it simply won't let you. (This is not a suggestion. The system will reject the return and keep charging you until you move it into a zone.)</p>
+            <p>The good news: parking zones are everywhere. You'll almost always find one within 20 meters of where you want to stop.</p>
+            <img src="images/bike/8.jpg" alt="Shared bikes parked inside a painted white rectangle on the ground, the designated parking zone" class="bike-photo" loading="lazy">
+        </div>
+
+        <div class="step-block">
+            <h3><span class="step-num">6</span> Tap "Return the Vehicle" — done</h3>
+            <p>Tap the return button. The lock engages with a click, the timer stops, Alipay shows a ride summary (distance, time, cost), and you're done. Walk away. No docking, no key, no human interaction. Just a bike and a city.</p>
+            <img src="images/bike/9.jpg" alt="Alipay screen showing ride complete — distance, time, and cost summary after returning the bike" class="screenshot" loading="lazy">
+        </div>
+
+        <h2 id="cost">How Much Does It Cost?</h2>
+        <p>Almost nothing. Seriously:</p>
+        <ul>
+            <li><strong>Hellobike:</strong> Usually ¥1.5 per 30 minutes (about $0.21 USD). Pricing varies by city and brand — check the in-app prompt before unlocking.</li>
+            <li><strong>Meituan Bike:</strong> Similar pricing, typically ¥1.5–2 per 30 minutes.</li>
+            <li><strong>DiDi Qingju:</strong> Also around ¥1.5–2 per 30 minutes.</li>
+        </ul>
+        <p>Some brands offer a weekly or monthly pass — ¥10–15 for unlimited 30-minute rides over 7 days, which is great value if you're using bikes daily. You'll see the pass offer when you unlock your first bike. But honestly, at ¥1.5 per ride, you don't really need it unless you're staying more than a week.</p>
+        <p>Payment is automatic through Alipay or WeChat Pay. Usually no separate deposit or top-up is needed when using Alipay/WeChat mini-programs — it just charges your linked card after each ride. My friend rode 11 times across four days in Hangzhou and his total bill was ¥16.50 — that's $2.30 USD, or less than a single bus fare in most European cities.</p>
+
+        <h2 id="mistakes">Common Mistakes First-Timers Make</h2>
+        <p>Every traveler I've helped has made at least two of these. Learn from them:</p>
+        <ul>
+            <li><strong>Scanning a broken bike.</strong> You'll see a row of 15 bikes and instinctively scan the nearest one. Take 3 seconds to squeeze the brakes and spin the pedals first. A stuck brake or a flat tire means you've just wasted a scan — and on a busy morning, the good bikes disappear fast.</li>
+            <li><strong>Parking outside the marked zone.</strong> The app won't let you return the bike. You'll stand there tapping "Return" over and over, getting increasingly frustrated, while the timer keeps ticking. The fix is simple — push the bike 10— 0 meters into the nearest painted rectangle — but the first time it happens, you won't know what's wrong.</li>
+            <li><strong>Forgetting to tap "Return."</strong> You park the bike, walk into a café, order a coffee, and 45 minutes later realize the ride is still running. The lock engages automatically on some models, but the billing doesn't stop until you tap that button. Always wait for the ride-complete screen before walking away.</li>
+            <li><strong>Riding on sidewalks.</strong> In many countries, bikes share the sidewalk with pedestrians. Not in China. Sidewalks are for walking; bike lanes are for bikes. Riding on the sidewalk will get you dirty looks, shouted at, or — if you're unlucky — a fine. Stay in the bike lane.</li>
+            <li><strong>Checking Google Maps while riding.</strong> Google Maps doesn't work reliably in China without a VPN or roaming eSIM. Even if it does, staring at your phone while weaving through e-bike traffic is a terrible idea. Memorize your next turn, or pull over. You're not in a rush — the bike costs ¥1.5 per half hour.</li>
+        </ul>
+
+        <h2 id="before-you-ride">Things to Know Before You Ride</h2>
+
+        <div class="callout callout-teal">
+            <strong>— Bike lanes are everywhere.</strong> Chinese cities have dedicated bike lanes on almost every road — wide, separated from car traffic by barriers or curbs. It's one of the most bike-friendly urban environments in the world. You're not competing with cars; you're in your own lane.
+        </div>
+
+        <div class="callout">
+            <strong>⚠️ Traffic flows differently here.</strong> E-bikes (electric scooters) share the bike lanes with you, and they're <em>fast and silent</em>. They'll pass you on either side without warning. Ride predictably, stay to the right, and check over your shoulder before swerving. After 10 minutes you'll get the rhythm.
+        </div>
+
+        <ul>
+            <li><strong>Helmets:</strong> Shared bikes do not come with helmets — bring your own if you prefer riding with one. Almost nobody wears one locally, but you'll see the occasional rider with their own.</li>
+            <li><strong>Night riding:</strong> All three bike brands have built-in lights — the front basket has a small LED, and the rear mudguard has a red reflector. They're adequate, but if you're riding at night on unfamiliar roads, go slower.</li>
+            <li><strong>Rain:</strong> Shared bikes have solid rubber tires (no punctures), but they're slippery on wet roads. The brakes are less effective in rain. If it's pouring, just take the metro — it's ¥2— and deliciously air-conditioned.</li>
+            <li><strong>Phone mount:</strong> Some newer bikes have a phone holder on the handlebars. Most don't. If you need navigation, memorize the next turn before you start riding, or pull over to check your phone. Don't hold your phone while cycling — it's dangerous, and you may drop it.</li>
+            <li><strong>Bike condition check:</strong> Before you scan, give the bike a quick once-over. Squeeze the brakes, check the tires, spin the pedals. Most bikes are in good shape, but occasionally you'll find one with a stuck brake or a wobbly seat. Just scan a different one — there's always another bike 10 meters away.</li>
+            <li><strong>You need internet:</strong> Unlocking requires a data connection. If your eSIM is acting up or you're between WiFi zones, you can't unlock a bike. This is another reason to have a reliable data plan — see our <a href="/guide/esim.html" style="color:var(--accent);font-weight:600;">eSIM guide</a>.</li>
+        </ul>
+
+        <h2 id="troubleshooting">What If Something Goes Wrong?</h2>
+        <ul>
+            <li><strong>QR code won't scan?</strong> Try shading the code with your hand — direct sunlight can cause glare. If it still won't work, the code might be damaged. Just walk to the next bike.</li>
+            <li><strong>Lock won't open after paying?</strong> Rare, but it happens. Close Alipay, reopen, and scan again — it won't charge you twice. If the lock still won't budge, manually report it in the app (there's a "bike broken" option) and grab another bike.</li>
+            <li><strong>Can't return because "outside parking zone"?</strong> Open the bike-share mini-program within Alipay — it'll show nearby parking zones on a map. Usually you just need to push the bike 10— 0 meters.</li>
+            <li><strong>Forgot to return the bike?</strong> The timer keeps running. A friend once left a bike unlocked outside a restaurant for 90 minutes and got charged ¥4.50 — not the end of the world, but avoid it. The app sends a notification if your ride exceeds 30 minutes.</li>
+        </ul>
+
+        <div class="article-cta">
+            <h3>Get the Free China Arrival Checklist</h3>
+            <p>Shared bikes, metro cards, DiDi setup, Alipay walkthrough — everything you need for getting around Chinese cities, in one PDF.</p>
+            <a href="/index.html#newsletter" class="btn btn-primary">Get the Free Checklist</a>
+        </div>
+
+        <p style="margin-top: 28px; font-size: var(--text-sm); color: var(--text-faint);">
+            <a href="/index.html#guides" class="nav-back">— Back to all guides</a>
+        </p>
+
+    </div>
+</article>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 <a href="/index.html">China Travel OS</a>. Built for travelers, not algorithms.</p>
+    </div>
+</footer>
+
+</body>
+</html>

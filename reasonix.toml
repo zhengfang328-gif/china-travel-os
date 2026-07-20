@@ -1,0 +1,103 @@
+﻿# Reasonix configuration.
+# Resolution order: flag > ./reasonix.toml > ~/AppData/Roaming/reasonix/config.toml > built-in defaults.
+# Secrets come from the environment via api_key_env; never put keys here.
+
+config_version = 2
+# language      = "zh"   # ui/model language; empty = auto-detect from $LANG / $REASONIX_LANG
+
+[agent]
+cold_resume_prune = true
+
+[[providers]]
+name        = "deepseek-flash"
+kind        = "openai"
+base_url    = "https://api.deepseek.com"
+model       = "deepseek-v4-flash"
+api_key_env = "DEEPSEEK_API_KEY"
+balance_url = "https://api.deepseek.com/user/balance"
+context_window = 1000000
+price       = { cache_hit = 0.0028, input = 0.14, output = 0.28, currency = "¥" }
+prices      = { "deepseek-v4-flash" = { cache_hit = 0.0028, input = 0.14, output = 0.28, currency = "¥" } }
+
+[[providers]]
+name        = "deepseek-pro"
+kind        = "openai"
+base_url    = "https://api.deepseek.com"
+model       = "deepseek-v4-pro"
+api_key_env = "DEEPSEEK_API_KEY"
+balance_url = "https://api.deepseek.com/user/balance"
+context_window = 1000000
+price       = { cache_hit = 0.003625, input = 0.435, output = 0.87, currency = "¥" }
+prices      = { "deepseek-v4-pro" = { cache_hit = 0.003625, input = 0.435, output = 0.87, currency = "¥" } }
+
+[[providers]]
+name        = "mimo-pro"
+kind        = "openai"
+base_url    = "https://token-plan-cn.xiaomimimo.com/v1"
+models      = ["mimo-v2.5-pro", "mimo-v2.5"]
+default     = "mimo-v2.5-pro"
+api_key_env = "MIMO_API_KEY"
+context_window = 1000000
+price       = { cache_hit = 0.025, input = 3, output = 6, currency = "¥" }
+prices      = { "mimo-v2.5" = { cache_hit = 0.02, input = 1, output = 2, currency = "¥" }, "mimo-v2.5-pro" = { cache_hit = 0.025, input = 3, output = 6, currency = "¥" } }
+vision_models = ["mimo-v2.5"]
+no_proxy    = true
+
+[[providers]]
+name        = "mimo-flash"
+kind        = "openai"
+base_url    = "https://token-plan-cn.xiaomimimo.com/v1"
+models      = ["mimo-v2.5-pro", "mimo-v2.5"]
+default     = "mimo-v2.5"
+api_key_env = "MIMO_API_KEY"
+context_window = 1000000
+price       = { cache_hit = 0.02, input = 1, output = 2, currency = "¥" }
+prices      = { "mimo-v2.5" = { cache_hit = 0.02, input = 1, output = 2, currency = "¥" }, "mimo-v2.5-pro" = { cache_hit = 0.025, input = 3, output = 6, currency = "¥" } }
+vision_models = ["mimo-v2.5"]
+no_proxy    = true
+[tools]
+bash_timeout_seconds = 120
+
+[codegraph]
+enabled      = true   # built-in MCP server; off by default for first-run sessions
+auto_install = true   # fetch the runtime when CodeGraph is enabled but missing
+# path       = ""   # empty = cache, then PATH, then a bundle beside reasonix
+
+[builtin_mcp]
+time_enabled = true   # built-in Time MCP; off until manually enabled
+context7_enabled = false   # built-in Context7 MCP; off until manually enabled
+
+[lsp]
+enabled = true   # language server tools; servers launch lazily when used
+# [lsp.servers.go]
+# command = "gopls"
+# args = []
+# extensions = [".go"]
+
+[skills]
+# paths = ["~/my-skills", "../shared/skills"]   # extra custom skill roots
+# excluded_paths = ["~/.agents/skills"]   # hide convention roots without deleting folders
+# max_depth = 3   # nested scan depth; set 1 for legacy root-only discovery
+# disabled_skills = ["review"]   # hide noisy or unwanted skills
+
+[permissions]
+allow = ["bash=node \"C:\\Users\\ZHENG FANG\\.agents\\skills\\impeccable\\scripts\\context.mjs\" 2>&1", "bash=node \"C:\\Users\\ZHENG FANG\\.agents\\skills\\impeccable\\scripts\\detect.mjs\" --json \"F:\\阿里云盘\\项目\\China Travel OS\\index.html\" \"F:\\阿里云盘\\项目\\China Travel OS\\guide\\alipay.html\" \"F:\\阿里云盘\\项目\\China Travel OS\\guide\\wechat-pay.html\" \"F:\\阿里云盘\\项目\\China Travel OS\\guide\\apps.html\" \"F:\\阿里云盘\\项目\\China Travel OS\\guide\\vpn.html\" \"F:\\阿里云盘\\项目\\China Travel OS\\guide\\esim.html\" \"F:\\阿里云盘\\项目\\China Travel OS\\guide\\trains.html\" \"F:\\阿里云盘\\项目\\China Travel OS\\guide\\checklist.html\" \"F:\\阿里云盘\\项目\\China Travel OS\\guide\\bike.html\" \"F:\\阿里云盘\\项目\\China Travel OS\\guide\\metro.html\" \"F:\\阿里云盘\\项目\\China Travel OS\\guide\\ride-hailing.html\" \"F:\\阿里云盘\\项目\\China Travel OS\\guide\\safety.html\" 2>&1", "bash=New-Item -ItemType Directory -Force -Path \"F:\\阿里云盘\\项目\\China Travel OS\\.impeccable\\live\" 2>&1", "bash=node \"C:\\Users\\ZHENG FANG\\.agents\\skills\\impeccable\\scripts\\detect-csp.mjs\" 2>&1", "bash=node \"C:\\Users\\ZHENG FANG\\.agents\\skills\\impeccable\\scripts\\critique-storage.mjs\" slug \"F:\\阿里云盘\\项目\\China Travel OS\\index.html\" 2>&1", "bash=if (Test-Path \"F:\\阿里云盘\\项目\\China Travel OS\\.impeccable\\critique\\ignore.md\") { Get-Content \"F:\\阿里云盘\\项目\\China Travel OS\\.impeccable\\critique\\ignore.md\" } else { Write-Output \"NO_IGNORE_FILE\" }", "task", "bash=node \"C:\\Users\\ZHENG FANG\\.agents\\skills\\impeccable\\scripts\\detect.mjs\" --json \"F:\\阿里云盘\\项目\\China Travel OS\\index.html\" 2>&1", "Bash(Select-String -Path \"F:\\阿里云盘\\项目\\China Travel OS\\guide\\daily-life.html\" -Pattern \"閳ユ摶\" 2>$null | Measure-Object | Select-Object -ExpandProperty Count)", "Edit", "Bash((Get-Content \"F:\\阿里云盘\\项目\\China Travel OS\\docs\\妞ゅ湱娲扮痪顏囶洣_001.md\" | Measure-Object -Line).Lines)", "Bash(Select-String -Path \"F:\\阿里云盘\\项目\\China Travel OS\\docs\\妞ゅ湱娲扮痪顏囶洣_001.md\" -Pattern \"^(娑撯偓|娴滃瘝娑撳\ue56f閸ユ硲娴滄敓閸忕搮娑撳剟閸忕弲娑旀絸閸椾簠閸椾椒绔磡閸椾椒绨﹟閸椾椒绗亅閸椾礁娲搢閸椾椒绨瞸閸椾礁鍙殀閸椾椒绔穦閸椾礁鍙搢閸椾椒绡€)|婕廫\" | ForEach-Object { $_.Line })", "Bash(Get-ChildItem -Recurse -Filter \"*.html\" \"F:\\阿里云盘\\项目\\China Travel OS\\guide\" | Select-String -Pattern \"payments\\.html\" -List | Select-Object -ExpandProperty Path)"]
+[sandbox]
+workspace_root = "F:\\阿里云盘\\项目\\China Travel OS"
+
+
+[statusline]
+# A custom status line: a command whose first stdout line replaces the built-in
+# data row. It receives {"model","contextUsed","contextWindow","cwd"} as JSON on stdin.
+# command = "my-statusline.sh"
+
+# External MCP servers. type: "stdio" (default, a subprocess) | "http" | "sse".
+# ${VAR} / ${VAR:-default} are expanded from the environment in command/args/env/url/headers.
+# [[plugins]]
+# name    = "example"
+# command = "reasonix-plugin-example"
+# [[plugins]]                                  # a remote server over Streamable HTTP
+# name    = "stripe"
+# type    = "http"
+# url     = "https://mcp.stripe.com"
+# headers = { Authorization = "Bearer ${STRIPE_KEY}" }
