@@ -329,10 +329,15 @@
         @media (hover: none) {
             .city-card .city-link-text { opacity: 1; transform: translateY(0); }
         }
+        .city-soon { cursor: default; opacity: .7; }
+        .city-soon:hover { transform: none; box-shadow: none; }
+        .city-soon .city-link-text { opacity: 1; transform: translateY(0); color: rgba(255,255,255,.55); font-weight: 500; }
         .city-hangzhou { background: #2D5A3B; }
+        .city-beijing  { background: #6B2D2D; }
         .city-shanghai { background: #C0392B; }
         .city-chengdu  { background: #9B4D2F; }
         .city-chongqing{ background: #2C2A4A; }
+        .city-more     { background: #4A4458; }
 
         /* ============================================
            GUIDE SECTION — category cards preserved
@@ -663,26 +668,40 @@
                 <span class="city-link-text">Explore Hangzhou →</span>
             </a>
 
-            <a href="/city/shanghai.html" class="city-card city-shanghai">
-                <span class="city-tag">🌆 First-timer favorite</span>
+            <div class="city-card city-soon city-beijing">
+                <span class="city-tag">🏯 COMING SOON</span>
+                <h3>Beijing</h3>
+                <p>Forbidden City, Great Wall, hutongs, and the heart of China's past and present.</p>
+                <span class="city-link-text">Coming soon</span>
+            </div>
+
+            <div class="city-card city-soon city-shanghai">
+                <span class="city-tag">🌆 COMING SOON</span>
                 <h3>Shanghai</h3>
                 <p>Skyline bars, French Concession lanes, and the world's best metro.</p>
-                <span class="city-link-text">Explore Shanghai →</span>
-            </a>
+                <span class="city-link-text">Coming soon</span>
+            </div>
 
-            <a href="/city/chengdu.html" class="city-card city-chengdu">
-                <span class="city-tag">🐼 Laid-back vibes</span>
+            <div class="city-card city-soon city-chengdu">
+                <span class="city-tag">🐼 COMING SOON</span>
                 <h3>Chengdu</h3>
                 <p>Pandas, spicy hotpot, teahouse culture, and the slowest-paced big city in China.</p>
-                <span class="city-link-text">Explore Chengdu →</span>
-            </a>
+                <span class="city-link-text">Coming soon</span>
+            </div>
 
-            <a href="/city/chongqing.html" class="city-card city-chongqing">
-                <span class="city-tag">🚠 Cyberpunk realness</span>
+            <div class="city-card city-soon city-chongqing">
+                <span class="city-tag">🚠 COMING SOON</span>
                 <h3>Chongqing</h3>
                 <p>Trains run through buildings, roads stack 8 layers high, and the night views are absolutely unreal.</p>
-                <span class="city-link-text">Explore Chongqing →</span>
-            </a>
+                <span class="city-link-text">Coming soon</span>
+            </div>
+
+            <div class="city-card city-soon city-more">
+                <span class="city-tag">📍 More to come</span>
+                <h3>&amp; more</h3>
+                <p>Xi'an, Guilin, Lhasa, Zhangjiajie… we're just getting started. More cities, same insider approach.</p>
+                <span class="city-link-text">Stay tuned</span>
+            </div>
 
         </div>
     </div>
@@ -973,6 +992,7 @@
             <div class="footer-col">
                 <h4>Cities</h4>
                 <a href="/city/hangzhou.html">Hangzhou</a>
+                <a href="/city/beijing.html">Beijing</a>
                 <a href="/city/shanghai.html">Shanghai</a>
                 <a href="/city/chengdu.html">Chengdu</a>
                 <a href="/city/chongqing.html">Chongqing</a>
