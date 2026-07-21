@@ -30,6 +30,9 @@ Static HTML/CSS, mobile-first, deployed via GitHub Pages / Netlify.
 - **修 CSS 后必检查** 项目笔记.md「设计规范」章节是否需要同步更新（数值/策略/禁令描述一致）。
 - 新增攻略页 → 更新 项目笔记.md 进度清单 + 文件结构。
 
+### 自动同步
+- **每次修改完成后必须自动执行**：`git add` → `git commit` → `git push origin main`，不需要等用户提醒。commit message 用英文简要描述改动。
+
 ## 文件结构速查
 
 ```
