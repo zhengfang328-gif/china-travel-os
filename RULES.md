@@ -33,6 +33,10 @@ Static HTML/CSS, mobile-first, deployed via GitHub Pages / Netlify.
 ### 自动同步
 - **每次修改完成后必须自动执行**：`git add` → `git commit` → `git push origin main`，不需要等用户提醒。commit message 用英文简要描述改动。
 
+### 文件编码
+- **禁止用 PowerShell `Set-Content` 修改 HTML/MD 文件。**它会用系统默认编码（GBK）覆盖 UTF-8 文件，导致 emoji 和非 ASCII 字符全部变成 `?`。
+- **正确做法**：用 Python `open(f, 'w', encoding='utf-8')` 读写文件，确保 UTF-8 无损。
+
 ## 文件结构速查
 
 ```
