@@ -32,6 +32,7 @@ Static HTML/CSS, mobile-first, deployed via GitHub Pages / Netlify.
 
 ### 自动同步
 - **每次修改完成后必须自动执行**：`git add` → `git commit` → `git push origin main`，不需要等用户提醒。commit message 用英文简要描述改动。
+- **范围限定**：git 只同步网站部分（`index.html`、`guide/`、`city/`、`wrangler.jsonc` 等网页资产）。`China Travel OS配套内容/`（TikTok 脚本、账号设计、方法论等配套文档）**不进 git**，只走阿里云盘同步，不要 commit。
 
 ### 文件编码
 - **禁止用 PowerShell `Set-Content` 修改 HTML/MD 文件。**它会用系统默认编码（GBK）覆盖 UTF-8 文件，导致 emoji 和非 ASCII 字符全部变成 `?`。

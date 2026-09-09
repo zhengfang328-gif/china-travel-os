@@ -10,3 +10,6 @@ Thumbs.db
 
 # Reasonix internal state (not project code)
 .reasonix/desktop-topic-*.json
+
+# TikTok companion content — synced via Aliyun Drive only, never committed
+China Travel OS配套内容/
